@@ -1,0 +1,157 @@
+/* main menu start */
+
+.main-menu
+	padding: 0
+	margin: 0
+	display: none
+
++r992
+	.main-menu
+		display: inline-flex
+
+.main-menu
+	&__item
+		list-style: none
+		position: relative
+	&__item:not(:last-of-type)
+		margin-right: 30px
+
+	+r1200
+
+		&__item:not(:last-of-type)
+			margin-right: 40px
+
+	&__item &__link
+		position: relative
+		display: inline-block
+		color: #FFF
+		font-size: 14px
+		font-weight: 500
+		padding: 31px 0 30px 0	
+		text-decoration: none
+		text-transform: uppercase
+		transition: all .3s
+
+	+r1366
+	
+		&__item &__link
+			padding: 39px 0 24px 0
+
+	&__item:hover &__link
+		color: #FFF
+		opacity: 0.75
+	&__item &__link::before
+		content: ""
+		display: block
+		height: 3px
+		width: 0%
+		background: $orange
+		position: absolute
+		top: 2px
+		left: 0
+		transition: width .3s
+	&__item:hover &__link::before,
+	&__item &__link--highlighted::before
+		width: 100%
+	&__item--has-child &__link span
+		position: relative
+	&__item--has-child &__link span::after
+		content: ""
+		pointer-events: none
+		display: inline-block
+		height: 3px
+		width: 3px
+		border-radius: 50%
+		background: #FFF
+		position: absolute
+		right: -15px
+		top: 7px
+		transition: all .3s
+	&__item--has-child:hover span::after
+		background: #FFF
+		opacity: 0.75
+	&__item--active &__link
+		color: #FFF
+		opacity: 0.75
+	&__item--active &__link span::after
+		background: #ffffff
+		opacity: 0.75
+	&__item--active &__link::before
+		width: 100%
+	.sub-list--style-2
+		display: flex
+		flex-wrap: wrap
+		width: 380px
+	.sub-list--style-2 li
+		width: 50%
+	&__sub-list::before
+		content: ""
+		display: inline-block
+		border: 15px solid transparent
+		border-top: 20px solid $blue
+		position: absolute
+		top: -15px
+		left: 40px
+		transform: rotate(-90deg)
+	&__sub-list
+		padding: 0
+		margin: 0
+		position: absolute
+		top: 100%
+		left: -35px
+		width: 235px
+		padding: 35px
+		background-color: $blue
+		transform: translateY(15px)
+		opacity: 0
+		visibility: hidden
+		transition: all .3s
+	&__item--has-child:hover > &__sub-list
+		opacity: 1
+		transform: translateY(0)
+		visibility: visible
+	&__sub-list li
+		position: relative
+		list-style: none
+	&__sub-list li:not(:last-of-type)
+		margin-bottom: 10px	
+	&__sub-list li a
+		display: inline-block
+		color: #FFF
+		font-size: 14px
+		text-decoration: none
+		transition: color .3s
+	&__sub-list li a::after
+		content: ""
+		display: block
+		width: 0%
+		height: 2px
+		background-color: $orange
+		margin-top: 4px
+		transition: width .3s
+	&__sub-list li.item--active a,
+	&__sub-list li a:hover
+		color: #C4C4C4
+	&__sub-list li.item--active a::after,	
+	&__sub-list li a:hover::after
+		width: 100%
+
+/* main menu inner */
+
+.main-menu--inner
+	.main-menu__item .main-menu__link
+		color: $dblue
+	.main-menu__item:hover .main-menu__link
+		color: $dblue
+		opacity: 0.75
+	.main-menu__item--has-child .main-menu__link span::after
+		background: $dblue
+	.main-menu__item--has-child:hover .main-menu__link span::after,
+	.main-menu__item--active .main-menu__link span::after
+		background: $dblue
+		opacity: 0.75
+	.main-menu__item--active .main-menu__link
+		color: $dblue
+		opacity: 0.75
+
+/* main menu end */

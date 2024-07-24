@@ -1,0 +1,188 @@
+// cause details tabs start
+
+.tabs.horizontal-tabs.cause-details-tabs
+
+	ul.horizontal-tabs__header
+		li
+			a(href="#horizontal-tabs__item-1")
+				span Description 
+		li
+			a(href="#horizontal-tabs__item-2")
+				span Donors
+		li
+			a(href="#horizontal-tabs__item-3")
+				span Video
+		li
+			a(href="#horizontal-tabs__item-4")
+				span Gallery
+
+	.horizontal-tabs__content
+
+		#horizontal-tabs__item-1.horizontal-tabs__item
+
+			p #[strong Thresher shark rudd African lungfish silverside, Red salmon rockfish grunion, garpike zebra danio king-of-the-salmon banjo catfish. Sea chub demoiselle whalefish zebra lionfish mud cat pelican eel.]
+			p Minnow snoek icefish velvet-belly shark, California halibut round stingray northern sea robin. Southern grayling trout-perch. Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail, Canthigaster rostrata. Midshipman dartfish Modoc sucker, yellowtail kingfish basslet. Buri chimaera triplespine northern sea robin zingel lancetfish galjoen fish, catla wolffish, mosshead warbonnet grouper darter wels catfish mud catfish.
+			p African lungfish silverside, Red salmon rockfish grunion, garpike zebra danio king-of-the-salmon banjo catfish. Sea chub demoiselle whalefish zebra lionfish mud cat pelican eel. Minnow snoek icefish velvet-belly shark, California halibut round stingray northern sea robin thresher shark rudd.
+			h6.tabs__title Access
+			p The aim is to promote the development of high-quality drinking water and sanitation services, accessible to everyone in the Sheohar District, and sustained by local communities, businesses, and governments.
+			h6.tabs__title Behaviour change
+			p This project uses SABC interventions to engage Sheohar communities with respect to embracing healthy behaviours around water, sanitation, and hygiene — behaviours such as handwashing with soap at key moments, using household latrines, and the safe storage and handling of water.
+			h6.tabs__title Capital
+			p In a region where the majority of the population consists of subsistence farmers, access to capital and the development of markets systems is crucial. In response to this, the Sheohar 2 project’s C component focuses specifically on people’s livelihoods, access to credit, and the provision of WASH-related products and services.
+
+		#horizontal-tabs__item-2.horizontal-tabs__item
+
+			.row.offset-30
+
+				.col-md-6.col-xl-4
+
+					// item start
+					.donor-item
+						.row.align-items-center
+							.col-lg-7
+								.donor-item__info
+									.donor-item__img
+										img.img--bg(src="img/face_1.jpg" alt="face")
+									.donor-item__description
+										.donor-item__name Chris Patt
+										.donor-item__date 23 Jan'19
+							.col-lg-5
+								h5.donor-item__value $ 200.00
+					// item end
+
+				.col-md-6.col-xl-4
+
+					// item start
+					.donor-item
+						.row.align-items-center
+							.col-lg-7
+								.donor-item__info
+									.donor-item__img
+										img.img--bg(src="img/face_2.jpg" alt="face")
+									.donor-item__description
+										.donor-item__name Ched Bonq
+										.donor-item__date 23 Jan'19
+							.col-lg-5
+								h5.donor-item__value $ 500.00
+					// item end
+
+				.col-md-6.col-xl-4
+
+					// item start
+					.donor-item
+						.row.align-items-center
+							.col-lg-7
+								.donor-item__info
+									.donor-item__img
+										img.img--bg(src="img/face_3.jpg" alt="face")
+									.donor-item__description
+										.donor-item__name Lisa Tactics
+										.donor-item__date 23 Jan'19
+							.col-lg-5
+								h5.donor-item__value $ 300.00
+					// item end
+
+				.col-md-6.col-xl-4
+
+					// item start
+					.donor-item
+						.row.align-items-center
+							.col-lg-7
+								.donor-item__info
+									.donor-item__img
+										img.img--bg(src="img/face_4.jpg" alt="face")
+									.donor-item__description
+										.donor-item__name Mike Bloom
+										.donor-item__date 23 Jan'19
+							.col-lg-5
+								h5.donor-item__value $ 1000.00
+					// item end
+
+				.col-md-6.col-xl-4
+
+					// item start
+					.donor-item
+						.row.align-items-center
+							.col-lg-7
+								.donor-item__info
+									.donor-item__img
+										img.img--bg(src="img/face_5.jpg" alt="face")
+									.donor-item__description
+										.donor-item__name Taya Marsh
+										.donor-item__date 23 Jan'19
+							.col-lg-5
+								h5.donor-item__value $ 100.00
+					// item end
+
+				.col-md-6.col-xl-4
+
+					// item start
+					.donor-item
+						.row.align-items-center
+							.col-lg-7
+								.donor-item__info
+									.donor-item__img
+										img.img--bg(src="img/face_6.jpg" alt="face")
+									.donor-item__description
+										.donor-item__name Ion Malanik
+										.donor-item__date 23 Jan'19
+							.col-lg-5
+								h5.donor-item__value $ 400.00
+					// item end
+
+		#horizontal-tabs__item-3.horizontal-tabs__item
+
+			.video-frame
+				img.img--bg(src="img/video_frame-2.jpg" alt="frame")
+				a.video-trigger.video-frame__trigger(href="https://www.youtube.com/watch?v=_sI_Ps7JSEk")
+					span.video-frame__icon
+						+fa('play')
+					span.video-frame__text Watch our video
+
+		#horizontal-tabs__item-4.horizontal-tabs__item
+
+			.gallery-simple
+
+				.row.offset-30
+					
+					.col-12.col-sm-6.col-lg-4.col-xl-3
+
+						a.gallery-simple__item(href="img/ig_1.jpg" data-fancybox="simple-gallery")
+							img.img--bg(src="img/ig_1.jpg", alt="img")
+
+					.col-12.col-sm-6.col-lg-4.col-xl-3
+
+						a.gallery-simple__item(href="img/ig_2.jpg" data-fancybox="simple-gallery")
+							img.img--bg(src="img/ig_2.jpg", alt="img")
+
+					.col-12.col-sm-6.col-lg-4.col-xl-3
+
+						a.gallery-simple__item(href="img/ig_3.jpg" data-fancybox="simple-gallery")
+							img.img--bg(src="img/ig_3.jpg", alt="img")
+
+					.col-12.col-sm-6.col-lg-4.col-xl-3
+
+						a.gallery-simple__item(href="img/ig_4.jpg" data-fancybox="simple-gallery")
+							img.img--bg(src="img/ig_4.jpg", alt="img")
+
+					.col-12.col-sm-6.col-lg-4.col-xl-3
+
+						a.gallery-simple__item(href="img/ig_5.jpg" data-fancybox="simple-gallery")
+							img.img--bg(src="img/ig_5.jpg", alt="img")
+
+					.col-12.col-sm-6.col-lg-4.col-xl-3
+
+						a.gallery-simple__item(href="img/ig_6.jpg" data-fancybox="simple-gallery")
+							img.img--bg(src="img/ig_6.jpg", alt="img")
+
+					.col-12.col-sm-6.col-lg-4.col-xl-3
+
+						a.gallery-simple__item(href="img/ig_7.jpg" data-fancybox="simple-gallery")
+							img.img--bg(src="img/ig_7.jpg", alt="img")
+
+					.col-12.col-sm-6.col-lg-4.col-xl-3
+
+						a.gallery-simple__item(href="img/ig_8.jpg" data-fancybox="simple-gallery")
+							img.img--bg(src="img/ig_8.jpg", alt="img")
+
+// cause details tabs end

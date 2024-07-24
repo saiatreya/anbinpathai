@@ -1,0 +1,96 @@
+/* alerts start */
+
+.alert
+	position: relative
+	border-radius: 50px
+	border: none
+	margin-bottom: 0
+	padding: 15px 60px
+
++r992
+	.alert
+		padding: 20px 60px
+
++r1200
+	.alert
+		padding: 25px 70px
+
+.alert:not(:last-of-type)
+	margin-bottom: 30px
+
+.alert
+	&__text
+		font-size: 14px
+		margin-bottom: 0
+
+	+r576
+		&__text
+			font-size: 16px		
+
+	+r992
+		&__text
+			font-size: 18px
+
+	+r1200
+		&__text
+			font-size: 20px
+
+	strong
+		color: inherit
+	&__close
+		cursor: pointer
+		color: inherit
+		font-size: 14px
+		padding: 10px
+		position: absolute
+		right: 20px
+		top: 50%
+		transform: translateY(-50%)
+		opacity: 0.5
+		transition: opacity .3s
+	&__close:hover
+		opacity: 1
+	&__icon
+		font-size: 14px
+		position: absolute
+		left: 30px
+		top: 50%
+		transform: translateY(-50%)
+
+/* alert filled */
+
+.alert.alert--success.alert--filled
+	color: #FFF
+	background: #74DD78
+
+.alert.alert--attention.alert--filled
+	color: #FFF
+	background: #8AC1E8
+
+.alert.alert--warning.alert--filled
+	color: #FFF
+	background: #FEB04B
+
+.alert.alert--error.alert--filled
+	color: #FFF
+	background: #F56D91
+
+/* alert transparent */
+
+.alert.alert--success.alert--transparent
+	color: #74DD78
+	border: 2px solid #74DD78
+
+.alert.alert--attention.alert--transparent
+	color: #8AC1E8
+	border: 2px solid #8AC1E8
+
+.alert.alert--warning.alert--transparent
+	color: #FEB04B
+	border: 2px solid #FEB04B
+
+.alert.alert--error.alert--transparent
+	color: #F56D91
+	border: 2px solid #F56D91
+
+/* alerts end */

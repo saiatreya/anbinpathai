@@ -1,0 +1,61 @@
+/* checkout start */
+
+.checkout-form
+	.form__field,
+	.form__select
+		margin-bottom: 30px
+	.form__message
+		height: 210px
+	.form__fieldset
+		margin-bottom: 30px
+	.cart-totals__list
+		color: $title
+	.form__submit
+		margin-top: 35px
+	.form__radio-label:not(:last-of-type)
+		margin-right: 40px
+		margin-bottom: 15px
+
+/* order item */
+
+.order-item
+	line-height: 20px
+
+.order-item:not(:last-of-type)
+	margin-bottom: 20px
+
+.order-item
+	&__img
+		position: relative
+		height: 76px
+		width: 76px
+		border: 1px solid #E9E9E9
+	&__img img
+		z-index: 0
+	&__link
+		color: $title
+		font-weight: 700
+		letter-spacing: -0.050em
+		text-decoration: none
+		transition: opacity .3s
+	&__link:hover
+		color: $title
+		opacity: 0.75
+	&__description span
+		display: block
+		color: #999
+		font-size: 14px
+		font-weight: 500
+		margin-top: 5px
+	&__price
+		color: $title
+		font-size: 16px
+		font-weight: 700
+	&__remove
+		cursor: pointer
+		position: relative
+		top: -2px
+		color: #EC454C
+		font-size: 12px
+
+/* checkout end */

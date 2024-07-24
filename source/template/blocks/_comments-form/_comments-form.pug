@@ -1,0 +1,59 @@
+// comments form start
+
+form.form.comments-form(action="javascript:void(0);" autocomplete="off")
+	h6.form__title Live Comment
+
+	.row
+
+		.col-xl-5
+
+			input.form__field(type="text" name="first-name" placeholder="Firs Name")
+
+		.col-xl-5
+
+			input.form__field(type="email" name="email" placeholder="Email")
+
+		.col-12
+
+			textarea.form__field.form__message(name="message" placeholder="Message")
+
+		.col-12
+
+			.form__rating
+
+				strong Your rating:
+
+				input#rate_0.form__rating-input(type="radio" name="rating" value="0" disabled)
+
+				label(for="rate_1").form__rating-label
+					+fa('star')
+
+				input#rate_1.form__rating-input(type="radio" name="rating" value="1")
+
+				label(for="rate_2").form__rating-label
+					+fa('star')
+
+				input#rate_2.form__rating-input(type="radio" name="rating" value="2")
+
+				label(for="rate_3").form__rating-label
+					+fa('star')
+
+				input#rate_3.form__rating-input(type="radio" name="rating" value="3" checked)
+
+				label(for="rate_4").form__rating-label
+					+fa('star')
+
+				input#rate_4.form__rating-input(type="radio" name="rating" value="4")
+
+				label(for="rate_5").form__rating-label
+					+fa('star')
+
+				input#rate_5.form__rating-input(type="radio" name="rating" value="5")
+
+			span.form__text Your email address will not be published. Required fields are marked *
+
+		.col-12
+
+			button(type="submit").form__submit Send Comment
+
+// comments form end

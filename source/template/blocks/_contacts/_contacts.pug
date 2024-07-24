@@ -1,0 +1,45 @@
+// contacts start
+
+section.section.contacts.no-padding-top
+	.contacts-wrapper
+
+		.container
+
+			.row.justify-content-end
+
+				.col-xl-6
+
+					form.form.message-form(action="javascript:void(0);")
+
+						h6.form__title Send Message
+						span.form__text * The following info is required
+
+						.row
+
+							.col-lg-6
+
+								input.form__field(type="text" name="first-name" placeholder="First Name *" required)
+
+							.col-lg-6
+
+								input.form__field(type="text" name="last-name" placeholder="Last Name *" required)
+
+							.col-lg-6
+
+								input.form__field(type="email" name="email" placeholder="Email *" required)
+
+							.col-lg-6
+
+								input.form__field(type="tel" name="phone-number" placeholder="Phone")
+
+							.col-12
+
+								textarea.form__message.form__field(name="message" placeholder="Message")
+
+							.col-12
+
+								button(type="submit").form__submit Send Message
+
+		#map.contacts-wrapper__map(data-api-key="AIzaSyD5ES8GFHrarPhIVpDhFDea6fPtga0Wy4Y" data-longitude="-73.935242" data-latitude="40.730610" data-marker="img/marker.png")
+
+// contacts end

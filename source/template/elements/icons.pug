@@ -1,0 +1,984 @@
+extends ../layouts/primary.pug
+
+block variables
+
+	-var page = 'icons'
+
+	-var type = 'inner'
+
+	-var dest = 'elements'
+
+block header
+
+	include ../blocks/_aside-dropdown/_aside-dropdown
+
+	// header start
+
+	header.header.header--inner
+		.container-fluid
+			.row.no-gutters.justify-content-between
+
+				.col-auto.d-flex.align-items-center
+					.dropdown-trigger.dropdown-trigger--inner.d-none.d-sm-block
+						.dropdown-trigger__item
+
+					.header-logo
+						a.header-logo__link(href="index.html")
+							img.header-logo__img(src="img/logo_dark.png", alt="logo")
+
+				.col-auto
+					include ../blocks/_main-menu/_main-menu
+
+				.col-auto.d-flex.align-items-center
+
+					// lang select start
+					ul.lang-select.lang-select--inner
+						li.lang-select__item.lang-select__item--active
+							span En
+							ul.lang-select__sub-list
+								li
+									a(href="#") French
+								li
+									a(href="#") Spanish
+								li
+									a(href="#") Deutsch
+								li
+									a(href="#") Russian
+					// lang select end
+
+					a.button.button--squared(href="#")
+						span Donate
+
+					.dropdown-trigger.dropdown-trigger--inner.d-block.d-sm-none
+						.dropdown-trigger__item
+
+	// header end
+
+block main
+
+	section.promo-primary(class=(dest === "elements" ? "promo-primary--elements" : undefined))
+
+		picture
+			source(srcset='img/tabs.jpg' media='(min-width: 992px)')
+			img.img--bg(src='img/tabs.jpg' alt='img')
+
+		.promo-primary__description 
+			span Elements
+
+		.container
+			.row
+				.col-auto
+					.align-container
+						.align-container__item
+							span.promo-primary__pre-title Helpo
+							h1.promo-primary__title #[span Icons]
+
+	section.section.elements
+		.container
+			.row
+				.col-auto
+					h4.elements__title Variant 1
+
+			.row.offset-margin
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img.img--layout(src="img/icon_1-1.png" alt="img")
+							svg.icon.icon-item__icon.icon--red
+								use(xlink:href="#donation")
+						.icon-item__text
+							p Medicine Help
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img.img--layout(src="img/icon_2-2.png" alt="img")
+							svg.icon.icon-item__icon.icon--orange
+								use(xlink:href="#church")
+						.icon-item__text
+							p We Build and Create
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img.img--layout(src="img/icon_3-3.png" alt="img")
+							svg.icon.icon-item__icon.icon--green
+								use(xlink:href="#blood")
+						.icon-item__text
+							p Water Delivery
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img.img--layout(src="img/icon_4-4.png" alt="img")
+							svg.icon.icon-item__icon.icon--blue
+								use(xlink:href="#charity")
+						.icon-item__text
+							p We Care About
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img.img--layout(src="img/icon_5-5.png" alt="img")
+							svg.icon.icon-item__icon(style="color: #FDCD0F;")
+								use(xlink:href="#shirt")
+						.icon-item__text
+							p New Clothes
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img.img--layout(src="img/icon_6-6.png" alt="img")
+							svg.icon.icon-item__icon(style="color: #2BD4C3;")
+								use(xlink:href="#bread")
+						.icon-item__text
+							p Fresh Food
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img.img--layout(src="img/icon_7-7.png" alt="img")
+							svg.icon.icon-item__icon(style="color: #F76466;")
+								use(xlink:href="#man")
+						.icon-item__text
+							p Best Volounteers
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img.img--layout(src="img/icon_8-8.png" alt="img")
+							svg.icon.icon-item__icon(style="color: #F869B9;")
+								use(xlink:href="#donate-1")
+						.icon-item__text
+							p Donation Around the World
+
+	section.section.elements.no-padding-top
+		.container
+			.row
+				.col-auto
+					h4.elements__title Variant 2
+
+			.row.offset-margin
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/001-donate-2.svg" alt="icon")
+						.icon-item__text
+							p Donate
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/002-donate-1.svg" alt="icon")
+						.icon-item__text
+							p Donate_2
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/003-money-bag.svg" alt="icon")
+						.icon-item__text
+							p Money Bag
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/004-donation-9.svg" alt="icon")
+						.icon-item__text
+							p Donation_9
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/005-charity-4.svg" alt="icon")
+						.icon-item__text
+							p Charity_4
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/006-woman.svg" alt="icon")
+						.icon-item__text
+							p Woman
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/007-church.svg" alt="icon")
+						.icon-item__text
+							p Church
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/008-bible.svg" alt="icon")
+						.icon-item__text
+							p Bible
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/009-loudspeaker.svg" alt="icon")
+						.icon-item__text
+							p Loudspeaker
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/010-people.svg" alt="icon")
+						.icon-item__text
+							p People
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/011-heart-box.svg" alt="icon")
+						.icon-item__text
+							p Heart Box
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/012-balance.svg" alt="icon")
+						.icon-item__text
+							p Balance
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/013-heart.svg" alt="icon")
+						.icon-item__text
+							p Heart
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/014-donate.svg" alt="icon")
+						.icon-item__text
+							p Donate
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/015-donation-8.svg" alt="icon")
+						.icon-item__text
+							p Donation_8
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/016-blood.svg" alt="icon")
+						.icon-item__text
+							p Blood
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/017-man.svg" alt="icon")
+						.icon-item__text
+							p Man
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/018-donation-7.svg" alt="icon")
+						.icon-item__text
+							p Donation_7
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/019-donation-6.svg" alt="icon")
+						.icon-item__text
+							p Donation_6
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/020-location.svg" alt="icon")
+						.icon-item__text
+							p Location
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/021-gift.svg" alt="icon")
+						.icon-item__text
+							p Gift
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/022-donation-5.svg" alt="icon")
+						.icon-item__text
+							p Donation_5
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/023-ecology.svg" alt="icon")
+						.icon-item__text
+							p Ecology
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/024-wheelchair.svg" alt="icon")
+						.icon-item__text
+							p Wheelchair
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/025-first-aid-kit.svg" alt="icon")
+						.icon-item__text
+							p First Aid Kit
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/026-transfusion.svg" alt="icon")
+						.icon-item__text
+							p Transfusion
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/027-solidarity-1.svg" alt="icon")
+						.icon-item__text
+							p Solidarity_1
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/028-ribbon-2.svg" alt="icon")
+						.icon-item__text
+							p Ribbon_2
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/029-balloon.svg" alt="icon")
+						.icon-item__text
+							p Balloon
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/030-donation-4.svg" alt="icon")
+						.icon-item__text
+							p Donation_4
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/031-package.svg" alt="icon")
+						.icon-item__text
+							p Package
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/032-bread.svg" alt="icon")
+						.icon-item__text
+							p Bread
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/033-donation-3.svg" alt="icon")
+						.icon-item__text
+							p Donation_3
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/034-charity-3.svg" alt="icon")
+						.icon-item__text
+							p Charity_3
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/035-donation-2.svg" alt="icon")
+						.icon-item__text
+							p Donation_2
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/036-mail.svg" alt="icon")
+						.icon-item__text
+							p Mail
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/037-money.svg" alt="icon")
+						.icon-item__text
+							p Money
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/038-shirt.svg" alt="icon")
+						.icon-item__text
+							p Shirt
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/039-charity-2.svg" alt="icon")
+						.icon-item__text
+							p Charity_2
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/040-ribbon-1.svg" alt="icon")
+						.icon-item__text
+							p Ribbon_1
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/041-house-1.svg" alt="icon")
+						.icon-item__text
+							p House_1
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/042-house.svg" alt="icon")
+						.icon-item__text
+							p House
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/043-donation-1.svg" alt="icon")
+						.icon-item__text
+							p Donation_1
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/044-donation.svg" alt="icon")
+						.icon-item__text
+							p Donation
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/045-charity-1.svg" alt="icon")
+						.icon-item__text
+							p Charity_1
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/046-solidarity.svg" alt="icon")
+						.icon-item__text
+							p Solidarity
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/047-world-grid.svg" alt="icon")
+						.icon-item__text
+							p World Grid
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/048-ribbon.svg" alt="icon")
+						.icon-item__text
+							p Ribbon
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/049-smartphone.svg" alt="icon")
+						.icon-item__text
+							p Smartphone
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_1/050-charity.svg" alt="icon")
+						.icon-item__text
+							p Charity
+
+	section.section.elements.no-padding-top
+		.container
+			.row
+				.col-auto
+					h4.elements__title Variant 3
+
+			.row.offset-margin
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_2/1_basket.svg" alt="icon")
+						.icon-item__text
+							p 1_basket
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_2/1_blood.svg" alt="icon")
+						.icon-item__text
+							p 1_blood
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_2/1_charity.svg" alt="icon")
+						.icon-item__text
+							p 1_charity
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_2/1_donate.svg" alt="icon")
+						.icon-item__text
+							p 1_donate
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_2/1_hand.svg" alt="icon")
+						.icon-item__text
+							p 1_hand
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_2/1_hand_love.svg" alt="icon")
+						.icon-item__text
+							p 1_hand_love
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_2/1_earth.svg" alt="icon")
+						.icon-item__text
+							p 1_earth
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_2/1_house.svg" alt="icon")
+						.icon-item__text
+							p 1_house
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_2/1_kids.svg" alt="icon")
+						.icon-item__text
+							p 1_kids
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_2/1_love.svg" alt="icon")
+						.icon-item__text
+							p 1_love
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_2/1_money.svg" alt="icon")
+						.icon-item__text
+							p 1_money
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_2/1_money_hand.svg" alt="icon")
+						.icon-item__text
+							p 1_money_hand
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_2/1_nature.svg" alt="icon")
+						.icon-item__text
+							p 1_nature
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_2/1_people.svg" alt="icon")
+						.icon-item__text
+							p 1_people
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_2/1_tape.svg" alt="icon")
+						.icon-item__text
+							p 1_tape
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_2/1_t-shirt.svg" alt="icon")
+						.icon-item__text
+							p 1_t-shirt
+
+	section.section.elements.no-padding-top
+		.container
+			.row
+				.col-auto
+					h4.elements__title Variant 4
+
+			.row.offset-margin
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_3/2_animal_shelter.svg" alt="icon")
+						.icon-item__text
+							p 2_animal_shelter
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_3/2_beggar.svg" alt="icon")
+						.icon-item__text
+							p 2_beggar
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_3/2_charity.svg" alt="icon")
+						.icon-item__text
+							p 2_charity
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_3/2_child.svg" alt="icon")
+						.icon-item__text
+							p 2_child
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_3/2_cooking.svg" alt="icon")
+						.icon-item__text
+							p 2_cooking
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_3/2_delivery.svg" alt="icon")
+						.icon-item__text
+							p 2_delivery
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_3/2_disabled.svg" alt="icon")
+						.icon-item__text
+							p 2_disabled
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_3/2_donate.svg" alt="icon")
+						.icon-item__text
+							p 2_donate
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_3/2_homeless.svg" alt="icon")
+						.icon-item__text
+							p 2_homeless
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_3/2_love.svg" alt="icon")
+						.icon-item__text
+							p 2_love
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_3/2_money.svg" alt="icon")
+						.icon-item__text
+							p 2_money
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_3/2_money_hand.svg" alt="icon")
+						.icon-item__text
+							p 2_money_hand
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_3/2_pc_donate.svg" alt="icon")
+						.icon-item__text
+							p 2_pc_donate
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_3/2_phone_donate.svg" alt="icon")
+						.icon-item__text
+							p 2_phone_donate
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_3/2_piggy_bank.svg" alt="icon")
+						.icon-item__text
+							p 2_piggy_bank
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_3/2_receipt.svg" alt="icon")
+						.icon-item__text
+							p 2_receipt
+
+	section.section.elements.no-padding-top
+		.container
+			.row
+				.col-auto
+					h4.elements__title Variant 5
+
+			.row.offset-margin
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_4/3_blood.svg" alt="icon")
+						.icon-item__text
+							p 3_blood
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_4/3_childs_hand.svg" alt="icon")
+						.icon-item__text
+							p 3_childs_hand
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_4/3_donat_money.svg" alt="icon")
+						.icon-item__text
+							p 3_donat_money
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_4/3_donate.svg" alt="icon")
+						.icon-item__text
+							p 3_donate
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_4/3_earth.svg" alt="icon")
+						.icon-item__text
+							p 3_earth
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_4/3_food.svg" alt="icon")
+						.icon-item__text
+							p 3_food
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_4/3_hand.svg" alt="icon")
+						.icon-item__text
+							p 3_hand
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_4/3_help.svg" alt="icon")
+						.icon-item__text
+							p 3_help
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_4/3_house.svg" alt="icon")
+						.icon-item__text
+							p 3_house
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_4/3_love.svg" alt="icon")
+						.icon-item__text
+							p 3_love
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_4/3_love_hand.svg" alt="icon")
+						.icon-item__text
+							p 3_love_hand
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_4/3_money.svg" alt="icon")
+						.icon-item__text
+							p 3_money
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_4/3_piggy_bank.svg" alt="icon")
+						.icon-item__text
+							p 3_piggy_bank
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_4/3_pram.svg" alt="icon")
+						.icon-item__text
+							p 3_pram
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_4/3_present.svg" alt="icon")
+						.icon-item__text
+							p 3_present
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_4/3_tape.svg" alt="icon")
+						.icon-item__text
+							p 3_tape
+
+	include ../blocks/_bottom-bg/_bottom-bg
+
+block footer
+
+	include ../blocks/_footer/_footer

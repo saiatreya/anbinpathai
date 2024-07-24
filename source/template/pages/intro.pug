@@ -1,0 +1,497 @@
+extends ../layouts/primary.pug
+
+block variables
+
+block header
+
+	// aside dropdown start
+
+	.aside-dropdown.aside-dropdown--intro
+		.aside-dropdown__inner
+			span.aside-dropdown__close
+				+svg('close')
+
+			.aside-dropdown__item
+
+			.aside-dropdown__item
+
+				// aside menu start
+				ul.aside-menu
+					li.main-menu__item
+						a.main-menu__link.main-menu__link--scroll(href="#front-pages")
+							span Demo
+
+					li.main-menu__item
+						a.main-menu__link.main-menu__link--scroll(href="#inner-pages")
+							span Inner Pages
+
+					li.main-menu__item
+						a.main-menu__link.main-menu__link--scroll(href="#features")
+							span Features
+
+					li.main-menu__item
+						a.main-menu__link.main-menu__link--scroll(href="#technologies")
+							span Used Technologies
+				// aside menu end
+
+			.aside-dropdown__item
+				a.button.button--squared(href="#") 
+					span Purchase Helpo
+
+	// aside dropdown end
+
+	// header start
+
+	header.header.header--front.header--intro
+		.container-fluid
+			.row.no-gutters.justify-content-between
+
+				.col-auto.d-flex.align-items-center
+
+					.dropdown-trigger.d-none.d-lg-none.d-sm-block
+						.dropdown-trigger__item
+
+					.header-logo
+						a.header-logo__link(href="index.html")
+							img.header-logo__img.logo--light(src="img/logo_white.png", alt="logo")
+							img.header-logo__img.logo--dark(src="img/logo_dark.png", alt="logo")
+
+				.col-auto
+
+					// main menu start
+
+					nav
+						ul.main-menu(class=(type === "inner" ? "main-menu--inner" : undefined))
+
+							li.main-menu__item
+								a.main-menu__link.main-menu__link--scroll(href="#front-pages")
+									span Demo
+
+							li.main-menu__item
+								a.main-menu__link.main-menu__link--scroll(href="#inner-pages")
+									span Inner Pages
+
+							li.main-menu__item
+								a.main-menu__link.main-menu__link--scroll(href="#features")
+									span Features
+
+							li.main-menu__item
+								a.main-menu__link.main-menu__link--scroll(href="#technologies")
+									span Used Technologies
+
+					// main menu end
+
+				.col-auto.d-flex.align-items-center
+
+					a.button.button--squared(href="https://themeforest.net/item/helpo-fundraising-charity-html-template/25352375" target="_blank") 
+						span Purchase Helpo
+
+					.dropdown-trigger.d-block.d-sm-none
+						.dropdown-trigger__item
+
+	// header end
+
+block main
+
+	// intro start
+
+	.intro-promo
+		img.img--bg(src="img/intro-promo.jpg" alt="promo")
+
+		.container
+			.row
+
+				.col-12
+					span.intro-promo__pre-title Helpo
+					h1.intro-promo__title Helpo #[span | Fundraising & Charity HTML Template]
+					.intro-promo__divider.text-center
+						.intro-promo__line
+						.intro-promo__line
+
+	// intro end
+
+	// section start
+
+	section.section.front-demos#front-pages
+		img.front-demos__bg(src="img/demos_img.png" alt="img")
+		.front-demos__container
+
+			.row.margin-bottom
+				.col-12
+
+					.heading.heading--primary.heading--center
+						h2.heading__title.no-margin-bottom #[span Awesome 6 home page] #[span demos with 2 colors]
+
+			.row.offset-70
+
+				.col-sm-6.col-md-4
+
+					.demo-item
+						.demo-item__img
+							img.img--contain(src="img/front_1.jpg" alt="front")
+							a.demo-item__link.button.button--primary(href="index.html" target="_blank") See Page
+						h6.demo-item__title 01. Homepage color
+
+				.col-sm-6.col-md-4
+
+					.demo-item
+						.demo-item__img
+							img.img--contain(src="img/front_2.jpg" alt="front")
+							a.demo-item__link.button.button--primary(href="front_2.html" target="_blank") See Page
+						h6.demo-item__title 02. Homepage color
+
+				.col-sm-6.col-md-4
+
+					.demo-item
+						.demo-item__img
+							img.img--contain(src="img/front_3.jpg" alt="front")
+							a.demo-item__link.button.button--primary(href="front_3.html" target="_blank") See Page
+						h6.demo-item__title 03. Homepage color
+
+				.col-sm-6.col-md-4
+
+					.demo-item
+						.demo-item__img
+							img.img--contain(src="img/front_4.jpg" alt="front")
+							a.demo-item__link.button.button--primary(href="mono/index.html" target="_blank") See Page
+						h6.demo-item__title 01. Homepage monochrome
+
+				.col-sm-6.col-md-4
+
+					.demo-item
+						.demo-item__img
+							img.img--contain(src="img/front_5.jpg" alt="front")
+							a.demo-item__link.button.button--primary(href="mono/front_2.html" target="_blank") See Page
+						h6.demo-item__title 02. Homepage monochrome
+
+				.col-sm-6.col-md-4
+
+					.demo-item
+						.demo-item__img
+							img.img--contain(src="img/front_6.jpg" alt="front")
+							a.demo-item__link.button.button--primary(href="mono/front_3.html" target="_blank") See Page
+						h6.demo-item__title 03. Homepage monochrome
+
+	// section end
+
+	// section start
+
+	section.intro-counters.section.no-padding-top
+		.intro-counters__bg Achivements
+		.container
+			.row.offset-margin
+
+				.col-sm-4
+
+					.counter-item.counter-item--intro.text-center.text-lg-left
+						img.counter__img(src="img/counter_1.png" alt="layout")
+						span.js-counter 6
+						span home pages
+
+				.col-sm-4
+
+					.counter-item.counter-item--intro.text-center.text-lg-left
+						img.counter__img(src="img/counter_2.png" alt="layout")
+						span.js-counter 50
+						span inner pages
+
+				.col-sm-4
+
+					.counter-item.counter-item--intro.text-center.text-lg-left
+						img.counter__img(src="img/counter_3.png" alt="layout")
+						span.js-counter 100
+						span + elements
+
+	// section end
+
+	// section start
+
+	section.section.inner-pages.no-padding-bottom#inner-pages
+		img.inner-pages__bg(src="img/inner-pages.png" alt="img")
+
+		.container
+			.row.margin-bottom
+
+				.col-12
+
+					.heading.heading--primary.heading--center
+						span.heading__pre-title Inner Pages
+						h2.heading__title #[span Great created] #[span Inner pages]
+						p.no-margin-bottom We created 16 pre build pages for use. E-commerce pages included to template.
+
+		.pages-slider
+
+			.pages-slider__item
+
+				.demo-item
+					.demo-item__img
+						img.img--contain(src="img/1c.jpg" alt="page")
+						a.demo-item__link.button.button--primary(href="about.html" target="_blank") See Page
+					h6.demo-item__title 01. About Organization color
+
+			.pages-slider__item
+
+				.demo-item
+					.demo-item__img
+						img.img--contain(src="img/1m.jpg" alt="page")
+						a.demo-item__link.button.button--primary(href="mono/about.html" target="_blank") See Page
+					h6.demo-item__title 01. About Organization monochrome
+
+			.pages-slider__item
+
+				.demo-item
+					.demo-item__img
+						img.img--contain(src="img/2c.jpg" alt="page")
+						a.demo-item__link.button.button--primary(href="causes.html" target="_blank") See Page
+					h6.demo-item__title 02. Our Causes color
+
+			.pages-slider__item
+
+				.demo-item
+					.demo-item__img
+						img.img--contain(src="img/2m.jpg" alt="page")
+						a.demo-item__link.button.button--primary(href="mono/causes.html" target="_blank") See Page
+					h6.demo-item__title 02. Our Causes monochrome
+
+			.pages-slider__item
+
+				.demo-item
+					.demo-item__img
+						img.img--contain(src="img/3c.jpg" alt="page")
+						a.demo-item__link.button.button--primary(href="cause-details.html" target="_blank") See Page
+					h6.demo-item__title 03. Cause Details color
+
+			.pages-slider__item
+
+				.demo-item
+					.demo-item__img
+						img.img--contain(src="img/3m.jpg" alt="page")
+						a.demo-item__link.button.button--primary(href="mono/cause-details.html" target="_blank") See Page
+					h6.demo-item__title 03. Cause Details monochrome
+
+			.pages-slider__item
+
+				.demo-item
+					.demo-item__img
+						img.img--contain(src="img/4c.jpg" alt="page")
+						a.demo-item__link.button.button--primary(href="stories.html" target="_blank") See Page
+					h6.demo-item__title 04. Our Stories color
+
+			.pages-slider__item
+
+				.demo-item
+					.demo-item__img
+						img.img--contain(src="img/4m.jpg" alt="page")
+						a.demo-item__link.button.button--primary(href="mono/stories.html" target="_blank") See Page
+					h6.demo-item__title 04. Our Stories monochrome
+
+			.pages-slider__item
+
+				.demo-item
+					.demo-item__img
+						img.img--contain(src="img/5c.jpg" alt="page")
+						a.demo-item__link.button.button--primary(href="blog.html" target="_blank") See Page
+					h6.demo-item__title 05. Blog color
+
+			.pages-slider__item
+
+				.demo-item
+					.demo-item__img
+						img.img--contain(src="img/5m.jpg" alt="page")
+						a.demo-item__link.button.button--primary(href="mono/blog.html" target="_blank") See Page
+					h6.demo-item__title 05. Blog monochrome
+
+			.pages-slider__item
+
+				.demo-item
+					.demo-item__img
+						img.img--contain(src="img/6c.jpg" alt="page")
+						a.demo-item__link.button.button--primary(href="shop.html" target="_blank") See Page
+					h6.demo-item__title 06. Shop color
+
+			.pages-slider__item
+
+				.demo-item
+					.demo-item__img
+						img.img--contain(src="img/6m.jpg" alt="page")
+						a.demo-item__link.button.button--primary(href="mono/shop.html" target="_blank") See Page
+					h6.demo-item__title 06. Shop monochrome
+
+		.container
+			.row
+
+				.col-12.text-center
+
+					// slider nav start
+
+					.slider__nav.pages-slider__nav
+						.slider__arrows
+							.slider__prev
+								+fa('chevron-left')
+							.slider__next
+								+fa('chevron-right')
+
+					// slider nav end
+
+	// section end
+
+	// section start
+
+	section.section.intro-features#features.no-padding-bottom
+		.container
+			.row.offset-70
+
+				.col-md-10.offset-md-1.col-lg-12.offset-lg-0
+
+					.stories-item
+
+						.row.align-items-center.margin-bottom
+
+							.col-lg-7
+
+								.heading.heading--primary
+									span.heading__pre-title 01
+									h2.heading__title.no-margin-bottom #[span Affordable choice between]#[br] #[span awesome 2 color themes]
+
+							.col-lg-5
+
+								p We have created pages that allow you to interpret your website in two different forms: Color and Monochrome
+
+						.row
+
+							.col-12
+
+								.img-box
+									img.img--layout(src="img/feat_1.png" alt="img")
+									.img-box__img.img-box__wide
+										img.img--contain(src="img/feat_1-1.jpg" alt="img")
+
+				.col-md-10.offset-md-1.col-lg-12.offset-lg-0
+
+					.stories-item
+
+						.row.align-items-center
+
+							.col-lg-6.col-xl-5
+
+								.img-box
+									img.img--layout(src="img/feat_2.png" alt="img")
+									.img-box__img
+										img(src="img/feat_2-2.png" alt="img")
+
+							.col-lg-6.col-xl-6.offset-xl-1
+
+								.heading.heading--primary
+									span.heading__pre-title 02
+									h2.heading__title #[span + 100 Awesome Isometric]#[br] #[span & Flat Icon Collections]
+
+								p We collected for you +100 different modern icons for your business. You can use it for your website and you don’t need icons on other websites.
+								a.button.stories-item__button.button--primary(href="icons.html" target="_blank") See All Icons
+
+				.col-md-10.offset-md-1.col-lg-12.offset-lg-0
+
+					.stories-item
+
+						.row.align-items-center.flex-column-reverse.flex-lg-row
+
+							.col-lg-6.col-xl-6
+
+								.heading.heading--primary
+									span.heading__pre-title 03
+									h2.heading__title #[span Pre-built shop pages for] #[span your E-commerce]
+
+								p We created and included inner pages for E-commerce. You can use it for sale and rent your products online.
+								a.button.stories-item__button.button--primary(href="shop.html" target="_blank") See Pages
+
+							.col-lg-6.col-xl-5.offset-xl-1
+
+								.img-box
+									img.img--layout(src="img/feat_3.png" alt="img")
+									.img-box__img
+										img(src="img/feat_3-3.png" alt="img")
+
+				.col-md-10.offset-md-1.col-lg-12.offset-lg-0
+
+					.stories-item
+
+						.row.align-items-center
+
+							.col-lg-6.col-xl-5
+
+								.img-box
+									img.img--layout(src="img/feat_4.png" alt="img")
+									.img-box__img
+										img(src="img/feat_4-4.png" alt="img")
+
+							.col-lg-6.col-xl-6.offset-xl-1
+
+								.heading.heading--primary
+									span.heading__pre-title 04
+									h2.heading__title #[span Powerful 100+ elements]
+
+								p Helpo includes 100+ Elements for building different creative pages and blocks
+								a.button.stories-item__button.button--primary(href="alerts.html" target="_blank") See Pages
+
+	// section end
+
+	// section start
+
+	section.section#technologies
+		.container
+			.row.margin-bottom
+				.col-12
+
+					.heading.heading--primary.heading--center
+						span.heading__pre-title Technology
+						h2.heading__title.no-margin-bottom #[span Used Technologies]
+
+			.row.offset-margin
+
+				.col-sm-6.col-lg-3
+
+					a.technologie-item(href="https://getbootstrap.com/" target="_blank")
+						.technologie-item__img
+							svg.icon.technologie-item__icon(style="font-size: 160px;")
+								use(xlink:href="#bootstrap")
+
+				.col-sm-6.col-lg-3
+
+					a.technologie-item(href="https://gulpjs.com/" target="_blank")
+						.technologie-item__img
+							svg.icon.technologie-item__icon(style="font-size: 90px;")
+								use(xlink:href="#gulp")
+
+				.col-sm-6.col-lg-3
+
+					a.technologie-item(href="https://jquery.com/" target="_blank")
+						.technologie-item__img
+							svg.icon.technologie-item__icon(style="font-size: 130px;")
+								use(xlink:href="#jquery")
+
+				.col-sm-6.col-lg-3
+
+					a.technologie-item(href="https://nodejs.org/" target="_blank")
+						.technologie-item__img
+							svg.icon.technologie-item__icon(style="font-size: 130px;")
+								use(xlink:href="#node")
+
+	// section end
+
+block footer
+
+	// footer start
+
+	section.section.intro-footer
+		img.img--bg(src="img/intro-footer.jpg" alt="img")
+
+		.container
+			.row
+
+				.col-12
+
+					.heading.heading--primary.text-center
+						span.heading__pre-title.color--golden Helpo
+						h2.heading__title.color--white.no-margin-bottom #[span Buy Helpo] #[br] #[span Fundraising & Charity HTML Template]
+						a.button.intro-footer__button.button--primary(href="https://themeforest.net/item/helpo-fundraising-charity-html-template/25352375" target="_blank") Purchase Helpo
+
+	// footer end

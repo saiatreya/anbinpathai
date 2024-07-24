@@ -1,0 +1,273 @@
+extends ../layouts/primary.pug
+
+block variables
+
+	-var page = 'causes_3'
+
+	-var type = 'inner'
+
+	-var dest = 'causes-pages'
+
+block header
+
+	include ../blocks/_aside-dropdown/_aside-dropdown
+
+	// header start
+	
+	header.header.header--inner
+		.container-fluid
+			.row.no-gutters.justify-content-between
+
+				.col-auto.d-flex.align-items-center
+					.dropdown-trigger.dropdown-trigger--inner.d-none.d-sm-block
+						.dropdown-trigger__item
+
+					.header-logo
+						a.header-logo__link(href="index.html")
+							img.header-logo__img(src="img/logo_dark.png", alt="logo")
+
+				.col-auto
+					include ../blocks/_main-menu/_main-menu
+
+				.col-auto.d-flex.align-items-center
+
+					// lang select start
+					ul.lang-select.lang-select--inner
+						li.lang-select__item.lang-select__item--active
+							span En
+							ul.lang-select__sub-list
+								li
+									a(href="#") French
+								li
+									a(href="#") Spanish
+								li
+									a(href="#") Deutsch
+								li
+									a(href="#") Russian
+					// lang select end				
+
+					a.button.button--squared(href="#") 
+						span Donate
+
+					.dropdown-trigger.dropdown-trigger--inner.d-block.d-sm-none
+						.dropdown-trigger__item
+
+	// header end
+
+block main
+
+	section.promo-primary(class=(dest === "elements" ? "promo-primary--elements" : undefined))
+
+		picture
+			source(srcset='img/causes.jpg', media='(min-width: 992px)')
+			img.img--bg(src='img/causes.jpg', alt='img')
+
+		.promo-primary__description 
+			span Charity
+
+		.container
+			.row
+				.col-auto
+					.align-container
+						.align-container__item
+							span.promo-primary__pre-title Helpo
+							h1.promo-primary__title #[span Our] #[span Causes]
+
+	// causes inner start
+
+	section.section.causes-inner
+
+		.container
+			.row.offset-margin
+
+				.col-md-8.offset-md-2.col-lg-12.offset-lg-0
+
+					.causes-item.causes-item--style-3
+						.causes-item__body
+							.row.align-items-center
+								.col-lg-5.col-xl-4
+									.causes-item__img
+										img.img--bg(src="img/causes_1.jpg", alt="img")
+								.col-lg-7.col-xl-8
+									.causes-item__action
+										.causes-item__badge(style="background-color: #49C2DF") Water Delivery
+										a(href="#").causes-item__link Donate
+									.causes-item__top
+										h6.causes-item__title 
+											a(href="cause-details.html") Clean Water in Africa
+										p Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail canthigaster rostrata. 
+									.causes-item__lower
+										.progress-bar
+											.progress-bar__inner(style="width: 78%;")
+												.progress-bar__value 78%
+										.causes-item__details-holder
+											.causes-item__details-item
+												span Goal: 
+												span 25 000$
+											.causes-item__details-item.text-right
+												span Pledged: 
+												span 20 350$
+
+				.col-md-8.offset-md-2.col-lg-12.offset-lg-0
+
+					.causes-item.causes-item--style-3
+						.causes-item__body
+							.row.align-items-center
+								.col-lg-5.col-xl-4
+									.causes-item__img
+										img.img--bg(src="img/causes_2.jpg", alt="img")
+								.col-lg-7.col-xl-8
+									.causes-item__action
+										.causes-item__badge(style="background-color: #F36F8F") Medicine
+										a(href="#").causes-item__link Donate
+									.causes-item__top
+										h6.causes-item__title 
+											a(href="cause-details.html") Health in other Countries
+										p Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail canthigaster rostrata. 
+									.causes-item__lower
+										.progress-bar
+											.progress-bar__inner(style="width: 23%;")
+												.progress-bar__value 23%
+										.causes-item__details-holder
+											.causes-item__details-item
+												span Goal: 
+												span 14 000$
+											.causes-item__details-item.text-right
+												span Pledged: 
+												span 6 098$
+
+				.col-md-8.offset-md-2.col-lg-12.offset-lg-0
+
+					.causes-item.causes-item--style-3
+						.causes-item__body
+							.row.align-items-center
+								.col-lg-5.col-xl-4
+									.causes-item__img
+										img.img--bg(src="img/causes_3.jpg", alt="img")
+								.col-lg-7.col-xl-8
+									.causes-item__action
+										.causes-item__badge(style="background-color: #2EC774") Education
+										a(href="#").causes-item__link Donate
+									.causes-item__top
+										h6.causes-item__title 
+											a(href="cause-details.html") We Build and Create
+										p Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail canthigaster rostrata. 
+									.causes-item__lower
+										.progress-bar
+											.progress-bar__inner(style="width: 51%;")
+												.progress-bar__value 51%
+										.causes-item__details-holder
+											.causes-item__details-item
+												span Goal: 
+												span 159 000$
+											.causes-item__details-item.text-right
+												span Pledged: 
+												span 76 500$
+
+				.col-md-8.offset-md-2.col-lg-12.offset-lg-0
+
+					.causes-item.causes-item--style-3
+						.causes-item__body
+							.row.align-items-center
+								.col-lg-5.col-xl-4
+									.causes-item__img
+										img.img--bg(src="img/causes_4.jpg", alt="img")
+								.col-lg-7.col-xl-8
+									.causes-item__action
+										.causes-item__badge(style="background-color: #F8AC3A") Food
+										a(href="#").causes-item__link Donate
+									.causes-item__top
+										h6.causes-item__title 
+											a(href="cause-details.html") Clean Water in India
+										p Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail canthigaster rostrata. 
+									.causes-item__lower
+										.progress-bar
+											.progress-bar__inner(style="width: 42%;")
+												.progress-bar__value 42%
+										.causes-item__details-holder
+											.causes-item__details-item
+												span Goal: 
+												span 220 000$
+											.causes-item__details-item.text-right
+												span Pledged: 
+												span 95 200$
+
+				.col-md-8.offset-md-2.col-lg-12.offset-lg-0
+
+					.causes-item.causes-item--style-3
+						.causes-item__body
+							.row.align-items-center
+								.col-lg-5.col-xl-4
+									.causes-item__img
+										img.img--bg(src="img/causes_5.jpg", alt="img")
+								.col-lg-7.col-xl-8
+									.causes-item__action
+										.causes-item__badge(style="background-color: #49C2DF") Water Delivery
+										a(href="#").causes-item__link Donate
+									.causes-item__top
+										h6.causes-item__title 
+											a(href="cause-details.html") Clean Water in India
+										p Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail canthigaster rostrata. 
+									.causes-item__lower
+										.progress-bar
+											.progress-bar__inner(style="width: 65%;")
+												.progress-bar__value 65%
+										.causes-item__details-holder
+											.causes-item__details-item
+												span Goal: 
+												span 80 000$
+											.causes-item__details-item.text-right
+												span Pledged: 
+												span 52 000$
+
+				.col-md-8.offset-md-2.col-lg-12.offset-lg-0
+
+					.causes-item.causes-item--style-3
+						.causes-item__body
+							.row.align-items-center
+								.col-lg-5.col-xl-4
+									.causes-item__img
+										img.img--bg(src="img/causes_6.jpg", alt="img")
+								.col-lg-7.col-xl-8
+									.causes-item__action
+										.causes-item__badge(style="background-color: #49C2DF") Education
+										a(href="#").causes-item__link Donate
+									.causes-item__top
+										h6.causes-item__title 
+											a(href="cause-details.html") New Books for Children
+										p Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail canthigaster rostrata. 
+									.causes-item__lower
+										.progress-bar
+											.progress-bar__inner(style="width: 65%;")
+												.progress-bar__value 65%
+										.causes-item__details-holder
+											.causes-item__details-item
+												span Goal: 
+												span 20 000$
+											.causes-item__details-item.text-right
+												span Pledged: 
+												span 18 000$
+
+		.container
+			.row
+
+				.col-12
+
+					include ../blocks/_pagination/_pagination
+
+	// causes inner end
+
+	// bottom bg start
+
+	section.bottom-background.background--brown
+		.container
+			.row
+				.col-12
+					.bottom-background__img
+						img(src="img/bottom-bg.png", alt="img")
+
+	// bottom bg end
+
+block footer
+
+	include ../blocks/_footer/_footer

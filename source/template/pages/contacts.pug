@@ -1,0 +1,152 @@
+extends ../layouts/primary.pug
+
+block variables
+
+	-var page = 'contacts'
+
+	-var type = 'inner'
+
+block header
+
+	include ../blocks/_aside-dropdown/_aside-dropdown
+
+	// header start
+	
+	header.header.header--inner
+		.container-fluid
+			.row.no-gutters.justify-content-between
+
+				.col-auto.d-flex.align-items-center
+					.dropdown-trigger.dropdown-trigger--inner.d-none.d-sm-block
+						.dropdown-trigger__item
+
+					.header-logo
+						a.header-logo__link(href="index.html")
+							img.header-logo__img(src="img/logo_dark.png", alt="logo")
+
+				.col-auto
+					include ../blocks/_main-menu/_main-menu
+
+				.col-auto.d-flex.align-items-center
+
+					// lang select start
+					ul.lang-select.lang-select--inner
+						li.lang-select__item.lang-select__item--active
+							span En
+							ul.lang-select__sub-list
+								li
+									a(href="#") French
+								li
+									a(href="#") Spanish
+								li
+									a(href="#") Deutsch
+								li
+									a(href="#") Russian
+					// lang select end
+
+					a.button.button--squared(href="#") 
+						span Donate
+
+					.dropdown-trigger.dropdown-trigger--inner.d-block.d-sm-none
+						.dropdown-trigger__item
+
+	// header end
+
+block main
+
+	section.promo-primary(class=(dest === "elements" ? "promo-primary--elements" : undefined))
+
+		picture
+			source(srcset='img/contacts.jpg' media='(min-width: 992px)')
+			img.img--bg(src='img/contacts.jpg' alt='img')
+
+		.promo-primary__description 
+			span Compassion
+
+		.container
+			.row
+				.col-auto
+					.align-container
+						.align-container__item
+							span.promo-primary__pre-title Helpo
+							h1.promo-primary__title #[span Contacts]
+
+	// section start
+
+	section.section.contacts
+		.container
+			.row.offset-margin
+
+				.col-sm-6.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img.img--layout(src="img/icon_1-1.png" alt="img")
+							svg.icon.icon-item__icon.icon--red
+								use(xlink:href="#location-pin")
+						.icon-item__text
+							p Adress: Elliott Ave, Parkville VIC 3052, Melbourne Canada
+
+				.col-sm-6.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img.img--layout(src="img/icon_2-2.png" alt="img")
+							svg.icon.icon-item__icon.icon--orange
+								use(xlink:href="#phone-call")
+						.icon-item__text
+							p Phone: #[a.icon-item__link(href="tel:+31859644725") + 31 85 964 47 25] #[a.icon-item__link(href="tel:+31859644725") + 31 85 964 47 25]
+
+				.col-sm-6.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img.img--layout(src="img/icon_3-3.png" alt="img")
+							svg.icon.icon-item__icon.icon--green
+								use(xlink:href="#envelope")
+						.icon-item__text
+							p Email: #[a.icon-item__link(href="mailto:support@helpo.org") support@helpo.org]
+
+				.col-sm-6.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img.img--layout(src="img/icon_4-4.png" alt="img")
+							svg.icon.icon-item__icon.icon--blue
+								use(xlink:href="#share")
+						.icon-item__text
+
+							// socials start
+							ul.socials
+								li.socials__item
+									a.socials__link(href="#")
+										+fa('instagram')
+								li.socials__item
+									a.socials__link(href="#")
+										+fa('google-plus')
+								li.socials__item
+									a.socials__link.socials__link--active(href="#")
+										+fa('twitter')
+								li.socials__item
+									a.socials__link(href="#")
+										+fa('facebook')
+							// socials end
+
+	// section end
+
+	include ../blocks/_contacts/_contacts
+
+	// bottom bg start
+	
+	section.bottom-background
+		.container
+			.row
+				.col-12
+					.bottom-background__img
+						img(src="img/bottom-bg.png", alt="img")
+	
+	// bottom bg end
+
+block footer
+
+	include ../blocks/_footer/_footer

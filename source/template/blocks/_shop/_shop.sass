@@ -1,0 +1,418 @@
+/* shop start */
+
+section.shop
+	background: #F9F7F6
+	position: static
+
+.shop
+	.pagination
+		margin-top: 70px
+	.shop-filter
+		margin-bottom: 10px
+	.range-slider
+		margin-top: -10px
+	.recent-posts
+		margin-top: 30px
+
+/* shop aside */
+
+.aside-holder
+	position: fixed
+	top: 0
+	left: 0
+	transform: translateX(-320px)
+	width: 100%
+	height: 100%
+	max-width: 320px
+	overflow-y: scroll
+	z-index: 10
+	transition: all .3s
+	opacity: 0
+	visibility: hidden
+
++r992
+
+	.aside-holder
+		position: static
+		max-width: none	
+		overflow: auto
+		z-index: 0
+		opacity: 1
+		visibility: visible
+		transform: translateX(0)
+
+.aside-holder--visible
+	opacity: 1
+	visibility: visible
+	transform: translateX(0)
+
+.aside-holder
+	.recent-posts
+		display: none
+
+	+r992
+
+		.recent-posts
+			display: block
+
+.shop-aside
+	padding: 52px 0
+	background: #FFF
+	box-shadow: 0px 3px 15px 2px rgba(0, 0, 0, 0.04)
+
+
++r992
+
+	.shop-aside
+		padding: 0
+		margin-bottom: 60px
+
+.shop-aside
+	&__filter-block
+		padding: 32px 30px 35px 30px
+		border-bottom: 1px solid #F5F1EF
+	&__price-block
+		padding: 35px 30px 40px 30px
+		border-bottom: 1px solid #F5F1EF
+	&__option-block
+		padding: 35px 30px 38px 30px
+		border-bottom: 1px solid #F5F1EF
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+	&__option-block label:not(:last-of-type)
+		margin-bottom: 8px
+	&__option-block &__title
+		margin-bottom: 23px
+	&__tags-block
+		padding: 35px 30px 40px 30px
+	&__tags-block &__title
+		margin-bottom: 25px
+	&__buttons-block
+		padding: 0 30px 40px 30px
+	&__checkbox-block
+		padding: 35px 30px 38px 30px
+		border-bottom: 1px solid #F5F1EF
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+	&__checkbox-block &__title
+		margin-bottom: 23px
+	&__checkbox-block label:not(:last-of-type)
+		margin-bottom: 8px
+
+/* brand filter */
+
+.brand-filter
+	padding: 0
+	margin: 0
+	list-style: none
+
+.brand-filter
+	&__item
+		cursor: pointer	
+		display: flex
+		align-items: center
+		color: $blue
+		font-weight: 700
+		transition: opacity .3s
+	&__item:not(:last-of-type)
+		margin-bottom: 14px	
+	&__item:hover
+		color: $blue
+		opacity: 0.75
+	&__item span:first-of-type
+		width: 85%
+
+/* range slider */
+
+.range-slider
+	.irs-from,
+	.irs-to,
+	.irs-min,
+	.irs-max,
+	.irs-single
+		display: none
+	.irs-handle
+		height: 18px
+		width: 18px
+		top: 29px
+		border: 2px solid #ECE9E7
+		box-shadow: none
+		background: #FFF
+		cursor: pointer
+	.irs-handle:hover
+		background: #FFF	
+	.irs-handle::after
+		content: ""
+		display: block
+		height: 8px
+		width: 8px
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		background: $orange
+		border-radius: 50%
+	.irs-bar,
+	.irs-line
+		background: #ECE9E7
+	&__values
+		display: flex
+		justify-content: space-between
+		margin-top: 10px
+	&__input
+		height: 50px
+		width: 90px
+		background-color: #F0EDEB
+		border: none
+		text-align: center
+		border-radius: 25px
+		color: #87817D
+		font-size: 14px
+		font-weight: 700
+
+	+r992
+
+		&__input
+			width: 70px
+
+	+r1200
+
+		&__input
+			width: 90px
+
+/* filter form */
+
+.filter-form
+	font-size: 14px
+
+.filter-form
+	.form__clear
+		display: inline-block
+		cursor: pointer
+		color: #333
+		font-size: 12px
+		font-weight: 700
+		text-transform: uppercase
+		margin-left: 30px
+		margin-top: 20px
+		transition: opacity .3s
+
+	+r1200
+		
+		.form__clear
+			margin-top: 0
+
+	.form__clear:hover
+		color: #333
+		opacity: 0.75
+	.form__submit
+		min-width: auto
+
+/* shop item */
+
+.shop-item
+	background: #FFF
+	box-shadow: 0px 3px 15px 2px rgba(0, 0, 0, 0.04)
+	margin-bottom: 30px
+	transition: box-shadow .3s
+
+.shop-item:hover
+	box-shadow: 0px 3px 15px 2px rgba(0, 0, 0, 0.2)
+
+.shop-item
+	&__img
+		display: flex
+		justify-content: center
+		align-items: center
+		position: relative
+		overflow: hidden
+	.img--contain
+		max-height: 90%
+		max-width: 90%
+		z-index: 0
+	&__img::before
+		content: ""
+		display: block
+		padding-top: percentage(270/260)
+	&__badge
+		display: inline-block
+		color: #FFF
+		font-size: 14px
+		font-weight: 700
+		padding: 3px 14px 5px 14px
+		border-radius: 3px
+		position: absolute
+		top: 8px
+		left: 8px
+		z-index: 1
+	.shop-item__badge--sale
+		background: #F58CA6
+	.shop-item__badge--new
+		background: #2EC774
+	.shop-item__badge--hot
+		background: #F8AC3A
+	&__add
+		display: inline-flex
+		align-items: center
+		color: #333
+		font-size: 14px
+		font-weight: 700
+		padding: 10px 17px
+		text-decoration: none
+		text-transform: uppercase
+		background: $orange
+		border-radius: 20px
+		z-index: 1
+		transform: translateY(30px)
+		opacity: 0
+		transition: all .3s
+	&__add:hover
+		color: #ffffff
+		background: #5C5E8B
+	&__add .icon
+		font-size: 20px
+		margin-right: 10px
+	&__details
+		padding: 0 20px 20px 20px
+	&__name
+		font-size: 16px
+		margin-bottom: 10px
+	&__name a
+		color: $blue
+		text-decoration: none
+		transition: opacity .3s
+	&__name a:hover
+		color: $blue
+		opacity: 0.75
+	&__price
+		color: #8e8e93
+		font-weight: 700
+
+.shop-item:hover
+	.shop-item__add
+		opacity: 1
+		transform: translate(0)
+
+/* shop filter */
+
+.shop-filter
+	display: inline-block
+	padding: 0
+	margin: 0
+	list-style: none
+
+.shop-filter
+	&__item--active
+		cursor: pointer
+		position: relative
+		padding: 14px 20px
+	&__item--active span
+		position: relative
+		color: $blue
+		font-size: 14px
+		font-weight: 700
+	&__item--active span::before,
+	&__item--active span::after
+		content: ""
+		display: block
+		width: 6px
+		height: 2px
+		background: $blue
+		position: absolute
+		top: 8px
+		transition: all .3s
+		pointer-events: none
+	&__item--active span::before
+		right: -17px
+		transform: rotate(45deg)
+	&__item--active span::after
+		right: -20px
+		transform: rotate(-45deg)
+	&__item--active:hover span::after
+		transform: rotate(45deg)
+	&__item--active:hover span::before
+		transform: rotate(-45deg)
+	&__sub-list
+		margin: 0
+		padding: 12px 30px 18px 30px
+		list-style: none
+		background: #FFF
+		position: absolute
+		top: 100%
+		right: -10px
+		transform: translateY(15px)
+		width: 250px
+		opacity: 0
+		visibility: hidden
+		text-align: left
+		z-index: 2
+		box-shadow: 0px 3px 15px 2px rgba(0, 0, 0, 0.05)
+		transition: all .3s
+	&__sub-list li a
+		position: relative
+		display: inline-block
+		color: $blue
+		font-size: 14px
+		line-height: 36px
+		font-weight: 700
+		text-decoration: none
+		transition: opacity .3s
+	&__sub-list li a:hover
+		color: $blue
+		opacity: 0.75
+	&__item--active:hover &__sub-list
+		transform: translate(0)
+		opacity: 1
+		visibility: visible
+
+/* aside trigger */
+
+.shop__aside-trigger
+	cursor: pointer
+	display: inline-block
+	color: $blue
+	font-size: 14px
+	font-weight: 700
+
++r992
+
+	.shop__aside-trigger
+		display: none
+
+/* aside close */
+
+.shop__aside-close
+	display: inline-block
+	position: absolute
+	top: 15px
+	right: 15px
+	cursor: pointer
+	color: $blue
+	padding: 10px
+
++r992
+
+	.shop__aside-close
+		display: none
+
+/* shop backdrop */	
+
+.shop__backdrop
+	display: block
+	transition: all .3s
+
++r992
+
+	.shop__backdrop
+		display: none
+
+.shop__backdrop--visible
+	position: fixed
+	height: 100%
+	width: 100%
+	background-color: rgba(0,0,0, 0.4)
+	z-index: 4
+
+/* shop end */

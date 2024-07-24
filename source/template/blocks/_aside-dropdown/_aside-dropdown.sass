@@ -1,0 +1,185 @@
+/* aside dropdown start*/
+
+.aside-dropdown
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	overflow-y: auto
+	opacity: 0
+	visibility: hidden
+	z-index: 4
+	background-color: rgba(0, 0, 0, 0.4)
+	transition: opacity .3s
+
+.aside-dropdown
+	&__close
+		cursor: pointer
+		color: $dblue
+		position: absolute
+		left: 25px
+		top: 12px
+		padding: 10px
+		transition: opacity .3s
+
+	+r1200
+		&__close
+			left: 35px
+
+	+r1366
+		&__close
+			top: 19px
+
+	&__close:hover
+		opacity: 0.75
+	&__inner
+		position: relative
+		width: 320px
+		min-height: 100%
+		transform: translateX(-320px)
+		padding: 110px 0 50px 0
+		background-color: #F9F7F6
+		box-shadow: 0px 1px 10px rgba(0,0,0, 0.3)
+		transition: all .3s
+	&__item:first-of-type,	
+	&__item:nth-of-type(2)
+		padding: 0 65px
+	&__item:nth-of-type(2)
+		margin-top: 50px
+	&__item:nth-of-type(3)
+		padding: 0 30px
+		margin-top: 50px
+	.button
+		font-size: 14px
+		padding: 31px 30px 32px 30px
+
+.aside-dropdown--active
+	opacity: 1
+	visibility: visible
+
+.aside-dropdown--active
+	.aside-dropdown__inner
+		transform: translateX(0)
+
+/* aside menu */
+
+.aside-menu
+	color: $blue
+	padding: 0
+	margin: 0
+
+.aside-menu
+	&__item
+		list-style: none
+	&__item:not(:last-of-type)
+		margin-bottom: 16px
+	&__link
+		color: $dblue
+		font-size: 14px
+		font-weight: 500
+		text-transform: uppercase
+		text-decoration: none
+		transition: opacity .3s
+	&__link:hover
+		color: $dblue
+		opacity: 0.75
+	&__sub-list
+		padding: 0 0 0 15px
+		margin: 10px 0 0 0
+		list-style: none
+		display: none
+	&__sub-list a
+		color: #777
+		font-size: 14px
+		font-weight: 500
+		text-decoration: none
+		transition: color .3s
+	&__sub-list a:hover
+		color: $orange
+	&__sub-list li:not(:last-of-type)
+		margin-bottom: 6px
+	&__item--has-child &__link span
+		position: relative
+	&__item--has-child &__link span::after
+		content: ""
+		pointer-events: none
+		display: inline-block
+		height: 3px
+		width: 3px
+		border-radius: 50%
+		background: $dblue
+		position: absolute
+		right: -15px
+		top: 7px
+		transition: background .3s
+	&__item--has-child &__link:hover span::after
+		opacity: 0.75
+		background: $dblue
+	&__item--active &__link
+		color: $dblue
+		opacity: 0.75
+	&__item--active &__link span::after
+		background: $dblue
+	&__sub-list li.item--active a,
+	&__sub-list li a:hover
+		color: #C4C4C4
+	.main-menu__item .main-menu__link
+		color: $dblue
+		padding: 15px 0 20px 0
+	.main-menu__item .main-menu__link--highlighted
+		color: $orange
+
+/* aside inner */
+
+.aside-inner
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+
+.aside-inner
+	&__title
+		color: #9e9e9e
+		font-size: 11px
+		line-height: 25px
+		font-weight: 700
+		text-transform: uppercase
+	&__link
+		color: $blue
+		font-size: 14px
+		line-height: 25px
+		font-weight: 700
+		text-decoration: none
+		transition: opacity .3s
+	&__link:hover
+		color: $blue
+		opacity: 0.75
+
+.aside-inner:first-of-type
+	margin-top: 51px
+
+.aside-inner:not(:last-of-type)
+	margin-bottom: 15px
+
+/* aside socials */
+
+.aside-socials
+	display: inline-flex
+	padding: 0
+	margin: 0
+	margin-top: 68px
+
+.aside-socials
+	&__item
+		list-style: none
+	&__item:not(:last-of-type)
+		margin-right: 20px
+	&__link
+		color: $blue
+		transition: opacity .3s
+	&__link:hover
+		color: $blue
+		text-decoration: none
+		opacity: 0.75
+
+/* aside dropdown end*/

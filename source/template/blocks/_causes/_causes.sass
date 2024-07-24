@@ -1,0 +1,339 @@
+/* causes start */
+
+.causes
+	overflow: hidden
+
+.causes::before
+	content: ""
+	display: block
+	width: 100%
+	height: 65%
+	background: #F9F7F6
+	position: absolute
+	top: 0
+	left: 0
+	z-index: -1
+
+.causes
+	&__heading-text
+		margin-bottom: 0
+		margin-top: 0px
+
+	+r576
+
+		&__heading-text
+			margin-top: 30px
+
+	+r992
+
+		&__heading-text
+			margin-top: 0px
+
+	+r1200
+
+		&__heading-text
+			margin-bottom: 30px
+
+	&__bg
+		position: absolute
+		bottom: 0
+		right: 0
+		pointer-events: none
+	// .heading .button
+	// 	margin-top: 20px
+	.heading
+		margin-bottom: 30px
+
+	+r576
+
+		.heading
+			margin-bottom: 0
+
+/* causes style-2 */
+
+.causes--style-2
+	background-color: #F9F7F6
+
+.causes--style-2::before
+	display: none
+
+.causes--style-2
+	.causes__bg
+		position: absolute
+		top: 0
+		left: 0
+		bottom: auto
+		right: auto
+		pointer-events: none
+
+/* causes slider */
+
++r1366
+
+	.causes-holder
+		margin-left: calc((100% - 1200px) / 2)
+		overflow: hidden
+
+	.causes-holder
+		&__wrapper
+			width: 100%
+			max-width: 1200px
+
+.causes-slider
+	.slick-list
+		padding: 0 0 50px 0px
+		overflow: hidden
+
+	+r1366
+
+		.slick-list
+			overflow: visible
+			margin: 0 -15px
+
+	.slick-slide
+		margin: 0 15px
+	&__nav
+		margin-top: 30px
+
+.causes-slider__nav
+	.slider__prev,
+	.slider__next
+		color: $blue
+
+/* causes item */
+
+.causes-item
+	margin-bottom: 50px
+
+.causes-item
+	&__title
+		margin-bottom: 20px
+	&__title a
+		color: inherit
+		text-decoration: none
+		transition: opacity .3s
+	&__title a:hover
+		color: inherit
+		opacity: 0.75
+	&__img
+		position: relative
+		margin-top: 45px
+	.img--bg
+		object-position: center center
+		font-family: "object-fit: cover; object-position: center center"
+		z-index: 1
+	&__badge
+		display: inline-block
+		color: #FFF
+		font-size: 14px
+		font-weight: 700
+		line-height: 27px
+		padding: 1px 15px 3px 15px
+		border-radius: 3px
+	&__lower
+		margin-top: 45px
+	&__details-holder
+		display: flex
+		font-size: 14px
+		margin-top: 25px
+	&__details-item span:nth-of-type(2)
+		color: #333
+		font-weight: 700
+
+.progress-bar
+	position: relative
+	width: 100%
+	height: 13px
+	background-color: #F9F7F6
+	border-radius: 50px
+
+.progress-bar
+	&__inner
+		position: absolute
+		top: 0
+		left: 0
+		background-color: #37E18C
+		height: 100%
+		border-radius: 50px
+	&__value
+		position: absolute
+		top: -27px
+		right: 0
+		color: #333
+		font-weight: 700
+
+/* causes item primary */
+
+.causes-item--primary
+	.causes-item__img::before
+		content: ""
+		display: block
+		padding-top: percentage(260/340)
+	.causes-item__body
+		padding: 45px 15px 46px 15px
+		background: #FFF
+		box-shadow: 0px 0px 15px 0px rgba(15, 13, 13, 0.06)
+	.causes-item__badge
+		position: absolute
+		left: 15px
+		top: -15px
+		z-index: 2
+	.causes-item__top,
+	.causes-item__lower
+		padding: 0 15px
+	.causes-item__button
+		margin: 32px 0 0 30px
+	.causes-item__details-item
+		width: 50%
+	.causes-item__details-holder
+		justify-content: space-between
+
+/* causes-item style-2 */
+
+.causes-item--style-2
+	.causes-item__body
+		padding: 45px 30px 40px 30px
+		background: #FFF
+		box-shadow: 0px 3px 15px 2px rgba(15, 13, 13, 0.06)
+	.causes-item__action
+		margin-bottom: 25px
+		display: flex
+		justify-content: space-between
+		align-items: center
+	.causes-item__link
+		display: inline-block
+		position: relative
+		color: #333
+		font-size: 14px
+		font-weight: 700
+		text-transform: uppercase
+		text-decoration: none
+		transition: color .3s
+	.causes-item__link::before
+		content: "+"
+		display: inline-block
+		vertical-align: top
+		position: absolute
+		left: -10px
+	.causes-item__link::after
+		content: ""
+		display: block
+		width: 100%
+		height: 1px
+		background: #333
+		transition: all .3s
+		position: absolute
+		bottom: 0
+		left: 0
+	.causes-item__link:hover::after
+		opacity: 0
+		transform: translateY(10px)
+		background: $orange
+	.causes-item__details-holder
+		justify-content: space-between
+
+	+r576	
+		.causes-item__details-holder
+			justify-content: flex-start
+
+	+r576
+		.causes-item__details-item:first-of-type
+			margin-right: 50px
+	
+
+/* causes-item style-3 */
+
+.causes-item--style-3
+	padding: 15px 15px 35px 15px
+	background: #FFF
+	box-shadow: 0px 3px 15px 2px rgba(15, 13, 13, 0.06)
+
++r992
+	.causes-item--style-3
+		padding: 30px 30px 25px 30px
+
+.causes-item--style-3
+	.causes-item__img
+		position: relative
+		top: -3px
+	.causes-item__img::before
+		content: ""
+		display: block
+		padding-top: percentage(260/350)
+	.causes-item__action
+		margin: 25px 0
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	+r992
+		.causes-item__action
+			margin: 0 0 25px 0
+
+	.causes-item__link
+		display: inline-block
+		position: relative
+		color: #333
+		font-size: 14px
+		font-weight: 700
+		text-transform: uppercase
+		text-decoration: none
+		transition: color .3s
+	.causes-item__link::before
+		content: "+"
+		display: inline-block
+		vertical-align: top
+		position: absolute
+		left: -10px
+	.causes-item__link::after
+		content: ""
+		display: block
+		width: 100%
+		height: 1px
+		background: #333
+		transition: all .3s
+		position: absolute
+		bottom: 0
+		left: 0
+	.causes-item__link:hover::after
+		opacity: 0
+		transform: translateY(10px)
+		background: $orange
+	.causes-item__details-item:first-of-type
+		margin-right: 50px
+	.causes-item__img
+		margin: 0
+	.causes-item__button
+		margin-top: 35px
+	.causes-item__wrapper
+		padding: 0px 15px 40px 15px
+
+
+	+r576
+
+		.causes-item__wrapper
+			padding: 0px 30px 50px 30px
+
+	+r1200
+
+		.causes-item__wrapper
+			padding-right: 30px
+			padding-bottom: 0
+
+/* causes-item slider */
+
+.causes-item--slider
+	.causes-item__action
+		margin: 38px 0 25px 0
+
+	+r576
+
+		.causes-item__action
+			margin: 48px 0 25px 0
+
+	+r1200
+
+		.causes-item__action
+			margin: 25px 0
+
+/* causes end */

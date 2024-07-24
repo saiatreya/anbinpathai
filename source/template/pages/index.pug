@@ -1,0 +1,43 @@
+extends ../layouts/primary.pug
+
+block variables
+
+	-var page = 'index'
+
+	-var type = 'front'
+
+block header
+
+	include ../blocks/_aside-dropdown/_aside-dropdown
+
+	include ../blocks/_header/_header
+
+block main
+
+	include ../blocks/_promo/_promo
+
+	include ../blocks/_about-us/_about-us
+
+	include ../blocks/_icons-section/_icons-section
+
+	include ../blocks/_causes/_causes
+
+	include ../blocks/_projects/_projects
+
+	include ../blocks/_events/_events
+
+	include ../blocks/_text-section/_text-section
+
+	include ../blocks/_testimonials--style-2/_testimonials--style-2
+
+	include ../blocks/_blog/_blog
+
+	include ../blocks/_donors/_donors
+
+	include ../blocks/_instagram/_instagram
+
+	include ../blocks/_subscribe/_subscribe
+
+block footer
+
+	include ../blocks/_footer/_footer

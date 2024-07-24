@@ -1,0 +1,105 @@
+extends ../layouts/primary.pug
+
+block variables
+
+	-var page = 'cart'
+
+	-var type = 'inner'
+
+	-var dest = 'shop-inner'
+
+block header
+
+	include ../blocks/_aside-dropdown/_aside-dropdown
+
+	// header start
+
+	header.header.header--inner.header--shop
+		.container-fluid
+			.row.no-gutters.justify-content-between
+
+				.col-auto.d-flex.align-items-center
+					.dropdown-trigger.dropdown-trigger--inner.d-none.d-sm-block
+						.dropdown-trigger__item
+
+					.header-logo
+						a.header-logo__link(href="index.html")
+							img.header-logo__img(src="img/logo_dark.png", alt="logo")
+
+				.col-auto
+					include ../blocks/_main-menu/_main-menu
+
+				.col-auto.d-flex.align-items-center
+
+					// lang select start
+					ul.lang-select.lang-select--inner
+						li.lang-select__item.lang-select__item--active
+							span En
+							ul.lang-select__sub-list
+								li
+									a(href="#") French
+								li
+									a(href="#") Spanish
+								li
+									a(href="#") Deutsch
+								li
+									a(href="#") Russian
+					// lang select end
+
+					a.cart-trigger(href="shop-cart.html")
+						+svg('bag')
+						span.cart-trigger__count 3
+
+					a.button.button--squared(href="#") 
+						span Donate
+
+					.dropdown-trigger.dropdown-trigger--inner.d-block.d-sm-none
+						.dropdown-trigger__item
+						
+	// header end
+
+block main
+
+	section.promo-primary(class=(dest === "shop-inner" ? "promo-primary--shop" : undefined))
+
+		picture
+			source(srcset='img/shop.jpg', media='(min-width: 992px)')
+			img.img--bg(src='img/shop.jpg', alt='img')
+
+		.promo-primary__description 
+			span Freedom
+
+		.container
+			.row
+				.col-auto
+					.align-container
+						.align-container__item
+							span.promo-primary__pre-title Helpo
+							h1.promo-primary__title #[span Shop] #[span Cart]
+
+	// section start
+
+	section.section.background--brown
+		.container
+			.row
+
+				.col-12
+
+					include ../blocks/_cart/_cart
+
+	// section end
+
+	// bottom bg start
+
+	section.bottom-background.background--brown
+		.container
+			.row
+				.col-12
+					.bottom-background__img
+						img(src="img/bottom-bg.png", alt="img")
+
+	// bottom bg end
+
+block footer
+
+	include ../blocks/_footer/_footer

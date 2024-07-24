@@ -1,0 +1,483 @@
+/* header start */
+
+header.header
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 3
+	display: flex
+	align-items: center
+	background-color: #FFF
+	transition: background .3s
+
++r992
+	header.header
+		background: transparent
+
+header.header
+	.container-fluid
+		padding-left: 0
+		padding-right: 0
+	.row
+		flex-wrap: nowrap
+	.button
+		font-size: 14px
+		width: 180px
+		display: none
+
+	+r576
+
+		.button
+			display: flex
+
+	+r1200
+		.button
+			width: 260px
+
+/* header front */
+
+.header--front
+	.logo--dark
+		display: inline-block
+	.logo--light
+		display: none
+
++r992
+
+	.header--front
+		.logo--light
+			display: inline-block
+		.logo--dark
+			display: none
+
+	.header--front.header--fixed
+		.logo--light
+			display: none
+		.logo--dark
+			display: inline-block
+
+/* header inner */
+
+header.header--inner
+	background: #FFF
+	width: 100%
+	max-width: 1440px
+	left: 50%
+	transform: translateX(-50%)
+	padding: 0
+	box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.04)
+
++r1366
+	header.header--inner
+		padding: 8px 8px 8px 0
+
+/* dropdonw trigger */
+
+.dropdown-trigger
+	position: relative
+	cursor: pointer
+	height: 16px
+	width: 27px
+	margin: 0 15px 0 0
+	transition: opacity .3s
+
++r576
+
+	.dropdown-trigger
+		margin: 0 30px 0 15px
+
++r1200
+	.dropdown-trigger
+		margin: 0 60px 0 40px
+
+.dropdown-trigger:hover
+	opacity: 0.75
+
+.dropdown-trigger
+	&__item
+		position: relative
+	&__item::before,
+	&__item::after
+		content: ""
+		display: block
+		position: absolute
+		right: 0
+	&__item,
+	&__item::before,
+	&__item::after
+		background: $dblue
+		height: 2px
+		transition: opacity .3s
+
+	+r992
+		&__item,
+		&__item::before,
+		&__item::after
+			background: #FFF
+	&__item,
+	&__item::before
+		width: 27px
+	&__item::before
+		top: 7px
+	&__item::after
+		width: 21px
+		top: 14px
+
+/* dropdown trigger inner */
+
+.dropdown-trigger--inner
+	.dropdown-trigger__item,
+	.dropdown-trigger__item::before,
+	.dropdown-trigger__item::after
+		background: $dblue
+
+/* header logo */
+
+.header-logo
+	margin-left: 15px
+
++r576
+
+	.header-logo
+		margin-left: 0
+
+.header-logo
+	&__link
+		text-decoration: none
+	&__img
+		display: inline-block
+		max-height: 35px
+		max-width: auto
+
+	+r992
+
+		&__img
+			max-height: 40px
+
+	+r1366
+
+		&__img
+			max-height: 45px
+
+/* lang select */
+
+.lang-select
+	padding: 0
+	margin: 0
+	list-style: none
+	color: $blue
+	font-size: 14px
+	font-weight: 500
+	margin-right: 15px
+
++r576
+
+	.lang-select
+		margin-right: 30px
+
++r992
+	.lang-select
+		color: #FFF
+
++r1200
+	.lang-select
+		margin-right: 60px
+
++r1600
+	.lang-select
+		margin-right: 130px
+
+.lang-select
+	&__item--active
+		cursor: pointer
+		position: relative
+		padding: 25px 20px 24px 20px
+		transition: all .3s
+
+	+r992
+		&__item--active
+			padding: 31px 20px 30px 20px
+
+	+r1366
+		&__item--active
+			padding: 39px 20px 24px 20px
+
+	&__item--active::before
+		content: ""
+		display: none
+		height: 1px
+		width: 22px
+		background-color: #CFC4CC
+		position: absolute
+		bottom: 33px
+		left: -35px
+		pointer-events: none
+		transition: all .3s
+
+	+r1366
+		&__item--active::before
+			display: block
+
+	&__item--active span
+		position: relative
+		text-transform: uppercase
+	&__item--active span::before,
+	&__item--active span::after
+		content: ""
+		display: block
+		width: 6px
+		height: 2px
+		position: absolute
+		background: $blue
+		top: 8px
+		transition: all .3s
+		pointer-events: none
+	
+	+r992
+
+		&__item--active span::before,
+		&__item--active span::after
+			background: #CFC4CC
+
+	&__item--active span::before
+		right: -17px
+		transform: rotate(45deg)
+	&__item--active span::after
+		right: -20px
+		transform: rotate(-45deg)
+	&__item--active:hover span::after
+		transform: rotate(45deg)
+	&__item--active:hover span::before
+		transform: rotate(-45deg)
+	&__sub-list
+		margin: 0
+		padding: 12px 30px 18px 30px
+		list-style: none
+		background: $blue
+		position: absolute
+		top: 100%
+		right: -10px
+		transform: translateY(15px)
+		width: 125px
+		opacity: 0
+		visibility: hidden
+		transition: all .3s
+
+	+r576
+
+		&__sub-list
+			left: -10px
+
+	&__sub-list::before
+		content: ""
+		display: inline-block
+		border: 15px solid transparent
+		border-top: 20px solid $blue
+		position: absolute
+		top: -15px
+		right: 33px
+		transform: rotate(90deg)
+
+	+r576
+
+		&__sub-list::before
+			left: 33px
+			right: auto
+			transform: rotate(-90deg)
+
+	&__sub-list li a
+		position: relative
+		display: inline-block
+		color: #FFF
+		font-size: 14px
+		line-height: 36px
+		font-weight: 400
+		text-decoration: none
+		transition: color .3s
+	&__sub-list li a:hover
+		color: #C4C4C4
+	&__item--active:hover &__sub-list
+		transform: translate(0)
+		opacity: 1
+		visibility: visible 
+	&__sub-list li a::after
+		content: ""
+		display: block
+		width: 0%
+		height: 2px
+		background: $orange
+		position: absolute
+		bottom: 0px
+		left: 0
+		transition: width .3s
+	&__sub-list li a:hover::after
+		width: 100%
+
+/* lang select inner */
+
+.lang-select--inner
+	color: $dblue
+	margin-right: 15px
+
++r576
+
+	.lang-select--inner
+		margin-right: 30px	
+
++r1366
+	.lang-select--inner	
+		margin-right: 40px
+
++r1600
+	.lang-select--inner	
+		margin-right: 60px
+
+.lang-select--inner
+	.lang-select__item--active span::before,
+	.lang-select__item--active span::after
+		background: $dblue
+
+/* cart trigger */
+
+.cart-trigger
+	position: relative
+	color: #333
+	text-decoration: none
+	margin-right: 20px
+	transition: color .3s
+
++r576
+
+	.cart-trigger
+		margin-right: 40px
+
++r992
+
+	.cart-trigger
+		margin-top: 10px
+
++r1366
+
+	.cart-trigger
+		margin-right: 80px
+
+.cart-trigger
+	.icon
+		font-size: 24px
+	&__count
+		color: $blue
+		display: inline-block
+		position: absolute
+		top: 0
+		right: -8px
+		font-size: 12px
+		line-height: 14px
+		font-weight: 500
+		height: 19px
+		min-width: 19px
+		background: $orange
+		border: 2px solid #FFF
+		border-radius: 50%
+		text-align: center
+		transition: color .3s
+
+.cart-trigger:hover
+	.cart-trigger__count
+		color: $blue
+
+/* header fixed */
+
+.header--front.header--fixed
+	background: #FFF
+	box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.04)
+
+.header--front.header--fixed,
+.header--front_2,
+.header--front_3
+	.dropdown-trigger__item, 
+	.dropdown-trigger__item::before, 
+	.dropdown-trigger__item::after
+		background: $dblue
+	.dropdown-trigger:hover
+		.dropdown-trigger__item,
+		.dropdown-trigger__item::before,
+		.dropdown-trigger__item::after
+			background: $dblue
+			opacity: 0.75
+	.main-menu__item .main-menu__link
+		color: $dblue
+		padding: 31px 0 30px 0
+	.main-menu__item--active .main-menu__link,
+	.main-menu__item:hover .main-menu__link,
+	.main-menu__item .main-menu__link--highlighted
+		color: $dblue
+		opacity: 0.75
+	.main-menu__item--has-child .main-menu__link span::after
+		background: $dblue
+	.main-menu__item--active .main-menu__link span::after,
+	.main-menu__item--has-child:hover span::after
+		background: $dblue
+		opacity: 0.75
+
+	+r992
+
+		.lang-select__item--active
+			color: $dblue
+			padding: 31px 20px 30px 20px
+
+	.lang-select__item--active span::before, 
+	.lang-select__item--active span::after
+		background: $dblue
+
+	.lang-select__item--active::before
+		bottom: 40px
+
+/* header front_2 */
+
+header.header--front_2
+	background: #FFF
+	width: 100%
+	max-width: 1536px
+	left: auto
+	right: 0
+	box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.04)
+
+/* header front_3 */
+
++r992
+
+	header.header--front_3
+		position: static
+		background: #FFF
+		box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.04)
+		padding: 9px 9px 9px 0
+		margin-top: -102px
+		transition: padding .3s
+
+header.header--front_3.header--sticky
+	position: fixed
+	margin: 0
+	padding: 0
+
+/* header intro */
+
+.header--intro
+	min-height: 60px
+
++r992
+
+	.header--intro
+		padding-left: 35px
+
+header.header--intro
+	.button
+		width: 200px
+		min-height: 70px
+
+	+r1200
+
+		.button
+			width: 260px
+
+/* header end */

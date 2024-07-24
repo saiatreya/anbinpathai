@@ -1,0 +1,211 @@
+// aside dropdown start
+
+.aside-dropdown
+	.aside-dropdown__inner
+		span.aside-dropdown__close
+			+svg('close')
+
+		.aside-dropdown__item.d-lg-none.d-block
+
+			ul.aside-menu
+
+				li.aside-menu__item.aside-menu__item--has-child(class=(type === "front" ? "aside-menu__item--active" : undefined))
+					a.aside-menu__link(href="javascript:void(0);")
+						span Home
+
+					// sub menu start
+					ul.aside-menu__sub-list
+						li(class=(page === "index" ? "item--active" : undefined))
+							a(href="index.html")
+								span 01 Home Color Style
+						li(class=(page === "front_2" ? "item--active" : undefined))
+							a(href="front_2.html") 
+								span 02 Home Color Style
+						li(class=(page === "front_3" ? "item--active" : undefined))
+							a(href="front_3.html")
+								span 03 Home Color Style
+						li
+							a(href="mono/index.html")
+								span 04 Home Monochrome
+						li
+							a(href="mono/front_2.html")
+								span 05 Home Monochrome
+						li
+							a(href="mono/front_3.html")
+								span 06 Home Monochrome
+					// sub menu end
+
+				li.aside-menu__item.aside-menu__item--has-child(class=(dest === "pages" ? "aside-menu__item--active" : undefined))
+					a.aside-menu__link(href="javascript:void(0);")
+						span Pages
+
+					// sub menu start
+					ul.aside-menu__sub-list
+						li(class=(page === "about" ? "item--active" : undefined))
+							a(href="about.html")
+								span About
+						li(class=(page === "typography" ? "item--active" : undefined))
+							a(href="typography.html") 
+								span Typography
+						li(class=(page === "donors" ? "item--active" : undefined))
+							a(href="donors.html")
+								span Donors & Partners
+						li(class=(page === "volunteer" ? "item--active" : undefined))
+							a(href="volunteer.html")
+								span Become a Volunteer
+						li(class=(page === "events" ? "item--active" : undefined))
+							a(href="events.html")
+								span Events
+						li(class=(page === "event-details" ? "item--active" : undefined))
+							a(href="event-details.html")
+								span Event Details
+						li(class=(page === "stories" ? "item--active" : undefined))
+							a(href="stories.html")
+								span Stories
+						li(class=(page === "storie-details" ? "item--active" : undefined))
+							a(href="story-details.html")
+								span Story Details
+						li(class=(page === "blog" ? "item--active" : undefined))
+							a(href="blog.html")
+								span Blog
+						li(class=(page === "blog-post" ? "item--active" : undefined))
+							a(href="blog-post.html")
+								span Blog Post
+						li(class=(page === "gallery" ? "item--active" : undefined))
+							a(href="gallery.html")
+								span Gallery
+						li(class=(page === "pricing" ? "item--active" : undefined))
+							a(href="pricing.html")
+								span Pricing Plans
+						li(class=(page === "faq" ? "item--active" : undefined))
+							a(href="faq.html")
+								span FAQ
+						li(class=(page === "404" ? "item--active" : undefined))
+							a(href="404.html")
+								span 404 Page
+					// sub menu end
+
+				li.aside-menu__item.aside-menu__item--has-child(class=(dest === "causes-pages" ? "aside-menu__item--active" : undefined))
+					a.aside-menu__link(href="javascript:void(0);")
+						span Causes
+
+					// sub menu start
+					ul.aside-menu__sub-list
+						li(class=(page === "causes" ? "item--active" : undefined))
+							a(href="causes.html")
+								span Causes 1
+						li(class=(page === "causes_2" ? "item--active" : undefined))
+							a(href="causes_2.html") 
+								span Causes 2
+						li(class=(page === "causes_3" ? "item--active" : undefined))
+							a(href="causes_3.html")
+								span Causes 3
+						li(class=(page === "cause_details" ? "item--active" : undefined))
+							a(href="cause-details.html")
+								span Cause Details
+					// sub menu end
+
+				li.aside-menu__item.aside-menu__item--has-child(class=(dest === "shop-inner" ? "aside-menu__item--active" : undefined))
+					a.aside-menu__link(href="javascript:void(0);")
+						span Shop
+
+					// sub menu start
+					ul.aside-menu__sub-list
+						li(class=(page === "shop" ? "item--active" : undefined))
+							a(href="shop.html")
+								span Catalog Page
+						li(class=(page === "shop-product" ? "item--active" : undefined))
+							a(href="shop-product.html")
+								span Shop Product
+						li(class=(page === "cart" ? "item--active" : undefined))
+							a(href="shop-cart.html")
+								span Shop Cart
+						li(class=(page === "checkout" ? "item--active" : undefined))
+							a(href="shop-checkout.html")
+								span Shop Checkout
+						li(class=(page === "account" ? "item--active" : undefined))
+							a(href="shop-account.html")
+								span Shop Account
+					// sub menu end
+
+				li.aside-menu__item(class=(page === "contacts" ? "aside-menu__item--active" : undefined))
+					a.aside-menu__link(href="contacts.html")
+						span Contacts
+
+				li.aside-menu__item.aside-menu__item--has-child(class=(dest === "elements" ? "aside-menu__item--active" : undefined))
+					a.aside-menu__link(href="javascript:void(0);")
+						span Elements
+
+					// sub menu start
+					ul.aside-menu__sub-list
+						li(class=(page === "alerts" ? "item--active" : undefined))
+							a(href="alerts.html")
+								span Alerts
+						li(class=(page === "team" ? "item--active" : undefined))
+							a(href="team.html")
+								span Team
+						li(class=(page === "testimonials" ? "item--active" : undefined))
+							a(href="testimonials.html")
+								span Testimonials
+						li(class=(page === "accordion" ? "item--active" : undefined))
+							a(href="accordion.html")
+								span Accordion
+						li(class=(page === "tabs" ? "item--active" : undefined))
+							a(href="tabs.html")
+								span Tabs
+						li(class=(page === "pricing-plan" ? "item--active" : undefined))
+							a(href="pricing-plan.html")
+								span Pricing Plan
+						li(class=(page === "counters" ? "item--active" : undefined))
+							a(href="counters.html")
+								span Counters
+						li(class=(page === "icons" ? "item--active" : undefined))
+							a(href="icons.html")
+								span Icons
+
+					// sub menu end
+
+		.aside-dropdown__item
+
+			// aside menu start
+			ul.aside-menu
+				li.aside-menu__item
+					a.aside-menu__link(href="#") Documents
+				li.aside-menu__item
+					a.aside-menu__link(href="#") Information
+				li.aside-menu__item
+					a.aside-menu__link(href="#") Additional Pages
+				li.aside-menu__item
+					a.aside-menu__link(href="#") Elements
+				li.aside-menu__item
+					a.aside-menu__link(href="#") Contacts
+			// aside menu end
+
+			.aside-inner
+				span.aside-inner__title Email
+				a.aside-inner__link(href="mailto:support@helpo.org") support@helpo.org
+
+			.aside-inner
+				span.aside-inner__title Phone numbers
+				a.aside-inner__link(href="tel:+180012345678") + 1800 - 123 456 78
+				a.aside-inner__link(href="tel:+18009756511") + 1800 - 975 65 11
+
+			ul.aside-socials
+				li.aside-socials__item
+					a.aside-socials__link(href="#")
+						+fa('instagram')
+				li.aside-socials__item
+					a.aside-socials__link(href="#")
+						+fa('google-plus')
+				li.aside-socials__item
+					a.aside-socials__link.aside-socials__link--active(href="#")
+						+fa('twitter')
+				li.aside-socials__item
+					a.aside-socials__link(href="#")
+						+fa('facebook')
+
+		.aside-dropdown__item
+			a.button.button--squared(href="#")
+				span Donate
+
+// aside dropdown end

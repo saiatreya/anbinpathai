@@ -1,0 +1,185 @@
+extends ../layouts/primary.pug
+
+block variables
+
+	-var page = 'accordion'
+
+	-var type = 'inner'
+
+	-var dest = 'elements'
+
+block header
+
+	include ../blocks/_aside-dropdown/_aside-dropdown
+
+	// header start
+	
+	header.header.header--inner
+		.container-fluid
+			.row.no-gutters.justify-content-between
+
+				.col-auto.d-flex.align-items-center
+					.dropdown-trigger.dropdown-trigger--inner.d-none.d-sm-block
+						.dropdown-trigger__item
+
+					.header-logo
+						a.header-logo__link(href="index.html")
+							img.header-logo__img(src="img/logo_dark.png", alt="logo")
+
+				.col-auto
+					include ../blocks/_main-menu/_main-menu
+
+				.col-auto.d-flex.align-items-center
+
+					// lang select start
+					ul.lang-select.lang-select--inner
+						li.lang-select__item.lang-select__item--active
+							span En
+							ul.lang-select__sub-list
+								li
+									a(href="#") French
+								li
+									a(href="#") Spanish
+								li
+									a(href="#") Deutsch
+								li
+									a(href="#") Russian
+					// lang select end
+
+					a.button.button--squared(href="#")
+						span Donate
+
+					.dropdown-trigger.dropdown-trigger--inner.d-block.d-sm-none
+						.dropdown-trigger__item
+
+	// header end
+
+block main
+
+	section.promo-primary(class=(dest === "elements" ? "promo-primary--elements" : undefined))
+
+		picture
+			source(srcset='img/alerts.jpg', media='(min-width: 992px)')
+			img.img--bg(src='img/alerts.jpg', alt='img')
+
+		.promo-primary__description 
+			span Elements
+
+		.container
+			.row
+				.col-auto
+					.align-container
+						.align-container__item
+							span.promo-primary__pre-title Helpo
+							h1.promo-primary__title #[span Accordion]
+
+	section.section.elements.elements--testimonials(style="background-color: #F9F7F6")
+		
+		.container
+			.row
+				.col-auto
+					h4.elements__title Variant 1
+
+			.row
+				.col-xl-8
+					.accordion.accordion--primary
+						.accordion__title-block
+							h6.accordion__title Health in other Countries?
+							span.accordion__close
+						.accordion__text-block
+							p Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish; bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.
+					.accordion.accordion--primary
+						.accordion__title-block
+							h6.accordion__title Water Delivery in Africa?
+							span.accordion__close
+						.accordion__text-block
+							p Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish; bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.
+					.accordion.accordion--primary
+						.accordion__title-block
+							h6.accordion__title We Build and Create?
+							span.accordion__close
+						.accordion__text-block
+							p Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish; bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.
+					.accordion.accordion--primary
+						.accordion__title-block
+							h6.accordion__title How to became a volounteer?
+							span.accordion__close
+						.accordion__text-block
+							p Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish; bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.
+					.accordion.accordion--primary
+						.accordion__title-block
+							h6.accordion__title Health in other Countries?
+							span.accordion__close
+						.accordion__text-block
+							p Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish; bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.
+					.accordion.accordion--primary
+						.accordion__title-block
+							h6.accordion__title We Build and Create?
+							span.accordion__close
+						.accordion__text-block
+							p Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish; bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.
+					.accordion.accordion--primary
+						.accordion__title-block
+							h6.accordion__title How to became a volounteer?
+							span.accordion__close
+						.accordion__text-block
+							p Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish; bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.
+
+
+	section.section.elements.elements--testimonials
+
+		.container
+			.row
+				.col-auto
+					h4.elements__title Variant 2
+
+			.row
+				.col-xl-8
+					.accordion.accordion--bordered
+						.accordion__title-block
+							h6.accordion__title Health in other Countries?
+							span.accordion__close
+						.accordion__text-block
+							p Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish; bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.
+					.accordion.accordion--bordered
+						.accordion__title-block
+							h6.accordion__title Water Delivery in Africa?
+							span.accordion__close
+						.accordion__text-block
+							p Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish; bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.
+					.accordion.accordion--bordered
+						.accordion__title-block
+							h6.accordion__title We Build and Create?
+							span.accordion__close
+						.accordion__text-block
+							p Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish; bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.
+					.accordion.accordion--bordered
+						.accordion__title-block
+							h6.accordion__title How to became a volounteer?
+							span.accordion__close
+						.accordion__text-block
+							p Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish; bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.
+					.accordion.accordion--bordered
+						.accordion__title-block
+							h6.accordion__title Health in other Countries?
+							span.accordion__close
+						.accordion__text-block
+							p Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish; bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.
+					.accordion.accordion--bordered
+						.accordion__title-block
+							h6.accordion__title We Build and Create?
+							span.accordion__close
+						.accordion__text-block
+							p Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish; bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.
+					.accordion.accordion--bordered
+						.accordion__title-block
+							h6.accordion__title How to became a volounteer?
+							span.accordion__close
+						.accordion__text-block
+							p Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish; bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.
+
+	include ../blocks/_bottom-bg/_bottom-bg
+
+block footer
+
+	include ../blocks/_footer/_footer

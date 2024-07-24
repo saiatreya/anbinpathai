@@ -1,0 +1,231 @@
+// blog post start
+
+section.section.blog-post
+	.container
+		.row
+
+			.col-md-8.col-lg-9
+
+				.blog-post__top
+					.blog-post__img
+						img.img--bg(src="img/blog-post.jpg", alt="img")
+					.blog-post__description
+
+						.row
+
+							.col-6
+
+								span.blog-post__name Samuel Smith
+
+							.col-6.text-right
+
+								span.blog-post__date 23 Jan'19
+
+								span #[+svg('comment')] 5
+
+				h5.blog-post__title Back to the future: Quality education through respect, commitment and accountability
+
+				p Flyingfish Kafue pike cow shark California smoothtongue golden loach temperate ocean-bass gulper eel. Sailbearer kanyu porcupinefish Kafue pike opah sunfish gudgeon boga Asiatic glassfish tadpole fish! Alewife, poacher airbreathing catfish; zebra tilapia northern pearleye naked-back knifefish pupfish dojo loach, "snake mackerel bonytail chub arapaima horsefish weasel shark." 
+
+				p Asian carps sailback scorpionfish; dragon goby lemon sole triplefin blenny hog sucker. Smelt sleeper shovelnose sturgeon merluccid hake cow shark herring smelt trout-perch barbeled houndshark. Shell-ear Asian carps blackfish Port Jackson shark Atlantic saury. Sacramento blackfish pricklefish, Atlantic cod, "driftwood catfish chimaera ribbonfish, marblefish worm eel smelt mora gray reef shark scabbard fish."
+
+				p Northern anchovy--bass yellowtail barracuda zander yellowfin grouper gurnard skipjack tuna shark burrowing goby eulachon wobbegong. Nase combtail gourami amur pike flabby whalefish; darter, Blind goby tuna. Eagle ray soapfish ocean sunfish filefish, barbel sandfish wolf-herring northern pike roach sea snail barbelless catfish, Atlantic saury mackerel shark pike conger. Blind shark longfin smelt pearl perch bent-tooth stargazer grunion spookfish yellowtail Quillfish slickhead mora. Springfish snake mackerel sockeye salmon banjo catfish toadfish sauger four-eyed fish 
+
+				p.text-filled Streamer fish California halibut Pacific saury. Slickhead grunion lake trout. Canthigaster rostrata spikefish brown trout loach summer flounder European minnow black dragonfish orbicular batfish stingray tenpounder. Sucker lionfish garibaldi surgeonfish Celebes rainbowfish forehead brooder
+
+				p Flyingfish Kafue pike cow shark California smoothtongue golden loach temperate ocean-bass gulper eel. Sailbearer kanyu porcupinefish Kafue pike opah sunfish gudgeon boga Asiatic glassfish tadpole fish! Alewife, poacher airbreathing catfish; zebra tilapia northern pearleye naked-back knifefish pupfish dojo loach, "snake mackerel bonytail chub arapaima horsefish weasel shark." 
+
+				p Asian carps sailback scorpionfish; dragon goby lemon sole triplefin blenny hog sucker. Smelt sleeper shovelnose sturgeon merluccid hake cow shark herring smelt trout-perch barbeled houndshark. Shell-ear Asian carps blackfish Port Jackson shark Atlantic saury. Sacramento blackfish pricklefish, Atlantic cod, "driftwood catfish chimaera ribbonfish, marblefish worm eel smelt mora gray reef shark scabbard fish."
+
+				.blog-post__details
+
+					.row.align-items-center
+
+						.col-lg-3.text-center.text-lg-left
+							span.blog-post__name Samuel Smith
+						
+						.col-lg-6.text-center
+
+							.tags
+								a.blog-post__tag(href="#") #Donate
+								a.blog-post__tag(href="#") #Homelesspeople
+								a.blog-post__tag(href="#") #Poor
+								a.blog-post__tag(href="#") #Child
+
+						.col-lg-3
+
+							ul.blog-post__socials
+								li
+									a(href="#")
+										+fa('facebook')
+								li
+									a(href="#")
+										+fa('twitter')
+								li
+									a(href="#")
+										+fa('youtube-play')
+								li
+									a(href="#")
+										+fa('instagram')
+
+				h6.blog-post__title Comments
+
+				.comments
+
+					.comments__item
+						.comments__item-img
+							img.img--bg(src="img/comment_1.jpg", alt="img")
+						.comments__item-description
+							.row.align-items-center
+								
+								.col-9.d-flex.flex-wrap.align-items-baseline
+
+									span.comments__item-name Ann Miller
+
+									span.comments__item-date 23 Jan'19 02:15PM
+
+								.col-3.text-right
+
+									span.comments__item-action
+										+svg('previous')
+								
+								.col-12
+
+									.comments__item-text
+										p Asian carps sailback scorpionfish; dragon goby lemon sole triplefin blenny hog sucker. Smelt sleeper shovelnose sturgeon merluccid hake cow shark herring smelt trout-perch
+
+					.comments__item
+						.comments__item-img
+							img.img--bg(src="img/comment_2.jpg", alt="img")
+						.comments__item-description
+							.row.align-items-center
+								
+								.col-9.d-flex.flex-wrap.align-items-baseline
+
+									span.comments__item-name John Walker
+
+									span.comments__item-date 23 Jan'19 02:15PM
+
+								.col-3.text-right
+
+									span.comments__item-action
+										+svg('previous')
+								
+								.col-12
+
+									.comments__item-text
+										p Dragon goby lemon sole triplefin blenny hog sucker. Smelt sleeper shovelnose sturgeon merluccid hake cow shark herring smelt trout-perch
+
+						.comments__item.comments__item--sub
+							.comments__item-img
+								img.img--bg(src="img/comment_3.jpg", alt="img")
+							.comments__item-description
+								.row.align-items-center
+
+									.col-9.d-flex.flex-wrap.align-items-baseline
+
+										span.comments__item-name Helen Dollens
+
+										span.comments__item-date 23 Jan'19 02:15PM
+
+									.col-3.text-right
+
+										span.comments__item-action
+											+svg('previous')
+
+									.col-12
+
+										.comments__item-text
+											p Cow shark herring smelt trout-perch Asian carps sailback scorpionfish; dragon goby lemon sole triplefin blenny hog sucker. Smelt sleeper shovelnose sturgeon merluccid hake 
+
+				h6.blog-post__title Send Message
+
+				form.form.comments-form(action="javascript:void(0);")
+					.row
+
+						.col-xl-4
+
+							input.form__field(type="text" name="first-name" placeholder="First Name")
+
+						.col-xl-4
+
+							input.form__field(type="text" name="last-name" placeholder="Last Name")
+
+						.col-xl-4
+
+							input.form__field(type="email" name="email" placeholder="Email")
+
+						.col-12
+
+							textarea.form__field.form__message(name="message" placeholder="Message")
+
+						.col-12
+
+							button.form__submit.button.button--primary(type="submit") Send Message
+
+			.col-md-4.col-lg-3
+
+				.blog-post__category-holder
+
+					h6.blog-post__title Category
+
+					ul.blog-post__category
+						li
+							a(href="#") Education
+						li
+							a(href="#") Water Delivery
+						li
+							a(href="#") Food
+						li
+							a(href="#") Medcine
+						li
+							a(href="#") Helpo
+
+				h6.blog-post__title Recent Posts
+
+				.recent-posts
+
+					.recent-posts__item
+						.recent-posts__item-img
+							img.img--bg(src="img/recent_1.jpg", alt="img")
+						.recent-posts__item-description
+							a.recent-posts__item-link(href="blog-post.html") Back to the future: Quality education
+							span.recent-posts__item-value 23 Jan'19
+
+					.recent-posts__item
+						.recent-posts__item-img
+							img.img--bg(src="img/recent_2.jpg", alt="img")
+						.recent-posts__item-description
+							a.recent-posts__item-link(href="blog-post.html") Back to the future: Quality education
+							span.recent-posts__item-value 23 Jan'19
+
+					.recent-posts__item
+						.recent-posts__item-img
+							img.img--bg(src="img/recent_3.jpg", alt="img")
+						.recent-posts__item-description
+							a.recent-posts__item-link(href="blog-post.html") Back to the future: Quality education
+							span.recent-posts__item-value 23 Jan'19
+
+				h6.blog-post__title Archive
+
+				ul.archive-list
+					li.archive-list__item
+						a.archive-list__link(href="#") December 2018
+					li.archive-list__item
+						a.archive-list__link(href="#") January 2019
+					li.archive-list__item
+						a.archive-list__link(href="#") February 2019
+					li.archive-list__item
+						a.archive-list__link(href="#") March 2019
+
+				h6.blog-post__title Tags
+
+				.tags
+					a.tags__item(href="#") Charity
+					a.tags__item(href="#") Help
+					a.tags__item(href="#") Freedom
+					a.tags__item(href="#") Fundraising
+					a.tags__item(href="#") Donate
+					a.tags__item(href="#") Water
+
+// blog post end

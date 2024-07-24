@@ -1,0 +1,150 @@
+extends ../layouts/primary.pug
+
+block variables
+
+	-var page = 'alerts'
+
+	-var type = 'inner'
+
+	-var dest = 'elements'
+
+block header
+
+	include ../blocks/_aside-dropdown/_aside-dropdown
+
+	// header start
+	
+	header.header.header--inner
+		.container-fluid
+			.row.no-gutters.justify-content-between
+
+				.col-auto.d-flex.align-items-center
+					.dropdown-trigger.dropdown-trigger--inner.d-none.d-sm-block
+						.dropdown-trigger__item
+
+					.header-logo
+						a.header-logo__link(href="index.html")
+							img.header-logo__img(src="img/logo_dark.png", alt="logo")
+
+				.col-auto
+					include ../blocks/_main-menu/_main-menu
+
+				.col-auto.d-flex.align-items-center
+
+					// lang select start
+					ul.lang-select.lang-select--inner
+						li.lang-select__item.lang-select__item--active
+							span En
+							ul.lang-select__sub-list
+								li
+									a(href="#") French
+								li
+									a(href="#") Spanish
+								li
+									a(href="#") Deutsch
+								li
+									a(href="#") Russian
+					// lang select end
+
+					a.button.button--squared(href="#")
+						span Donate
+
+					.dropdown-trigger.dropdown-trigger--inner.d-block.d-sm-none
+						.dropdown-trigger__item
+
+	// header end
+
+block main
+
+	section.promo-primary(class=(dest === "elements" ? "promo-primary--elements" : undefined))
+
+		picture
+			source(srcset='img/alerts.jpg', media='(min-width: 992px)')
+			img.img--bg(src='img/alerts.jpg', alt='img')
+
+		.promo-primary__description 
+			span Elements
+
+		.container
+			.row
+				.col-auto
+					.align-container
+						.align-container__item
+							span.promo-primary__pre-title Helpo
+							h1.promo-primary__title #[span Alerts]
+
+	section.section.elements
+
+		.container
+			.row
+				.col-xl-10.offset-xl-1
+					h4.elements__title Variant 1
+
+			.row
+				.col-xl-10.offset-xl-1
+					
+					.alert.alert--success.alert--filled
+						.alert__icon
+							+svg('check')
+						p.alert__text #[strong Well done!] You successfully read this important alert message
+						span.alert__close
+							+svg('close')
+					.alert.alert--attention.alert--filled
+						.alert__icon
+							+svg('warning')
+						p.alert__text #[strong Heads up!] This alert needs your attention, but it's not super important
+						span.alert__close
+							+svg('close')
+					.alert.alert--warning.alert--filled
+						.alert__icon
+							+svg('question')
+						p.alert__text #[strong Warning!] Better check yourself, you're not looking too good
+						span.alert__close
+							+svg('close')
+					.alert.alert--error.alert--filled
+						.alert__icon
+							+svg('close')
+						p.alert__text #[strong Oh snap!] Change a few things up and try submitting again
+						span.alert__close
+							+svg('close')
+
+	section.section.elements.no-padding-top
+	
+		.container
+			.row
+				.col-xl-10.offset-xl-1
+					h4.elements__title Variant 2
+
+			.row
+				.col-xl-10.offset-xl-1
+					
+					.alert.alert--success.alert--transparent
+						.alert__icon
+							+svg('check')
+						p.alert__text #[strong Well done!] You successfully read this important alert message
+						span.alert__close
+							+svg('close')
+					.alert.alert--attention.alert--transparent
+						.alert__icon
+							+svg('warning')
+						p.alert__text #[strong Heads up!] This alert needs your attention, but it's not super important
+						span.alert__close
+							+svg('close')
+					.alert.alert--warning.alert--transparent
+						.alert__icon
+							+svg('question')
+						p.alert__text #[strong Warning!] Better check yourself, you're not looking too good
+						span.alert__close
+							+svg('close')
+					.alert.alert--error.alert--transparent
+						.alert__icon
+							+svg('close')
+						p.alert__text #[strong Oh snap!] Change a few things up and try submitting again
+						span.alert__close
+							+svg('close')
+
+	include ../blocks/_bottom-bg/_bottom-bg
+
+block footer
+
+	include ../blocks/_footer/_footer

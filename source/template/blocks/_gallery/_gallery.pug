@@ -1,0 +1,82 @@
+// gallery start
+
+section.section.gallery
+	.container
+		.row
+
+			.col-12
+
+				// filter panel start
+
+				ul.filter-panel
+					li.filter-panel__item.filter-panel__item--active(data-filter="*")
+						span All Causes
+					li.filter-panel__item(data-filter=".category_1")
+						span Water Delivery
+					li.filter-panel__item(data-filter=".category_2")
+						span Medicine
+					li.filter-panel__item(data-filter=".category_3")
+						span Education
+					li.filter-panel__item(data-filter=".category_4")
+						span Food
+
+				// filter panel end
+
+	.row.no-gutters.gallery-masonry
+
+		.col-6.col-md-4.gallery-masonry__item.category_1
+
+			a.gallery-masonry__img.gallery-masonry__item--height-2(href="img/gallery_1.jpg" data-fancybox="gallery")
+				img.img--bg(src="img/gallery_1.jpg", alt="img")
+				h6.gallery-masonry__description He Need Your Protection
+
+		.col-6.col-md-4.gallery-masonry__item.category_1
+
+			a.gallery-masonry__img.gallery-masonry__item--height-2(href="img/gallery_2.jpg" data-fancybox="gallery")
+				img.img--bg(src="img/gallery_2.jpg", alt="img")
+				h6.gallery-masonry__description He Need Your Protection
+
+		.col-6.col-md-4.gallery-masonry__item.category_2
+
+			a.gallery-masonry__img.gallery-masonry__item--height-2(href="img/gallery_3.jpg" data-fancybox="gallery")
+				img.img--bg(src="img/gallery_3.jpg", alt="img")
+				h6.gallery-masonry__description He Need Your Protection
+
+		.col-6.col-md-4.gallery-masonry__item.category_2
+
+			a.gallery-masonry__img.gallery-masonry__item--height-2(href="img/gallery_4.jpg" data-fancybox="gallery")
+				img.img--bg(src="img/gallery_4.jpg", alt="img")
+				h6.gallery-masonry__description He Need Your Protection
+
+		.col-6.col-md-8.gallery-masonry__item.category_3
+
+			a.gallery-masonry__img.gallery-masonry__item--height-1(href="img/gallery_5.jpg" data-fancybox="gallery")
+				img.img--bg(src="img/gallery_5.jpg", alt="img")
+				h6.gallery-masonry__description He Need Your Protection
+
+		.col-6.col-md-4.gallery-masonry__item.category_3
+
+			a.gallery-masonry__img.gallery-masonry__item--height-2(href="img/gallery_6.jpg" data-fancybox="gallery")
+				img.img--bg(src="img/gallery_6.jpg", alt="img")
+				h6.gallery-masonry__description He Need Your Protection
+
+		.col-6.col-md-8.gallery-masonry__item.category_4
+
+			a.gallery-masonry__img.gallery-masonry__item--height-3(href="img/gallery_7.jpg" data-fancybox="gallery")
+				img.img--bg(src="img/gallery_7.jpg", alt="img")
+				h6.gallery-masonry__description He Need Your Protection
+
+		.col-6.col-md-4.gallery-masonry__item.category_4
+
+			a.gallery-masonry__img.gallery-masonry__item--height-2(href="img/gallery_8.jpg" data-fancybox="gallery")
+				img.img--bg(src="img/gallery_8.jpg", alt="img")
+				h6.gallery-masonry__description He Need Your Protection
+
+	.container
+		.row
+
+			.col-12.text-center
+
+				a(href="#").button.gallery__button.button--primary More Images
+
+// gallery end

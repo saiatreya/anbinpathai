@@ -1,0 +1,203 @@
+extends ../layouts/primary.pug
+
+block variables
+
+	-var page = 'blog'
+
+	-var type = 'inner'
+
+	-var dest = 'pages'
+
+block header
+
+	include ../blocks/_aside-dropdown/_aside-dropdown
+
+	// header start
+	
+	header.header.header--inner
+		.container-fluid
+			.row.no-gutters.justify-content-between
+
+				.col-auto.d-flex.align-items-center
+					.dropdown-trigger.dropdown-trigger--inner.d-none.d-sm-block
+						.dropdown-trigger__item
+
+					.header-logo
+						a.header-logo__link(href="index.html")
+							img.header-logo__img(src="img/logo_dark.png", alt="logo")
+
+				.col-auto
+					include ../blocks/_main-menu/_main-menu
+
+				.col-auto.d-flex.align-items-center
+
+					// lang select start
+					ul.lang-select.lang-select--inner
+						li.lang-select__item.lang-select__item--active
+							span En
+							ul.lang-select__sub-list
+								li
+									a(href="#") French
+								li
+									a(href="#") Spanish
+								li
+									a(href="#") Deutsch
+								li
+									a(href="#") Russian
+					// lang select end				
+
+					a.button.button--squared(href="#") 
+						span Donate
+
+					.dropdown-trigger.dropdown-trigger--inner.d-block.d-sm-none
+						.dropdown-trigger__item
+
+	// header end
+
+block main
+
+	section.promo-primary(class=(dest === "elements" ? "promo-primary--elements" : undefined))
+
+		picture
+			source(srcset='img/blog.jpg', media='(min-width: 992px)')
+			img.img--bg(src='img/blog.jpg', alt='img')
+
+		.promo-primary__description 
+			span Compassion
+
+		.container
+			.row
+				.col-auto
+					.align-container
+						.align-container__item
+							span.promo-primary__pre-title Helpo
+							h1.promo-primary__title #[span Blog]
+
+	// blog start
+
+	section.section.blog.background--brown
+
+		img.blog__bg(src="img/events_inner-bg.png", alt="img")
+
+		.container
+
+			.row.offset-margin
+
+				.col-md-6.col-lg-5.col-xl-4
+
+					.blog-item.blog-item--style-1
+						.blog-item__img
+							img.img--bg(src="img/blog_1.jpg", alt="img")
+							span.blog-item__badge(style="background-color: #49C2DF;") Water Delivery
+						.blog-item__content
+							h6.blog-item__title
+								a(href="blog-post.html") Save the Children's Role in Fight Against Malnutrition Hailed
+							p Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail canthigaster
+							.blog-item__details
+								span.blog-item__date 23 Jan' 19
+								span #[+svg('comment')] 501
+
+				.col-md-6.col-lg-7.col-xl-8
+
+					.blog-item.blog-item--style-2
+						img.img--bg(src="img/blog_2.png", alt="img")
+						.blog-item__content
+							span.blog-item__badge(style="background-color: #2EC774;") Education
+							h6.blog-item__title
+								a(href="blog-post.html") Back to the future: Quality education through respect, commitment and accountability
+							p Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail canthigaster rostrata. Midshipman dartfish Modoc sucker, yellowtail
+						.blog-item__details
+							span.blog-item__date 23 Jan' 19
+							span #[+svg('comment')] 501
+
+				.col-md-6.col-lg-7.col-xl-8
+
+					.blog-item.blog-item--style-2
+						img.img--bg(src="img/blog_3.png", alt="img")
+						.blog-item__content
+							span.blog-item__badge(style="background-color: #F8AC3A;") Food
+							h6.blog-item__title
+								a(href="blog-post.html") Condolences to Families Effected By Flash Floods in Setswetla, Alexandra Township, Johannesburg
+							p Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail canthigaster rostrata. Midshipman dartfish Modoc sucker, yellowtail
+						.blog-item__details
+							span.blog-item__date 23 Jan' 19
+							span #[+svg('comment')] 501
+
+				.col-md-6.col-lg-5.col-xl-4
+
+					.blog-item.blog-item--style-1
+						.blog-item__img
+							img.img--bg(src="img/blog_4.png", alt="img")
+							span.blog-item__badge(style="background-color: #F36F8F;") Medicine
+						.blog-item__content
+							h6.blog-item__title
+								a(href="blog-post.html") Save the Children's Role in Fight Against Malnutrition Hailed
+							p Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail canthigaster
+							.blog-item__details
+								span.blog-item__date 23 Jan' 19
+								span #[+svg('comment')] 501
+
+				.col-md-6.col-lg-4
+
+					.blog-item.blog-item--style-1
+						.blog-item__img
+							img.img--bg(src="img/blog_5.jpg", alt="img")
+							span.blog-item__badge(style="background-color: #F36F8F;") Medicine
+						.blog-item__content
+							h6.blog-item__title
+								a(href="blog-post.html") Share HHAPI-NeSS this Mother’s Day support Save the Children
+							p Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail canthigaster
+							.blog-item__details
+								span.blog-item__date 23 Jan' 19
+								span #[+svg('comment')] 5
+
+				.col-md-6.col-lg-4
+
+					.blog-item.blog-item--style-1
+						.blog-item__img
+							img.img--bg(src="img/blog_6.jpg", alt="img")
+							span.blog-item__badge(style="background-color: #49C2DF;") Water Delivery
+						.blog-item__content
+							h6.blog-item__title
+								a(href="blog-post.html") Save the Children's Role in Fight Against Malnutrition Hailed
+							p Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail canthigaster
+							.blog-item__details
+								span.blog-item__date 23 Jan' 19
+								span #[+svg('comment')] 5
+
+				.col-md-6.col-lg-4
+
+					.blog-item.blog-item--style-1
+						.blog-item__img
+							img.img--bg(src="img/blog_7.jpg", alt="img")
+							span.blog-item__badge(style="background-color: #F8AC3A;") Food
+						.blog-item__content
+							h6.blog-item__title
+								a(href="blog-post.html") Back to the future: Quality education through respect, 
+							p Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail canthigaster
+							.blog-item__details
+								span.blog-item__date 23 Jan' 19
+								span #[+svg('comment')] 5
+
+			.row
+
+				.col-12
+
+					include ../blocks/_pagination/_pagination
+
+	// blog end
+
+	// bottom bg start
+
+	section.bottom-background.background--brown
+		.container
+			.row
+				.col-12
+					.bottom-background__img
+						img(src="img/bottom-bg.png", alt="img")
+
+	// bottom bg end
+
+block footer
+
+	include ../blocks/_footer/_footer

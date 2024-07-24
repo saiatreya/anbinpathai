@@ -1,0 +1,549 @@
+/* promo start */
+
+.promo
+	position: relative
+
+/* promo slider */
+
+.promo-slider
+	&__wrapper-1,
+	&__wrapper-2,
+	&__wrapper-3
+		opacity: 0
+		transition: all .6s
+		transform: translateY(30px)
+	.slick-current &__wrapper-1,
+	.slick-current &__wrapper-2,
+	.slick-current &__wrapper-3
+		opacity: 1
+		transform: translateY(0px)
+	.slick-current &__wrapper-1
+		transition-delay: .3s
+	.slick-current &__wrapper-2
+		transition-delay: .6s
+	.slick-current &__wrapper-3
+		transition-delay: .9s
+	&__button
+		font-size: 14px
+		padding: 18px 48px 17px 48px
+	&__item
+		position: relative
+	.align-container
+		height: auto
+		padding: 120px 0 250px 0
+
+	+r768
+
+		.align-container
+			height: 700px
+			padding: 150px 0
+
+	+r992
+
+		.align-container
+			height: 800px
+
+	+r1200
+
+		.align-container
+			height: 900px
+
+	&__item--style-1
+		text-align: center
+	&__item--style-1 &__title span:first-of-type
+		color: #FFF
+		font-size: 36px
+		line-height: 1.4
+		letter-spacing: -0.050em
+
+	+r576
+
+		&__item--style-1 &__title span:first-of-type
+			font-size: 42px
+			line-height: 60px
+
+	+r768
+
+		&__item--style-1 &__title span:first-of-type
+			font-size: 50px
+			line-height: 70px
+
+	+r992
+
+		&__item--style-1 &__title span:first-of-type
+			font-size: 70px
+			line-height: 90px
+
+	+r1200
+
+		&__item--style-1 &__title span:first-of-type
+			font-size: 80px
+			line-height: 100px
+
+	+r1366
+
+		&__item--style-1 &__title span:first-of-type
+			font-size: 90px
+			line-height: 110px
+
+	&__item--style-1 &__title span:nth-of-type(2)
+		color: $orange
+		font-size: 36px
+		line-height: 1.4
+		font-family: $font-storytella
+		letter-spacing: 0.050em
+
+	+r576
+
+		&__item--style-1 &__title span:nth-of-type(2)
+			font-size: 42px
+			line-height: 55px
+
+	+r768
+
+		&__item--style-1 &__title span:nth-of-type(2)
+			font-size: 60px
+			line-height: 75px
+
+	+r992
+
+		&__item--style-1 &__title span:nth-of-type(2)
+			font-size: 80px
+			line-height: 95px
+
+	+r1200
+
+		&__item--style-1 &__title span:nth-of-type(2)
+			font-size: 110px
+			line-height: 115px
+
+	+r1366
+
+		&__item--style-1 &__title span:nth-of-type(2)
+			font-size: 130px
+			line-height: 115px
+
+
+	&__item--style-1 &__subtitle
+		color: #FFF
+		line-height: 25px
+		width: 100%
+		max-width: 740px
+		margin: 10px auto 0 auto
+	&__item--style-1 &__button
+		color: #FFF
+		width: 100%
+		max-width: 215px
+		margin-top: 35px
+	&__item--style-1 &__button:hover
+		color: $blue
+	&__item--style-2
+		color: #FFF
+	&__item--style-2 &__title
+		color: inherit
+		font-size: 36px
+		line-height: 1.4
+
+	+r576
+
+		&__item--style-2 &__title
+			font-size: 42px
+			line-height: 52px
+
+	+r768
+
+		&__item--style-2 &__title
+			font-size: 50px
+			line-height: 55px
+
+	+r992
+
+		&__item--style-2 &__title
+			font-size: 60px
+			line-height: 65px
+
+	+r1200
+
+		&__item--style-2 &__title
+			font-size: 70px
+			line-height: 75px
+
+	&__item--style-2 &__title span:nth-of-type(2)
+		font-weight: 300
+	&__item--style-2 &__subtitle
+		line-height: 25px
+		margin-top: 10px
+
+	+r576
+
+		&__item--style-2 &__subtitle
+			margin-top: 28px
+
+	&__item--style-2 &__button
+		color: inherit
+		width: 100%
+		max-width: 210px
+		margin-top: 30px
+	&__item--style-2 &__button:hover
+		color: $blue
+	&__item--style-3
+		color: #FFF
+		text-align: center
+	&__item--style-3 &__title
+		color: inherit
+		font-size: 36px
+		line-height: 1.4
+
+	+r576
+
+		&__item--style-3 &__title
+			font-size: 42px
+			line-height: 52px
+
+	+r768
+
+		&__item--style-3 &__title
+			font-size: 50px
+			line-height: 55px
+
+	+r992
+
+		&__item--style-3 &__title
+			font-size: 60px
+			line-height: 65px
+
+	+r1200
+
+		&__item--style-3 &__title
+			font-size: 70px
+			line-height: 75px
+		
+	&__item--style-3 &__title span:nth-of-type(2)
+		font-weight: 300
+	&__item--style-3 &__subtitle
+		line-height: 25px
+		margin-top: 10px
+
+	+r576
+
+		&__item--style-3 &__subtitle
+			margin-top: 28px
+
+	&__item--style-3 &__button
+		color: inherit
+		width: 100%
+		max-width: 210px
+		margin-top: 30px
+		padding: 17px 45px
+	&__item--style-3 &__button:hover
+		color: $blue
+
+/* promo socials */
+
+.promo-socials
+	position: absolute
+	bottom: 200px
+	left: 35px
+	padding: 0
+	margin: 0
+	display: none
+
++r1366
+
+	.promo-socials
+		display: initial
+
+.promo-socials
+	&__item
+		list-style: none
+	&__item:not(:last-of-type)
+		margin-bottom: 20px
+	&__link
+		color: #FFF
+		transition: opacity .3s
+	&__link:hover
+		color: #FFF
+		opacity: 0.75
+
+/* promo pannel */
+
+.promo-pannel
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+	max-width: 290px
+	background-color: #F9F7F6
+	display: flex
+	align-items: center
+
++r576
+
+	.promo-pannel
+		max-width: 335px
+
++r992
+
+	.promo-pannel
+		max-width: 415px
+
++r1366
+
+	.promo-pannel
+		max-width: 955px
+
+.promo-pannel
+	&__anchor
+		text-decoration: none	
+		display: none
+		width: 80px
+		min-height: 130px
+
+	+r992
+
+		&__anchor
+			display: inline-flex
+
+	&__anchor span
+		color: $title
+		font-size: 14px
+		font-weight: 700
+		transform: rotate(-90deg)
+		margin: auto
+	&__video
+		position: relative
+		width: 100%
+		max-width: 290px
+		min-height: 130px
+		overflow: hidden
+		display: flex
+
+	+r576
+
+		&__video
+			max-width: 335px
+
+	&__video::before
+		content: ""
+		display: block
+		position: absolute
+		height: 100%
+		width: 100%
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background-color: rgba(56, 57, 118, 0.79)
+		z-index: 2
+	&__video img
+		z-index: 1
+		transform: scale(1)
+		transition: transform 1s
+	&__video:hover img
+		transform: scale(1.2)
+	&__video .video-trigger
+		color: #FFF
+		position: relative
+		z-index: 2
+		margin: auto
+		transition: opacity .3s
+	.video-trigger
+		display: flex
+		align-items: center
+		text-decoration: none
+	.video-trigger span
+		transition: color .3s
+	.video-trigger i
+		color: $blue
+		height: 45px
+		width: 45px
+		border-radius: 50%
+		text-align: center
+		line-height: 45px
+		background-color: #FFF
+		margin-left: 20px
+		transition: background-color .3s
+	.video-trigger:hover
+		opacity: 0.75
+	&__title
+		color: #9e9e9e
+		font-size: 11px
+		line-height: 25px
+		font-weight: 700
+		text-transform: uppercase
+		margin-bottom: 0
+	&__link
+		color: $title
+		font-size: 14px
+		font-weight: 700
+		text-decoration: none
+		transition: opacity .3s
+	&__link:hover
+		color: $title
+		opacity: 0.75
+	&__phones
+		width: 100%
+		max-width: 325px
+	&__phones &__link:not(:last-of-type)
+		margin-right: 15px
+	&__phones,
+	&__email
+		padding: 15px 35px
+		display: none
+
+	+r1366
+
+		&__phones,
+		&__email
+			padding: 15px 35px
+			display: initial
+
+	&__email
+		width: 100%
+		max-width: 205px
+
+/* slider nav */
+
+.slider__nav
+	display: inline-flex
+	align-items: center
+
+.slider__nav--promo
+	position: absolute
+	left: 30px
+	bottom: 160px
+
++r768
+
+	.slider__nav--promo
+		bottom: 45px
+		right: 50px
+		left: auto
+
++r1366
+
+	.slider__nav--promo
+		right: 80px
+
+.promo-slider__count
+	color: #FFF
+	font-weight: 700
+	letter-spacing: -0.050em
+
+.promo-slider__count::after
+	content: ""
+	display: inline-block
+	vertical-align: middle
+	height: 1px
+	width: 70px
+	margin: 0 30px
+	background: #7B7DA5
+
++r576
+
+	.promo-slider__count::after
+		width: 120px
+
+
+.slider__arrows
+	display: inline-flex
+
+.slider__prev,
+.slider__next
+	display: inline-flex !important
+	justify-content: center
+	align-items: center
+	cursor: pointer
+	color: #FFF
+	height: 45px
+	width: 45px
+	border: 2px solid $orange
+	border-radius: 50%
+	bacground: transparent
+	transition: all .3s
+
+.slider__prev
+	margin-right: 17px
+
+.slider__prev:hover,
+.slider__next:hover
+	color: $blue
+	background-color: $orange
+
+/* promo front_2 */
+
+.promo--front_2
+	.slider__nav--promo
+		right: auto
+		left: 15px
+	.promo-pannel
+		width: 100%
+		max-width: 290px
+		left: 0
+
+	+r576
+		
+		.promo-pannel
+			max-width: 335px
+
+	+r768
+		
+		.promo-pannel
+			left: auto
+			right: 0
+
+	.promo-pannel__video
+		min-height: 130px
+
+	+r768
+
+		.promo-pannel__video
+			min-height: 160px
+
+	.promo-pannel__anchor
+		position: absolute
+		bottom: 0
+		left: 0
+		background: #FFF
+		display: none
+		min-height: 160px
+
+	+r1366
+
+		.promo-pannel__anchor
+			display: inline-flex
+
++r1366
+
+	.promo--front_2 + .section::before
+		content: ""
+		display: block
+		height: 100%
+		width: 80px
+		position: absolute
+		top: 0
+		left: 0
+		background: #FFF
+
+/* promo front_3 */
+
+.promo--front_3
+	.promo-pannel
+		width: 100%
+
+	+r992
+		.promo-pannel
+			max-width: 335px
+			
+	.promo-pannel__video
+		min-height: 130px
+
+	+r768
+
+		.promo-pannel__video
+			min-height: 160px
+			
+	.promo-slider .align-container
+		height: 760px
+
+/* promo end */

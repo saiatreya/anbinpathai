@@ -1,0 +1,49 @@
+/* instagram start */
+
+.instagram-slider
+	&__nav
+		margin-top: 40px
+
+	+r768
+		&__nav
+			padding-bottom: 10px
+			margin: 0px
+
+	&__item
+		position: relative
+		vertical-align: top
+		transition: background .3s
+	&__item:hover
+		background: rgba(53, 57, 118, 0.7)	
+	&__item::before
+		content: ""
+		display: block
+		padding-top: percentage(267/318)
+	&__item .fa
+		color: #FFF
+		font-size: 18px
+	&__item &__icon
+		position: absolute
+		left: 15px
+		bottom: 15px
+		transition: opacity .3s
+	&__item:hover &__icon
+		opacity: 0
+	&__icon-hover
+		opacity: 0
+		transition: opacity .3s
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+	&__icon-hover .fa
+		font-size: 24px
+	&__item:hover &__icon-hover
+		opacity: 1	
+
+.instagram-slider__nav
+	.slider__prev, 
+	.slider__next
+		color: $blue
+
+/* instagram end */

@@ -1,0 +1,83 @@
+// shop product start
+
+section.section.shop-product.background--brown
+	.container
+		.row
+
+			.col-md-8.offset-md-2.col-lg-6.offset-lg-0
+
+				include ../_dual-slider/_dual-slider
+
+			.col-lg-6.col-xl-5.offset-xl-1
+
+				.shop-product__top
+
+					h3.shop-product__name Man Cap
+
+					span.shop-product__article Article: 212 435
+
+					ul.rating-list
+						li.rating-list__item
+							+fa('star')
+						li.rating-list__item
+							+fa('star')
+						li.rating-list__item
+							+fa('star')
+						li.rating-list__item
+							+fa('star')
+						li.rating-list__item.rating-list__item--disabled
+							+fa('star')
+
+					span.shop-product__reviews-count (2 customer reviews)
+
+					h4.shop-product__price 15.00$
+
+				.shop-product__description
+
+					h6.shop-product__title Description
+					p African lungfish silverside, Red salmon rockfish grunion, garpike zebra danio king-of-the-salmon banjo catfish. Sea chub demoiselle whalefish zebra lionfish mud cat pelican eel. Minnow snoek icefish velvet-belly shark
+					
+					ul.shop-product__list
+						li Material: Laser
+						li Color: Black & White
+						li Coutry: USA
+
+					.shop-product__tags
+
+						h6.shop-product__title Tags
+
+						.tags
+							a.tags__item(href="#") Charity
+							a.tags__item(href="#") Help
+							a.tags__item(href="#") Freedom
+							a.tags__item(href="#") Fundraising
+							a.tags__item(href="#") Donate
+
+					form.form.product-form(action="javascript:void(0);" autocomplete="off")
+						h6.product-form__title Choose size
+
+						.form__size
+
+							input#input-1.form__input-radio(type="radio" value="xxl" name="size" checked)
+							label.form__size-label(for="input-1") XXL
+
+							input#input-2.form__input-radio(type="radio" value="xl" name="size")
+							label.form__size-label(for="input-2") XL
+
+							input#input-3.form__input-radio(type="radio" value="l" name="size")
+							label.form__size-label(for="input-3") L
+
+							input#input-4.form__input-radio(type="radio" value="m" name="size")
+							label.form__size-label(for="input-4") M
+
+							input#input-5.form__input-radio(type="radio" value="s" name="size")
+							label.form__size-label(for="input-5") S
+
+						.form__wrapper
+							.form__count
+								span.form__minus -
+								input.form__field(type="number" value="1")
+								span.form__plus +
+								button.form__submit(type="submit") #[+svg('bag')] #[span Add to cart]
+
+// shop product end

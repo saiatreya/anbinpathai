@@ -1,0 +1,95 @@
+/* events inner start */
+
+.events-inner
+	background-color: #F9F7F6
+	overflow: hidden
+
+.events-inner
+	&__bg
+		position: absolute
+		top: 50%
+		right: 0
+		transform: translateY(-50%)
+		pointer-events: none
+	.pagination
+		margin-top: 70px
+
+/* upcoming-item */
+
+.upcoming-item
+	display: flex
+	align-items: flex-start
+	margin-bottom: 30px
+
+.upcoming-item
+	&__date
+		color: #5E5C8B
+		background-color: $orange
+		font-weight: 700
+		padding: 20px 10px 25px 10px
+		min-width: 100px
+		text-align: center
+		margin-right: 10px
+		display: none
+
+	+r576
+		&__date
+			display: block
+
+	&__date span:first-of-type
+		display: block
+		font-size: 50px
+		line-height: 50px
+		letter-spacing: -0.070em
+	&__body
+		padding: 15px
+		box-shadow: 0px 3px 15px 2px rgba(0, 0, 0, 0.04)
+		width: 100%
+		background-color: #FFF
+
+	+r576
+		&__body
+			max-width: calc(100% - 110px)
+
+	+r1200
+		&__body
+			padding: 30px
+
+	&__img
+		position: relative
+		overflow: hidden
+		margin-bottom: 35px
+
+	+r992
+
+		&__img
+			margin-bottom: 0
+
+	&__img::before
+		content: ""
+		display: block
+		padding-top: percentage(205/240)
+	&__img img
+		z-index: 0
+	&__title
+		margin-bottom: 16px
+	&__title a
+		color: inherit
+		text-decoration: none
+		transition: opacity .3s
+	&__title a:hover
+		color: $title
+		opacity: 0.75
+	&__details
+		margin-top: 25px
+	&__details .icon
+		position: relative
+		top: -2px
+		stroke: $orange
+		margin-right: 8px
+	&__details p:not(:last-of-type)
+		margin-bottom: 10px
+	&__details p:last-of-type
+		margin-bottom: 0	
+
+/* events inner end */

@@ -1,0 +1,107 @@
+extends ../layouts/primary.pug
+
+block variables
+
+	-var page = 'donors'
+
+	-var type = 'inner'
+
+	-var dest = 'pages'
+
+block header
+
+	include ../blocks/_aside-dropdown/_aside-dropdown
+
+	// header start
+	
+	header.header.header--inner
+		.container-fluid
+			.row.no-gutters.justify-content-between
+
+				.col-auto.d-flex.align-items-center
+					.dropdown-trigger.dropdown-trigger--inner.d-none.d-sm-block
+						.dropdown-trigger__item
+
+					.header-logo
+						a.header-logo__link(href="index.html")
+							img.header-logo__img(src="img/logo_dark.png", alt="logo")
+
+				.col-auto
+					include ../blocks/_main-menu/_main-menu
+
+				.col-auto.d-flex.align-items-center
+
+					// lang select start
+					ul.lang-select.lang-select--inner
+						li.lang-select__item.lang-select__item--active
+							span En
+							ul.lang-select__sub-list
+								li
+									a(href="#") French
+								li
+									a(href="#") Spanish
+								li
+									a(href="#") Deutsch
+								li
+									a(href="#") Russian
+					// lang select end				
+
+					a.button.button--squared(href="#") 
+						span Donate
+
+					.dropdown-trigger.dropdown-trigger--inner.d-block.d-sm-none
+						.dropdown-trigger__item
+
+	// header end
+
+block main
+
+	section.promo-primary(class=(dest === "elements" ? "promo-primary--elements" : undefined))
+
+		picture
+			source(srcset='img/donors.jpg' media='(min-width: 992px)')
+			img.img--bg(src='img/donors.jpg' alt='img')
+
+		.promo-primary__description 
+			span Mercy
+
+		.container
+			.row
+				.col-auto
+					.align-container
+						.align-container__item
+							span.promo-primary__pre-title Helpo
+							h1.promo-primary__title #[span Partners] #[span & Donors]
+
+	include ../blocks/_donors-inner/_donors-inner
+
+	include ../blocks/_info/_info
+
+	include ../blocks/_info-banner/_info-banner
+
+	// text section start
+
+	section.section.text-section.text-section--style-2
+
+		img.text-section__bg-left(src="img/text-section_left.png", alt="img")
+		img.text-section__bg-right(src="img/text-section_right.png", alt="img")
+
+		.container
+			.row
+
+				.col-12.text-center
+
+					h2.text-section__heading Thank You
+
+			.row
+
+				.col-lg-8.offset-lg-4.col-xl-7.offset-xl-4
+
+					h3.text-section__title To all our donors, #[br]partners and volunteers
+					p Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail, Canthigaster rostrata. Midshipman dartfish Modoc sucker, yellowtail kingfish
+
+	// text section end
+
+block footer
+
+	include ../blocks/_footer/_footer

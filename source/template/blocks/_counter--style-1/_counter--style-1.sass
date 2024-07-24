@@ -1,0 +1,37 @@
+/* counter style-1 start */
+
+.counter-item
+	&__lower
+		font-size: 60px
+		line-height: 60px
+		font-weight: 700
+		letter-spacing: -0.070em
+
+	+r992
+		&__lower
+			font-size: 80px
+			line-height: 80px
+
+	+r1200
+		&__lower
+			font-size: 100px
+			line-height: 100px
+
+.counter-item
+	display: inline-block
+	text-align: center
+	margin-bottom: 50px
+
++r768
+	.counter-item
+		text-align: left
+
+.counter-item--style-1
+	.counter-item__top .icon
+		font-size: 66px
+	.counter-item__title
+		margin-top: 13px
+	.counter-item__lower
+		color: #5E5C8B
+
+/* counter style-1 end */
