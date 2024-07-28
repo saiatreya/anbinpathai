@@ -1,0 +1,39 @@
+/* dual slider start */
+
+.main-slider
+	margin-bottom: 10px
+
+.main-slider
+	&__item
+		vertical-align: top
+	&__img
+		position: relative
+		background-color: #FFF
+	&__img img
+		z-index: 0
+	&__img::before
+		content: ""
+		display: block
+		padding-top: percentage(530/570)
+
+.nav-slider
+	.slick-track
+		margin: 0 -5px
+	&__item
+		vertical-align: top
+		padding: 0 5px
+	&__img
+		position: relative
+		background-color: #FFF
+		border-bottom: 3px solid transparent
+		transition: border-color .3s
+	&__img img
+		z-index: 0
+	.slick-current &__img
+		border-bottom: 3px solid $orange
+	&__img::before
+		content: ""
+		display: block
+		padding-top: percentage(120/125)
+
+/* dual slider end */

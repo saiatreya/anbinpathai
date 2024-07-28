@@ -1,0 +1,102 @@
+/* storie details start */
+
+.storie-details
+	overflow: hidden
+
+.storie-details
+	&__bg
+		display: none
+		position: absolute
+		top: 50%
+		left: 0
+		transform: translateY(-50%)
+		pointer-events: none
+		z-index: -1
+
+	+r992
+
+		&__bg
+			display: block
+
+	&__img
+		position: relative
+		overflow: hidden
+	&__top
+		margin-bottom: 60px
+	&__description
+		background-color: #F9F7F6
+		margin-top: 2px
+		padding: 25px 30px 27px 30px
+	&__name
+		margin-bottom: 10px
+
+	+r992
+
+		&__name
+			margin-bottom: 0
+
+	&__img::before
+		content: ""
+		display: block
+		padding-top: percentage(445/770)
+	&__title
+		margin-top: 40px
+	&__button
+		margin-top: 15px
+
+	+r768
+
+		&__button
+			margin-top: 0
+
+	&__details
+		font-size: 14px
+		background-color: #F9F7F6
+		padding: 30px
+		margin-top: 40px
+	&__tag
+		display: inline-block
+		color: #333
+		font-weight: 700
+		text-decoration: none
+		transition: color .3s
+	&__tag:hover
+		color: $orange
+	&__tag:first-of-type
+		margin-left: 10px
+	&__tag:not(:last-of-type)
+		margin-right: 5px
+	&__socials
+		display: flex
+		justify-content: center
+		list-style: none
+		margin: 15px 0 0 0
+		padding: 0
+
+	+r768
+
+		&__socials
+			justify-content: flex-end
+			margin: 0
+
+	&__socials li:not(:last-of-type)
+		margin-right: 10px
+	&__socials a
+		color: $blue
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		height: 36px
+		width: 36px
+		border: 2px solid #BFBECF
+		border-radius: 50%
+		text-decoration: none
+		transition: all .3s
+	&__socials a:hover
+		background: $orange
+		border: 2px solid $orange
+	&__blockquote,
+	.text-filled
+		margin: 50px 0
+
+/* storie details end */

@@ -1,0 +1,66 @@
+/* article start */
+
+.article
+	background-color: #F9F8F6
+
+.article
+	&__bg
+		position: absolute
+		right: 0
+		top: 50%
+		transform: translateY(-50%)
+		z-index: -1
+		pointer-events: none
+		display: none
+	
+	+r992
+
+		&__bg
+
+			display: block
+
+	&__img
+		margin-bottom: 30px
+
+	+r768
+
+		&__img
+			margin-bottom: 45px
+
+	&__img img
+		display: block
+		width: 100%
+		height: auto
+	&__list
+		margin: 30px 0
+	p:last-of-type
+		margin-bottom: 0
+	.article-information
+		margin-top: 65px
+	&__text-filled
+		margin: 40px 0
+
+/* article informatiom */
+
+.article-information
+	&__item
+		padding: 25px 30px 23px 30px
+		margin-bottom: 30px
+	&__title
+		color: #FFF
+	&__details-item
+		color: #FFF
+		font-size: 14px
+		line-height: 27px
+	&__details-item span:first-of-type
+		font-weight: 700
+		margin-right: 15px
+		letter-spacing: -0.030em
+	&__details-item a
+		color: inherit
+		text-decoration: none
+		transition: opacity .3s
+	&__details-item a:hover
+		opacity: 0.75
+
+/* article end */

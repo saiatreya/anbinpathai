@@ -1,0 +1,103 @@
+/* video block start */
+
+.video-block::before
+	content: ""
+	display: none
+	height: 100%
+	width: 80px
+	background-color: #F9F7F6
+	position: absolute
+	top: 0
+	left: 0
+
++r1600
+
+	.video-block::before
+		display: block
+
+.video-block::after
+	content: ""
+	display: block
+	height: 60%
+	width: 100%
+	position: absolute
+	bottom: 0
+	background-color: #F9F7F6
+	z-index: -2
+
+.video-frame
+	position: relative
+
+.video-frame::before
+	content: ""
+	display: block
+	padding-top: percentage(600/1170)
+	background: rgba(53, 57, 118, 0.7)
+	position: relative
+	z-index: 1
+
+.video-frame
+	.img--bg
+		z-index: 0
+	&__img-layout
+		display: none
+		position: absolute
+		bottom: -18%
+		left: 50%
+		transform: translateX(-50%)
+		z-index: -1
+
+	+r992
+
+		&__img-layout
+			display: inline-block
+
+	&__trigger
+		display: flex
+		flex-direction: column
+		align-items: center
+		color: #FFF
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		z-index: 2
+		text-decoration: none
+		transition: opacity .3s
+	&__icon
+		display: inline-block
+		color: $blue
+		height: 50px
+		width: 50px
+		line-height: 50px
+		border-radius: 50%
+		background: #FFF
+		text-align: center
+
+	+r768
+
+		&__icon
+			height: 80px
+			width: 80px
+			line-height: 80px
+
+	&__icon .fa
+		font-size: 20px
+		line-height: 50px
+
+	+r768
+
+		&__icon .fa
+			line-height: 80px
+
+
+	&__trigger:hover
+		color: #FFF
+		opacity: 0.75
+	&__text
+		font-size: 14px
+		font-weight: 700
+		text-transform: uppercase
+		margin-top: 15px
+
+/* video block end */

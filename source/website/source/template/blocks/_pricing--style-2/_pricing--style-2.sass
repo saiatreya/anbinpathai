@@ -1,0 +1,61 @@
+/* pricing style-2 start */
+
+.pricing-item--style-2
+	border: 7px solid #F3F0EE
+	padding: 50px 15px 55px 15px
+	display: flex
+	flex-direction: column
+	align-items: center
+	margin-bottom: 50px
+
+.pricing-item--style-2.pricing-item--selected
+	background-color: #F3F0EE
+
+.pricing-item--style-2
+	.pricing-item__plan
+		color: $blue
+	.pricing-item__price
+		color: #5E5C8B
+		font-size: 60px
+		line-height: 60px
+		font-weight: 700
+		letter-spacing: -0.070em
+	.pricing-item__price span
+		font-size: 30px
+		line-height: 30px
+		letter-spacing: -0.050em
+	.pricing-item__list
+		margin-top: 32px
+	.pricing-item__list li
+		position: relative
+		color: #333
+		line-height: 36px
+		font-weight: 700
+		list-style: none
+	.pricing-item__list li::before,
+	.pricing-item__list li::after
+		content: ""
+		display: inline-block
+		width: 2px
+		background-color: #45DBAB
+		position: absolute
+	.pricing-item__list li::before
+		height: 10px
+		transform: rotate(45deg)
+		left: -15px
+		top: 15px
+	.pricing-item__list li::after
+		height: 4px
+		transform: rotate(-45deg)
+		left: -20px
+		top: 19px
+	.pricing-item__list li.item--disabled
+		color: #BEBEBE
+	.pricing-item__list li.item--disabled::before,
+	.pricing-item__list li.item--disabled::after
+		display: none
+	.pricing-item__button
+		padding: 13px 42px 13px 42px
+		margin-top: 22px
+	
+/* pricing style-2 end */

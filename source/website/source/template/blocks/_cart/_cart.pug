@@ -1,0 +1,153 @@
+// cart start
+
+.cart
+
+	.cart__heading
+
+		.row
+
+			.col-lg-4
+
+				h6.cart__title Products
+
+			.col-lg-2.text-center.d-none.d-lg-block
+
+				h6.cart__title Price
+
+			.col-lg-3.text-center.d-none.d-lg-block
+
+				h6.cart__title Count
+
+			.col-lg-2.text-center.d-none.d-lg-block
+
+				h6.cart__title Summary
+
+			.col-lg-1
+
+	.cart__body
+
+		.cart-item
+			.row.align-items-center
+
+				.col-lg-4
+
+					.cart-item__product
+						.cart-item__product-img
+							img.img--contain(src="img/shop_7.jpg", alt="img")
+						.cart-item__product-name
+							a(href="shop-product.html") Awesome Jacket
+
+				.col-lg-2.text-center
+
+					.cart-item__price $18.00
+				.col-lg-3.text-center
+
+					.cart-item__count
+						span.cart-item__minus -
+						input.cart-item__input(type="number" value="1")
+						span.cart-item__plus +
+
+				.col-lg-2.text-center
+
+					.cart-item__summa $18.00
+
+				.col-lg-1.text-center.text-lg-right
+
+					span.cart-item__remove
+						+svg('remove')
+
+		.cart-item
+			.row.align-items-center
+
+				.col-lg-4
+
+					.cart-item__product
+						.cart-item__product-img
+							img.img--contain(src="img/shop_8.jpg", alt="img")
+						.cart-item__product-name
+							a(href="shop-product.html") Black & White Cap
+
+				.col-lg-2.text-center
+
+					.cart-item__price $5.00
+				.col-lg-3.text-center
+
+					.cart-item__count
+						span.cart-item__minus -
+						input.cart-item__input(type="number" value="1")
+						span.cart-item__plus +
+
+				.col-lg-2.text-center
+
+					.cart-item__summa $5.00
+
+				.col-lg-1.text-center.text-lg-right
+
+					span.cart-item__remove
+						+svg('remove')
+
+		.cart-item
+			.row.align-items-center
+
+				.col-lg-4
+
+					.cart-item__product
+						.cart-item__product-img
+							img.img--contain(src="img/shop_9.jpg", alt="img")
+						.cart-item__product-name
+							a(href="shop-product.html") Sports Sport Suit
+
+				.col-lg-2.text-center
+
+					.cart-item__price $35.00
+				.col-lg-3.text-center
+
+					.cart-item__count
+						span.cart-item__minus -
+						input.cart-item__input(type="number" value="1")
+						span.cart-item__plus +
+
+				.col-lg-2.text-center
+
+					.cart-item__summa $35.00
+
+				.col-lg-1.text-center.text-lg-right
+
+					span.cart-item__remove
+						+svg('remove')
+
+		.cart__lower
+
+			.row
+
+				.col-lg-8
+
+					.coupon-block
+
+						h6.cart__title Coupon Code
+
+						form.form.coupon-form(action="javascript: void(0);")
+
+							input.form__field(type="text" placeholder="xxx xx")
+							button.form__submit(type="submit") Apply Coupon
+
+				.col-lg-4.text-lg-right
+
+					.cart-totals
+
+						h6.cart__title Cart Totals
+
+						ul.cart-totals__list
+							li
+								span Subtotal:
+								span $ 58.00
+							li
+								span Sale:
+								span $ 10.00
+							li
+								span Total:
+								span $ 48.00
+
+						a.cart-totals__link.button.button--primary(href="shop-checkout.html") Proceed to checkout
+
+// cart end

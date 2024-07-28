@@ -1,0 +1,185 @@
+extends ../layouts/primary.pug
+
+block variables
+
+	-var page = 'account'
+
+	-var type = 'inner'
+
+	-var dest = 'shop-inner'
+
+block header
+
+	include ../blocks/_aside-dropdown/_aside-dropdown
+
+	// header start
+
+	header.header.header--inner.header--shop
+		.container-fluid
+			.row.no-gutters.justify-content-between
+
+				.col-auto.d-flex.align-items-center
+					.dropdown-trigger.dropdown-trigger--inner.d-none.d-sm-block
+						.dropdown-trigger__item
+
+					.header-logo
+						a.header-logo__link(href="index.html")
+							img.header-logo__img(src="img/logo_dark.png", alt="logo")
+
+				.col-auto
+					include ../blocks/_main-menu/_main-menu
+
+				.col-auto.d-flex.align-items-center
+
+					// lang select start
+					ul.lang-select.lang-select--inner
+						li.lang-select__item.lang-select__item--active
+							span En
+							ul.lang-select__sub-list
+								li
+									a(href="#") French
+								li
+									a(href="#") Spanish
+								li
+									a(href="#") Deutsch
+								li
+									a(href="#") Russian
+					// lang select end
+
+					a.cart-trigger(href="shop-cart.html")
+						+svg('bag')
+						span.cart-trigger__count 3
+
+					a.button.button--squared(href="#") 
+						span Donate
+
+					.dropdown-trigger.dropdown-trigger--inner.d-block.d-sm-none
+						.dropdown-trigger__item
+						
+	// header end
+
+block main
+
+	section.promo-primary(class=(dest === "shop-inner" ? "promo-primary--shop" : undefined))
+
+		picture
+			source(srcset='img/shop.jpg', media='(min-width: 992px)')
+			img.img--bg(src='img/shop.jpg', alt='img')
+
+		.promo-primary__description 
+			span Freedom
+
+		.container
+			.row
+				.col-auto
+					.align-container
+						.align-container__item
+							span.promo-primary__pre-title Helpo
+							h1.promo-primary__title #[span Shop] #[span Account]
+
+	// section start
+
+	section.section.background--brown
+		.container
+			.row.offset-margin
+
+				.col-md-8.offset-md-2.col-lg-6.offset-lg-0.col-xl-4.margin-bottom
+
+					form.form.account-form.sign-in-form(action="javascript:void(0);")
+						.form__fieldset
+							h6.form__title Sign In
+
+							.row
+
+								.col-12
+
+									input.form__field(type="text" name="username" placeholder="Username")
+									input.form__field(type="password" name="password" placeholder="Password")
+
+								.col-12.d-flex.align-items-end.justify-content-between.flex-wrap
+
+									label.form__checkbox-label
+										span.form__label-text Remember me
+										input.form__input-checkbox(type="checkbox" name="size-select" value="Size XXL" checked)
+										span.form__checkbox-mask
+
+									a.form__link(href="#") I forgot my password
+
+								.col-12.text-center
+
+									button(type="submit").form__submit Sign In
+
+								.col-12.text-center
+
+									strong #[a.form__link(href="#") Sign up] if you don’t have an account
+
+				.col-md-8.offset-md-2.col-lg-6.offset-lg-0.col-xl-4.margin-bottom
+
+					form.form.account-form.sign-up-form(action="javascript:void(0);")
+						.form__fieldset
+							h6.form__title Sign Up
+
+							.row
+
+								.col-12
+
+									input.form__field(type="text" name="fullname" placeholder="Full Name")
+									input.form__field(type="email" name="email" placeholder="Email")
+									input.form__field(type="password" name="password" placeholder="Password")
+									input.form__field(type="password" name="confirm-password" placeholder="Confirm Password")
+
+
+								.col-12
+
+									strong I agree with #[a.form__link(href="#") Term of Services]
+
+
+								.col-12.text-center
+
+									button(type="submit").form__submit Sign Up
+
+								.col-12.text-center
+
+									strong #[a.form__link(href="#") Sign in] if you an account
+
+				.col-md-8.offset-md-2.col-lg-6.offset-lg-0.col-xl-4.margin-bottom
+
+					form.form.account-form.password-form(action="javascript:void(0);")
+						.form__fieldset
+							h6.form__title Sign Up
+
+							.row
+
+								.col-12
+
+									input.form__field(type="email" name="email" placeholder="Email")
+
+								.col-12
+
+									a.form__link(href="#") Didn’t get email?
+
+
+								.col-12.text-center
+
+									button(type="submit").form__submit Submit
+
+								.col-12.text-center
+
+									strong Back to #[a.form__link(href="#") Sign in]
+
+	// section end
+
+	// bottom bg start
+
+	section.bottom-background.background--brown
+		.container
+			.row
+				.col-12
+					.bottom-background__img
+						img(src="img/bottom-bg.png", alt="img")
+
+	// bottom bg end
+
+block footer
+
+	include ../blocks/_footer/_footer

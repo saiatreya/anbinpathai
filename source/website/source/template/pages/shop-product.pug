@@ -1,0 +1,338 @@
+extends ../layouts/primary.pug
+
+block variables
+
+	-var page = 'shop-product'
+
+	-var type = 'inner'
+
+	-var dest = 'shop-inner'
+
+block header
+
+	include ../blocks/_aside-dropdown/_aside-dropdown
+
+	// header start
+
+	header.header.header--inner.header--shop
+		.container-fluid
+			.row.no-gutters.justify-content-between
+
+				.col-auto.d-flex.align-items-center
+					.dropdown-trigger.dropdown-trigger--inner.d-none.d-sm-block
+						.dropdown-trigger__item
+
+					.header-logo
+						a.header-logo__link(href="index.html")
+							img.header-logo__img(src="img/logo_dark.png", alt="logo")
+
+				.col-auto
+					include ../blocks/_main-menu/_main-menu
+
+				.col-auto.d-flex.align-items-center
+
+					// lang select start
+					ul.lang-select.lang-select--inner
+						li.lang-select__item.lang-select__item--active
+							span En
+							ul.lang-select__sub-list
+								li
+									a(href="#") French
+								li
+									a(href="#") Spanish
+								li
+									a(href="#") Deutsch
+								li
+									a(href="#") Russian
+					// lang select end
+
+					a.cart-trigger(href="shop-cart.html")
+						+svg('bag')
+						span.cart-trigger__count 3
+
+					a.button.button--squared(href="#") 
+						span Donate
+
+					.dropdown-trigger.dropdown-trigger--inner.d-block.d-sm-none
+						.dropdown-trigger__item
+						
+	// header end
+
+block main
+
+	section.promo-primary(class=(dest === "shop-inner" ? "promo-primary--shop" : undefined))
+
+		picture
+			source(srcset='img/shop.jpg' media='(min-width: 992px)')
+			img.img--bg(src='img/shop.jpg' alt='img')
+
+		.promo-primary__description 
+			span Freedom
+
+		.container
+			.row
+				.col-auto
+					.align-container
+						.align-container__item
+							span.promo-primary__pre-title Helpo
+							h1.promo-primary__title #[span Shop] #[span Product]
+
+	include ../blocks/_shop-product/_shop-product
+
+	// section start
+
+	section.section
+		.container
+			.row
+
+				.col-lg-8.col-xl-7
+
+					// shop product tabs start
+
+					.tabs.horizontal-tabs.shop-product-tabs
+
+						ul.horizontal-tabs__header
+							li
+								a(href="#horizontal-tabs__item-1")
+									span Description 
+							li
+								a(href="#horizontal-tabs__item-2")
+									span Reviews
+
+						.horizontal-tabs__content
+
+							#horizontal-tabs__item-1.horizontal-tabs__item
+
+								p African lungfish silverside, Red salmon rockfish grunion, garpike zebra danio king-of-the-salmon banjo catfish. Sea chub demoiselle whalefish zebra lionfish mud cat pelican eel. Minnow snoek icefish velvet-belly shark
+								p Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish; bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra pleco graveldiver river shark tripod fish; flagtail bala shark warbonnetcan eel. Minnow snoek icefish velvet-belly shark,
+
+								.table
+									.table__body
+										.table__row
+											.table__cell Material 
+											.table__cell Laser
+										.table__row
+											.table__cell Color
+											.table__cell Black & White
+										.table__row
+											.table__cell Coutry
+											.table__cell USA
+
+							#horizontal-tabs__item-2.horizontal-tabs__item
+
+								.comments
+
+									.comments__item
+										.comments__item-img
+											img.img--bg(src="img/comment_1.jpg", alt="img")
+										.comments__item-description
+											.row.align-items-center
+
+												.col-6.col-sm-8.col-md-7.d-flex.flex-wrap.align-items-baseline
+
+													span.comments__item-name Ann Miller
+
+													span.comments__item-date 23 Jan'19 02:15PM
+
+												.col-6.col-sm-4.col-md-5.text-right
+
+													ul.rating-list
+														li.rating-list__item
+															+fa('star')
+														li.rating-list__item
+															+fa('star')
+														li.rating-list__item
+															+fa('star')
+														li.rating-list__item
+															+fa('star')
+														li.rating-list__item.rating-list__item--disabled
+															+fa('star')
+
+												.col-12
+
+													.comments__item-text
+														p Asian carps sailback scorpionfish; dragon goby lemon sole triplefin blenny hog sucker. Smelt sleeper shovelnose sturgeon merluccid hake cow shark herring smelt trout-perch
+
+									.comments__item
+										.comments__item-img
+											img.img--bg(src="img/comment_2.jpg", alt="img")
+										.comments__item-description
+											.row.align-items-center
+
+												.col-6.col-sm-8.col-md-7.d-flex.flex-wrap.align-items-baseline
+
+													span.comments__item-name John Walker
+
+													span.comments__item-date 23 Jan'19 02:15PM
+
+												.col-6.col-sm-4.col-md-5.text-right
+
+													ul.rating-list
+														li.rating-list__item
+															+fa('star')
+														li.rating-list__item
+															+fa('star')
+														li.rating-list__item
+															+fa('star')
+														li.rating-list__item.rating-list__item--disabled
+															+fa('star')
+														li.rating-list__item.rating-list__item--disabled
+															+fa('star')
+
+												.col-12
+
+													.comments__item-text
+														p Dragon goby lemon sole triplefin blenny hog sucker. Smelt sleeper shovelnose sturgeon merluccid hake cow shark herring smelt trout-perch
+
+									.comments__item
+										.comments__item-img
+											img.img--bg(src="img/comment_3.jpg", alt="img")
+										.comments__item-description
+											.row.align-items-center
+
+												.col-6.col-sm-8.col-md-7.d-flex.flex-wrap.align-items-baseline
+
+													span.comments__item-name Helen Dollens
+
+													span.comments__item-date 23 Jan'19 02:15PM
+
+												.col-6.col-sm-4.col-md-5.text-right
+
+													ul.rating-list
+														li.rating-list__item
+															+fa('star')
+														li.rating-list__item
+															+fa('star')
+														li.rating-list__item.rating-list__item--disabled
+															+fa('star')
+														li.rating-list__item.rating-list__item--disabled
+															+fa('star')
+														li.rating-list__item.rating-list__item--disabled
+															+fa('star')
+
+												.col-12
+
+													.comments__item-text
+														p Cow shark herring smelt trout-perch Asian carps sailback scorpionfish; dragon goby lemon sole triplefin blenny hog sucker. Smelt sleeper shovelnose sturgeon merluccid hake 
+
+
+									// shop product tabs end
+
+								include ../blocks/_comments-form/_comments-form
+
+	// section end
+
+	// section start
+
+	section.section.background--brown
+
+		.container
+			.row.align-items-end.margin-bottom
+
+				.col-md-7.col-lg-8
+
+					.heading.heading--primary
+
+						h2.heading__title.no-margin-bottom #[span Related] #[span Products]
+
+				.col-md-5.col-lg-4.text-md-right
+
+					// slider nav start
+					.slider__nav.related-slider__nav
+						.slider__arrows
+							.slider__prev
+								+fa('chevron-left')
+							.slider__next
+								+fa('chevron-right')
+					// slider nav end
+
+			.row.offset-margin
+				.col-12
+
+					.related-slider
+
+						.related-slider__item
+
+							.shop-item
+								.shop-item__img
+									span.shop-item__badge.shop-item__badge--sale Sale - 50%
+									a.shop-item__add(href="#")
+										+svg('bag')
+										span Add to cart
+									img.img--contain(src="img/shop_1.png" alt="img")
+								.shop-item__details
+									h6.shop-item__name
+										a(href="shop-product.html") Classic Jeans
+									span.shop-item__price 15.00$
+
+						.related-slider__item
+
+							.shop-item
+								.shop-item__img
+									span.shop-item__badge.shop-item__badge--new New
+									a.shop-item__add(href="#")
+										+svg('bag')
+										span Add to cart
+									img.img--contain(src="img/shop_2.png" alt="img")
+								.shop-item__details
+									h6.shop-item__name
+										a(href="shop-product.html") Women Jacket
+									span.shop-item__price 25.00$						
+
+						.related-slider__item
+
+							.shop-item
+								.shop-item__img
+									span.shop-item__badge.shop-item__badge--hot Hot
+									a.shop-item__add(href="#")
+										+svg('bag')
+										span Add to cart
+									img.img--contain(src="img/shop_3.png" alt="img")
+								.shop-item__details
+									h6.shop-item__name
+										a(href="shop-product.html") Man Cap
+									span.shop-item__price 20.00$
+
+						.related-slider__item
+
+							.shop-item
+								.shop-item__img
+									a.shop-item__add(href="#")
+										+svg('bag')
+										span Add to cart
+									img.img--contain(src="img/shop_4.png" alt="img")
+								.shop-item__details
+									h6.shop-item__name
+										a(href="shop-product.html") Women Dress
+									span.shop-item__price 15.00$
+
+						.related-slider__item
+
+							.shop-item
+								.shop-item__img
+									span.shop-item__badge.shop-item__badge--new New
+									a.shop-item__add(href="#")
+										+svg('bag')
+										span Add to cart
+									img.img--contain(src="img/shop_2.png" alt="img")
+								.shop-item__details
+									h6.shop-item__name
+										a(href="shop-product.html") Women Jacket
+									span.shop-item__price 25.00$
+
+	// section end
+
+	// bottom bg start
+
+	section.bottom-background.background--brown
+		.container
+			.row
+				.col-12
+					.bottom-background__img
+						img(src="img/bottom-bg.png", alt="img")
+
+	// bottom bg end
+
+block footer
+
+	include ../blocks/_footer/_footer

@@ -1,0 +1,162 @@
+/* projects start */
+
+.projects
+	.heading
+		margin-bottom: 40px
+
+	+r992
+		
+		.heading
+			margin-bottom: 0
+
+.projects-masonry
+	&__img
+		position: relative
+		overflow: hidden
+		padding: 15px
+	&__item
+		color: #FFF
+		display: flex
+		flex-wrap: wrap
+		align-items: flex-start
+	&__item &__img img
+		transition: transform 1s
+	&__item:hover &__img img
+		transform: scale(1.2)
+	&__item .heading
+		width: 100%
+		max-width: 660px
+	&__item .heading .button
+		margin-top: 20px	
+	&__inner
+		width: 100%
+		max-width: 340px
+		text-align: center
+		padding: 30px 0
+	&__text
+		display: flex
+		justify-content: center
+		align-items: center
+		color: #FFF
+	&__badge
+		display: inline-block
+		font-size: 14px
+		font-weight: 700
+		padding: 6px 13px
+		margin-bottom: 22px
+		border-radius: 4px
+	&__title
+		font-size: 35px
+		line-height: 40px
+		margin-bottom: 17px
+	&__title a
+		color: #FFF
+		text-decoration: none
+		transition: color .3s
+	&__title a:hover
+		color: $orange
+	&__details-holder
+		margin-top: 30px
+	&__details-holder &__details-item
+		display: inline-block
+	&__details-holder &__details-item:not(:last-of-type)
+		margin-right: 15px
+	&__details-holder &__details-item span:nth-of-type(2)
+		font-weight: 700
+	&__link
+		position: relative
+		display: inline-block
+		font-size: 14px
+		font-weight: 700
+		text-transform: uppercase
+		text-decoration: none
+		margin-top: 30px
+		opacity: 0
+		transition: opacity .3s
+	&__item:hover &__link
+		opacity: 1
+	&__link::after
+		content: ""
+		display: inline-block
+		height: 1px
+		width: 100%
+		background: $orange
+		position: absolute
+		bottom: 2px
+		left: 0
+		transition: opacity .3s
+	&__link:hover::after
+		opacity: 0
+
+.projects-masonry__item--vertical
+	.projects-masonry__img
+		height: 50%
+		width: 100%
+		display: none
+
+	+r1366
+
+		.projects-masonry__img
+			display: initial
+
+	.projects-masonry__text
+		height: 100%
+		width: 100%
+
+	+r1366
+
+		.projects-masonry__text
+			height: 50%
+
+.projects-masonry__item--horizontal
+	.projects-masonry__img
+		height: 100%
+		width: 50%
+		display: none
+
+	+r1366
+
+		.projects-masonry__img
+			display: initial
+
+	.projects-masonry__text
+		height: 100%
+		width: 100%
+
+	+r1366
+
+		.projects-masonry__text	
+			width: 50%
+
+.projects-masonry__item--primary
+	.projects-masonry__img
+		height: 100%
+		width: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+
+.projects-masonry__item--height-1,
+.projects-masonry__item--height-2
+	height: 400px
+
++r1200
+
+	.projects-masonry__item--height-1
+		height: 900px
+
++r1200
+
+	.projects-masonry__item--height-2
+		height: 450px
+
+.projects-masonry__item--heading
+	height: auto
+	margin-bottom: 40px
+
++r992
+
+	.projects-masonry__item--heading
+		margin-bottom: 0
+	
+/* projects end */

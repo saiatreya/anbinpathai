@@ -1,0 +1,44 @@
+/* faq start */
+
+.faq
+	background-color: #F9F7F6
+
+.faq-aside
+	position: relative
+	color: #FFF
+	text-align: center
+	padding: 120px 15px 95px 15px
+	margin-top: 50px
+
++r992
+
+	.faq-aside
+		margin-top: 0
+
+.faq-aside
+	&__title
+		color: inherit
+		margin-bottom: 15px
+	&__link
+		position: relative
+		display: inline-block
+		color: #FFF
+		font-size: 14px
+		font-weight: 700
+		text-transform: uppercase
+		text-decoration: none
+		transition: color .3s
+	&__link::after
+		content: ""
+		display: block
+		width: 100%
+		height: 1px
+		position: absolute
+		bottom: 2px
+		left: 0
+		background-color: #FFF
+		transition: opacity .3s
+	&__link:hover::after
+		opacity: 0	
+
+/* faq end */

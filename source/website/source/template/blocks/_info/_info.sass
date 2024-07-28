@@ -1,0 +1,28 @@
+/* info start */
+
+.info
+	.heading
+		margin-bottom: 45px
+
+	+r1200
+
+		.heading
+			margin-bottom: 0
+
+	&__img
+		position: relative
+
+	.img--layout
+		display: none
+
+	+r992
+
+		.img--layout
+			display: initial
+
+	&__img img:not(.img--layout)
+		display: inline-block
+		width: 100%
+		height: auto
+
+/* info end */

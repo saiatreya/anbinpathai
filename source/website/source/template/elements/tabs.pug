@@ -1,0 +1,165 @@
+extends ../layouts/primary.pug
+
+block variables
+
+	-var page = 'tabs'
+
+	-var type = 'inner'
+
+	-var dest = 'elements'
+
+block header
+
+	include ../blocks/_aside-dropdown/_aside-dropdown
+
+	// header start
+	
+	header.header.header--inner
+		.container-fluid
+			.row.no-gutters.justify-content-between
+
+				.col-auto.d-flex.align-items-center
+					.dropdown-trigger.dropdown-trigger--inner.d-none.d-sm-block
+						.dropdown-trigger__item
+
+					.header-logo
+						a.header-logo__link(href="index.html")
+							img.header-logo__img(src="img/logo_dark.png", alt="logo")
+
+				.col-auto
+					include ../blocks/_main-menu/_main-menu
+
+				.col-auto.d-flex.align-items-center
+
+					// lang select start
+					ul.lang-select.lang-select--inner
+						li.lang-select__item.lang-select__item--active
+							span En
+							ul.lang-select__sub-list
+								li
+									a(href="#") French
+								li
+									a(href="#") Spanish
+								li
+									a(href="#") Deutsch
+								li
+									a(href="#") Russian
+					// lang select end				
+
+					a.button.button--squared(href="#") 
+						span Donate
+
+					.dropdown-trigger.dropdown-trigger--inner.d-block.d-sm-none
+						.dropdown-trigger__item
+
+	// header end
+
+block main
+
+	section.promo-primary(class=(dest === "elements" ? "promo-primary--elements" : undefined))
+
+		picture
+			source(srcset='img/tabs.jpg', media='(min-width: 992px)')
+			img.img--bg(src='img/tabs.jpg', alt='img')
+
+		.promo-primary__description 
+			span Elements
+
+		.container
+			.row
+				.col-auto
+					.align-container
+						.align-container__item
+							span.promo-primary__pre-title Helpo
+							h1.promo-primary__title #[span Tabs]
+
+	section.section.elements
+		.container
+			.row
+				.col-auto
+					h4.elements__title Variant 1
+
+			.row
+				.col-auto
+					.tabs.horizontal-tabs
+						ul.horizontal-tabs__header
+							li
+								a(href="#horizontal-tabs__item-1")
+									span Description
+							li
+								a(href="#horizontal-tabs__item-2")
+									span Donors
+							li
+								a(href="#horizontal-tabs__item-3")
+									span Video
+							li
+								a(href="#horizontal-tabs__item-4")
+									span Gallery
+						.horizontal-tabs__content
+							#horizontal-tabs__item-1.horizontal-tabs__item
+								p #[strong Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat porro facere, atque doloremque, sed voluptatibus quibusdam ipsam labore autem eveniet minima laborum sunt dignissimos consequuntur hic deleniti, accusantium qui modi!]
+								p African lungfish silverside, Red salmon rockfish grunion, garpike zebra danio king-of-the-salmon banjo catfish. Sea chub demoiselle whalefish zebra lionfish mud cat pelican eel. Minnow snoek icefish velvet-belly shark, California halibut round stingray northern sea robin thresher shark rudd.
+							#horizontal-tabs__item-2.horizontal-tabs__item
+								p #[strong Thresher shark rudd African lungfish silverside, Red salmon rockfish grunion, garpike zebra danio king-of-the-salmon banjo catfish. Sea chub demoiselle whalefish zebra lionfish mud cat pelican eel.]
+								p Minnow snoek icefish velvet-belly shark, California halibut round stingray northern sea robin. Southern grayling trout-perch. Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail, Canthigaster rostrata. Midshipman dartfish Modoc sucker, yellowtail kingfish basslet. Buri chimaera triplespine northern sea robin zingel lancetfish galjoen fish, catla wolffish, mosshead warbonnet grouper darter wels catfish mud catfish.
+								p African lungfish silverside, Red salmon rockfish grunion, garpike zebra danio king-of-the-salmon banjo catfish. Sea chub demoiselle whalefish zebra lionfish mud cat pelican eel. Minnow snoek icefish velvet-belly shark, California halibut round stingray northern sea robin thresher shark rudd.
+							#horizontal-tabs__item-3.horizontal-tabs__item
+								p #[strong Thresher shark rudd African lungfish silverside, Red salmon rockfish grunion, garpike zebra danio king-of-the-salmon banjo catfish. Sea chub demoiselle whalefish zebra lionfish mud cat pelican eel.]
+								p Minnow snoek icefish velvet-belly shark, California halibut round stingray northern sea robin. Southern grayling trout-perch. Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail, Canthigaster rostrata. Midshipman dartfish Modoc sucker, yellowtail kingfish basslet. Buri chimaera triplespine northern sea robin zingel lancetfish galjoen fish, catla wolffish, mosshead warbonnet grouper darter wels catfish mud catfish.
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam sunt natus explicabo, optio consequatur molestias itaque. Harum ea nesciunt quam expedita sequi obcaecati iusto blanditiis consectetur maxime officia qui esse reiciendis, nostrum illo. Nostrum recusandae ipsa quam, aut omnis, corrupti aliquid, corporis nisi eos blanditiis tempore labore eius minus voluptate?
+								p African lungfish silverside, Red salmon rockfish grunion, garpike zebra danio king-of-the-salmon banjo catfish. Sea chub demoiselle whalefish zebra lionfish mud cat pelican eel. Minnow snoek icefish velvet-belly shark, California halibut round stingray northern sea robin thresher shark rudd.
+							#horizontal-tabs__item-4.horizontal-tabs__item
+								p #[strong Thresher shark rudd African lungfish silverside, Red salmon rockfish grunion, garpike zebra danio king-of-the-salmon banjo catfish. Sea chub demoiselle whalefish zebra lionfish mud cat pelican eel.]
+								p Minnow snoek icefish velvet-belly shark, California halibut round stingray northern sea robin. Southern grayling trout-perch. Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail, Canthigaster rostrata. Midshipman dartfish Modoc sucker, yellowtail kingfish basslet. Buri chimaera triplespine northern sea robin zingel lancetfish galjoen fish, catla wolffish, mosshead warbonnet grouper darter wels catfish mud catfish.
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo eos impedit, mollitia dicta facere reiciendis? Dolor laborum sunt dolore veniam qui nostrum ipsa praesentium! Voluptatem odit eius laudantium, quod animi, nam placeat laboriosam mollitia rem quis officia, tempora numquam nesciunt.
+								p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum ut, facere expedita velit aut numquam iusto. Molestias maiores laudantium similique. Modi error illum ab, qui ipsam vero? Asperiores, iste quis? Repellat quidem sunt amet explicabo ducimus esse dolorum ab impedit iure ad vel culpa ut repellendus, commodi nostrum! Voluptates accusantium atque quis? Molestiae, ut. Officia velit unde possimus eos mollitia tempore praesentium, dolorum illo ratione minima iusto vero cum quod perferendis expedita illum vel ipsa suscipit! Magni culpa at officiis molestiae a vel similique inventore, accusantium adipisci in sequi maiores harum quaerat debitis reprehenderit illum saepe quidem natus pariatur ducimus?
+								p African lungfish silverside, Red salmon rockfish grunion, garpike zebra danio king-of-the-salmon banjo catfish. Sea chub demoiselle whalefish zebra lionfish mud cat pelican eel. Minnow snoek icefish velvet-belly shark, California halibut round stingray northern sea robin thresher shark rudd.
+
+	section.section.elements.no-padding-top
+		.container
+			.row
+				.col-auto
+					h4.elements__title Variant 2
+
+			.row
+				.col-auto
+					.tabs.vertical-tabs
+						ul.vertical-tabs__header
+							li
+								a(href="#vertical-tabs__item-1")
+									span Description 
+							li
+								a(href="#vertical-tabs__item-2")
+									span Donors
+							li
+								a(href="#vertical-tabs__item-3")
+									span Video
+							li
+								a(href="#vertical-tabs__item-4")
+									span Gallery
+						.vertical-tabs__content
+							#vertical-tabs__item-1.vertical-tabs__item
+								p #[strong Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat porro facere, atque doloremque, sed voluptatibus quibusdam ipsam labore autem eveniet minima laborum sunt dignissimos consequuntur hic deleniti, accusantium qui modi!]
+								p African lungfish silverside, Red salmon rockfish grunion, garpike zebra danio king-of-the-salmon banjo catfish. Sea chub demoiselle whalefish zebra lionfish mud cat pelican eel. Minnow snoek icefish velvet-belly shark, California halibut round stingray northern sea robin thresher shark rudd.
+							#vertical-tabs__item-2.vertical-tabs__item
+								p #[strong Thresher shark rudd African lungfish silverside, Red salmon rockfish grunion, garpike zebra danio king-of-the-salmon banjo catfish. Sea chub demoiselle whalefish zebra lionfish mud cat pelican eel.]
+								p Minnow snoek icefish velvet-belly shark, California halibut round stingray northern sea robin. Southern grayling trout-perch. Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail, Canthigaster rostrata. Midshipman dartfish Modoc sucker, yellowtail kingfish basslet. Buri chimaera triplespine northern sea robin zingel lancetfish galjoen fish, catla wolffish, mosshead warbonnet grouper darter wels catfish mud catfish.
+								p African lungfish silverside, Red salmon rockfish grunion, garpike zebra danio king-of-the-salmon banjo catfish. Sea chub demoiselle whalefish zebra lionfish mud cat pelican eel. Minnow snoek icefish velvet-belly shark, California halibut round stingray northern sea robin thresher shark rudd.
+							#vertical-tabs__item-3.vertical-tabs__item
+								p #[strong Thresher shark rudd African lungfish silverside, Red salmon rockfish grunion, garpike zebra danio king-of-the-salmon banjo catfish. Sea chub demoiselle whalefish zebra lionfish mud cat pelican eel.]
+								p Minnow snoek icefish velvet-belly shark, California halibut round stingray northern sea robin. Southern grayling trout-perch. Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail, Canthigaster rostrata. Midshipman dartfish Modoc sucker, yellowtail kingfish basslet. Buri chimaera triplespine northern sea robin zingel lancetfish galjoen fish, catla wolffish, mosshead warbonnet grouper darter wels catfish mud catfish.
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam sunt natus explicabo, optio consequatur molestias itaque. Harum ea nesciunt quam expedita sequi obcaecati iusto blanditiis consectetur maxime officia qui esse reiciendis, nostrum illo. Nostrum recusandae ipsa quam, aut omnis, corrupti aliquid, corporis nisi eos blanditiis tempore labore eius minus voluptate?
+								p African lungfish silverside, Red salmon rockfish grunion, garpike zebra danio king-of-the-salmon banjo catfish. Sea chub demoiselle whalefish zebra lionfish mud cat pelican eel. Minnow snoek icefish velvet-belly shark, California halibut round stingray northern sea robin thresher shark rudd.
+							#vertical-tabs__item-4.vertical-tabs__item
+								p #[strong Thresher shark rudd African lungfish silverside, Red salmon rockfish grunion, garpike zebra danio king-of-the-salmon banjo catfish. Sea chub demoiselle whalefish zebra lionfish mud cat pelican eel.]
+								p Minnow snoek icefish velvet-belly shark, California halibut round stingray northern sea robin. Southern grayling trout-perch. Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail, Canthigaster rostrata. Midshipman dartfish Modoc sucker, yellowtail kingfish basslet. Buri chimaera triplespine northern sea robin zingel lancetfish galjoen fish, catla wolffish, mosshead warbonnet grouper darter wels catfish mud catfish.
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo eos impedit, mollitia dicta facere reiciendis? Dolor laborum sunt dolore veniam qui nostrum ipsa praesentium! Voluptatem odit eius laudantium, quod animi, nam placeat laboriosam mollitia rem quis officia, tempora numquam nesciunt.
+								p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum ut, facere expedita velit aut numquam iusto. Molestias maiores laudantium similique. Modi error illum ab, qui ipsam vero? Asperiores, iste quis? Repellat quidem sunt amet explicabo ducimus esse dolorum ab impedit iure ad vel culpa ut repellendus, commodi nostrum! Voluptates accusantium atque quis? Molestiae, ut. Officia velit unde possimus eos mollitia tempore praesentium, dolorum illo ratione minima iusto vero cum quod perferendis expedita illum vel ipsa suscipit! Magni culpa at officiis molestiae a vel similique inventore, accusantium adipisci in sequi maiores harum quaerat debitis reprehenderit illum saepe quidem natus pariatur ducimus?
+								p African lungfish silverside, Red salmon rockfish grunion, garpike zebra danio king-of-the-salmon banjo catfish. Sea chub demoiselle whalefish zebra lionfish mud cat pelican eel. Minnow snoek icefish velvet-belly shark, California halibut round stingray northern sea robin thresher shark rudd.
+	
+	
+	include ../blocks/_bottom-bg/_bottom-bg
+
+block footer
+
+	include ../blocks/_footer/_footer

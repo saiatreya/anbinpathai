@@ -1,0 +1,59 @@
+/* events start */
+
+.events
+	overflow: hidden
+
+.events
+	&__bg
+		position: absolute
+		left: 0
+		bottom: 0
+		z-index: -1
+		pointer-events: none
+
+/* event item */
+
+.event-item
+	background-color: #FFF
+	padding: 5px
+	margin-bottom: 50px
+	box-shadow: 0px 3px 15px 2px rgba(0, 0, 0, 0.06)
+
+.event-item
+	&__img
+		position: relative
+		overflow: hidden
+	&__img::before
+		content: ""
+		display: block
+		padding-top: percentage(275/360)
+	&__img img
+		z-index: 1
+	&__content
+		padding: 25px 15px 18px 15px
+
+	+r1200
+
+		&__content
+			padding: 25px 30px 18px 30px
+
+	&__title
+		margin-bottom: 8px
+	&__title a
+		color: $title
+		text-decoration: none
+		transition: opacity .3s
+	&__title a:hover
+		color: $title
+		opacity: 0.75
+	&__content p
+		font-size: 14px
+		line-height: 27px
+		margin-bottom: 0
+
+/* events front_2 */
+
+.events--front_2
+	overflow: visible
+
+/* events end */

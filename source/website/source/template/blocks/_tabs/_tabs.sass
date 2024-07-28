@@ -1,0 +1,100 @@
+/* tabs start */
+
+.tabs
+	.r-tabs-accordion-title
+		text-align: center
+	p:last-of-type
+		margin-bottom: 0
+	&__title
+		color: $blue
+		margin: 40px 0 10px 0
+
+/* horizontal tabs */
+
+.horizontal-tabs
+	&__header
+		border-bottom: 1px solid #F9F7F6
+	&__header li:not(:last-of-type)
+		margin-right: 50px 
+	&__header a,
+	.r-tabs-anchor
+		display: flex
+		align-items: center
+		justify-content: center
+		color: #999
+		font-weight: 700
+		text-decoration: none
+		padding: 10px 0
+
+	.r-tabs-state-active .r-tabs-anchor
+		background: #F9F7F6
+
+	+r769
+		.r-tabs-state-active .r-tabs-anchor
+			background: none
+
+	+r769
+		.r-tabs-anchor
+			display: inline-flex
+			padding: 25px 0
+
+	&__header a:hover,
+	.horizontal-tabs__header .r-tabs-state-active a
+		color: $blue
+		border-bottom: 3px solid $orange
+	.r-tabs-panel
+		padding: 30px 0
+	
+	+r769
+		.r-tabs-panel
+			padding: 50px 0 0 0
+
+/* vertical tabs */
+
+.vertical-tabs
+	display: flex
+
+.vertical-tabs
+	&__header
+		width: 100%
+		max-width: 170px
+	&__header a,
+	.r-tabs-anchor
+		display: flex
+		justify-content: center
+		align-items: center
+		color: #C3C3C3
+		font-weight: 700
+		text-decoration: none
+		padding: 10px 0
+		border-left: 3px solid transparent
+
+	.r-tabs-state-active a
+		background: #F9F7F6
+
+	+r769
+		.r-tabs-state-active a
+			background: none
+
+	+r769
+		.r-tabs-anchor
+			display: inline-flex
+			padding: 0 0 0 15px
+	
+	&__header a:hover,
+	.vertical-tabs__header .r-tabs-state-active a
+		color: $blue
+		border-left: 3px solid $orange
+	.r-tabs-tab
+		display: block
+		padding: 15px 0
+	.r-tabs-tab:not(:last-of-type)
+		border-bottom: 1px solid #F9F7F6
+	.r-tabs-panel
+		padding: 30px 0
+
+	+r769
+		.r-tabs-panel
+			padding: 15px 0 0 30px
+
+/* tabs end */

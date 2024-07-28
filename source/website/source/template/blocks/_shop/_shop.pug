@@ -1,0 +1,321 @@
+// shop start
+
+section.section.shop
+	.container
+		.row.align-items-baseline
+
+			.col-5
+
+				span.shop__aside-trigger Filter
+
+			.col-7.text-right
+
+				// shop filter start
+				ul.shop-filter
+					li.shop-filter__item.shop-filter__item--active
+						span Sort by latest
+						ul.shop-filter__sub-list
+							li
+								a(href="#") Sort by latest
+							li
+								a(href="#") Sort by populirity
+							li
+								a(href="#") Sort by price: low to high
+							li
+								a(href="#") Sort by price: high to low
+							li
+								a(href="#") Sort by adding
+				// shop filter end		
+
+		.row
+
+			.col-lg-3
+
+				.aside-holder
+
+					span.shop__aside-close
+						+svg('close')
+
+					.shop-aside
+	
+						.shop-aside__filter-block
+	
+							ul.brand-filter
+								li.brand-filter__item
+									span.brand-filter__brand Education
+									span.brand-filter__count 25
+								li.brand-filter__item
+									span.brand-filter__brand Clothes
+									span.brand-filter__count 5
+								li.brand-filter__item
+									span.brand-filter__brand Food
+									span.brand-filter__count 17
+								li.brand-filter__item
+									span.brand-filter__brand Medcine
+									span.brand-filter__count 31
+								li.brand-filter__item
+									span.brand-filter__brand Helpo
+									span.brand-filter__count 6
+	
+						form.form.filter-form(action="javascript:void(0);" autocomplete="off")
+	
+							.shop-aside__price-block
+	
+								h6.shop-aside__title Price
+	
+								.range-slider
+									input.range-slider__bar(type="text" name="price")
+									.range-slider__values
+										input.range-slider__input.range-slider__min(type="text" name="min-price" value="50" readonly)
+										input.range-slider__input.range-slider__max(type="text" name="max-price" value="900" readonly)
+	
+							.shop-aside__checkbox-block
+	
+								h6.shop-aside__title Filter by size
+	
+								label.form__checkbox-label
+									span.form__label-text Size XXL
+									input.form__input-checkbox(type="checkbox" name="size-select" value="Size XXL" checked)
+									span.form__checkbox-mask
+	
+								label.form__checkbox-label
+									span.form__label-text Size L
+									input.form__input-checkbox(type="checkbox" name="size-select" value="Size L")
+									span.form__checkbox-mask
+	
+								label.form__checkbox-label
+									span.form__label-text Size S
+									input.form__input-checkbox(type="checkbox" name="size-select" value="Size S")
+									span.form__checkbox-mask
+	
+							.shop-aside__option-block
+	
+								h6.shop-aside__title Filter by option
+	
+								label.form__radio-label
+									span.form__label-text Option 1
+									input.form__input-radio(type="radio" name="option-select" value="option-1" checked)
+									span.form__radio-mask
+	
+								label.form__radio-label
+									span.form__label-text Option 2
+									input.form__input-radio(type="radio" name="option-select" value="option-2")
+									span.form__radio-mask
+	
+								label.form__radio-label
+									span.form__label-text Option 3
+									input.form__input-radio(type="radio" name="option-select" value="option-3")
+									span.form__radio-mask
+	
+							.shop-aside__tags-block
+	
+								h6.shop-aside__title Tags
+	
+								.tags
+									a.tags__item(href="#") Charity
+									a.tags__item(href="#") Help
+									a.tags__item(href="#") Freedom
+									a.tags__item(href="#") Fundraising
+									a.tags__item(href="#") Donate
+									a.tags__item(href="#") Water
+	
+							.shop-aside__buttons-block
+	
+								button.form__submit(type="submit") Filter
+								span.form__clear Clear
+		
+					.recent-posts
+
+						h6.shop-aside__title Top Rated Products
+	
+						.recent-posts__item
+							.recent-posts__item-img
+								img.img--contain(src="img/shop_7.jpg", alt="img")
+							.recent-posts__item-description
+								a.recent-posts__item-link(href="shop-product.html") Awesome Jacket
+								span.recent-posts__item-value $32.00 $18.00
+	
+						.recent-posts__item
+							.recent-posts__item-img
+								img.img--contain(src="img/shop_8.jpg", alt="img")
+							.recent-posts__item-description
+								a.recent-posts__item-link(href="shop-product.html") Black & White Cap
+								span.recent-posts__item-value $18.00
+	
+						.recent-posts__item
+							.recent-posts__item-img
+								img.img--contain(src="img/shop_9.jpg", alt="img")
+							.recent-posts__item-description
+								a.recent-posts__item-link(href="shop-product.html") Sports Sport Suit
+								span.recent-posts__item-value $32.00
+
+			.col-lg-9
+
+				.row.offset-30
+
+					.col-12.col-sm-6.col-md-4
+
+						.shop-item
+							.shop-item__img
+								span.shop-item__badge.shop-item__badge--sale Sale - 50%
+								a.shop-item__add(href="#")
+									+svg('bag')
+									span Add to cart
+								img.img--contain(src="img/shop_1.png" alt="img")
+							.shop-item__details
+								h6.shop-item__name
+									a(href="shop-product.html") Classic Jeans
+								span.shop-item__price 15.00$
+
+					.col-12.col-sm-6.col-md-4
+
+						.shop-item
+							.shop-item__img
+								span.shop-item__badge.shop-item__badge--new New
+								a.shop-item__add(href="#")
+									+svg('bag')
+									span Add to cart
+								img.img--contain(src="img/shop_2.png" alt="img")
+							.shop-item__details
+								h6.shop-item__name
+									a(href="shop-product.html") Women Jacket
+								span.shop-item__price 25.00$
+
+					.col-12.col-sm-6.col-md-4
+
+						.shop-item
+							.shop-item__img
+								span.shop-item__badge.shop-item__badge--hot Hot
+								a.shop-item__add(href="#")
+									+svg('bag')
+									span Add to cart
+								img.img--contain(src="img/shop_3.png" alt="img")
+							.shop-item__details
+								h6.shop-item__name
+									a(href="shop-product.html") Man Cap
+								span.shop-item__price 20.00$
+
+					.col-12.col-sm-6.col-md-4
+
+						.shop-item
+							.shop-item__img
+								a.shop-item__add(href="#")
+									+svg('bag')
+									span Add to cart
+								img.img--contain(src="img/shop_4.png" alt="img")
+							.shop-item__details
+								h6.shop-item__name
+									a(href="shop-product.html") Women Dress
+								span.shop-item__price 15.00$
+
+					.col-12.col-sm-6.col-md-4
+
+						.shop-item
+							.shop-item__img
+								a.shop-item__add(href="#")
+									+svg('bag')
+									span Add to cart
+								img.img--contain(src="img/shop_5.png" alt="img")
+							.shop-item__details
+								h6.shop-item__name
+									a(href="shop-product.html") Man Cap
+								span.shop-item__price 25.00$
+
+					.col-12.col-sm-6.col-md-4
+
+						.shop-item
+							.shop-item__img
+								a.shop-item__add(href="#")
+									+svg('bag')
+									span Add to cart
+								img.img--contain(src="img/shop_6.png" alt="img")
+							.shop-item__details
+								h6.shop-item__name
+									a(href="shop-product.html") Sport Suite
+								span.shop-item__price 20.00$
+
+					.col-12.col-sm-6.col-md-4
+
+						.shop-item
+							.shop-item__img
+								a.shop-item__add(href="#")
+									+svg('bag')
+									span Add to cart
+								img.img--contain(src="img/shop_1.png" alt="img")
+							.shop-item__details
+								h6.shop-item__name
+									a(href="shop-product.html") Classic Jeans
+								span.shop-item__price 15.00$
+
+					.col-12.col-sm-6.col-md-4
+
+						.shop-item
+							.shop-item__img
+								a.shop-item__add(href="#")
+									+svg('bag')
+									span Add to cart
+								img.img--contain(src="img/shop_2.png" alt="img")
+							.shop-item__details
+								h6.shop-item__name
+									a(href="shop-product.html") Women Jacket
+								span.shop-item__price 25.00$
+
+					.col-12.col-sm-6.col-md-4
+
+						.shop-item
+							.shop-item__img
+								a.shop-item__add(href="#")
+									+svg('bag')
+									span Add to cart
+								img.img--contain(src="img/shop_3.png" alt="img")
+							.shop-item__details
+								h6.shop-item__name
+									a(href="shop-product.html") Man Cap
+								span.shop-item__price 20.00$
+
+					.col-12.col-sm-6.col-md-4
+
+						.shop-item
+							.shop-item__img
+								a.shop-item__add(href="#")
+									+svg('bag')
+									span Add to cart
+								img.img--contain(src="img/shop_4.png" alt="img")
+							.shop-item__details
+								h6.shop-item__name
+									a(href="shop-product.html") Women Dress
+								span.shop-item__price 15.00$
+
+					.col-12.col-sm-6.col-md-4
+
+						.shop-item
+							.shop-item__img
+								a.shop-item__add(href="#")
+									+svg('bag')
+									span Add to cart
+								img.img--contain(src="img/shop_5.png" alt="img")
+							.shop-item__details
+								h6.shop-item__name
+									a(href="shop-product.html") Man Cap
+								span.shop-item__price 25.00$
+
+					.col-12.col-sm-6.col-md-4
+
+						.shop-item
+							.shop-item__img
+								a.shop-item__add(href="#")
+									+svg('bag')
+									span Add to cart
+								img.img--contain(src="img/shop_6.png" alt="img")
+							.shop-item__details
+								h6.shop-item__name
+									a(href="shop-product.html") Sport Suite
+								span.shop-item__price 20.00$
+
+				.row
+
+					.col-12
+
+						include ../_pagination/_pagination
+
+// shop end

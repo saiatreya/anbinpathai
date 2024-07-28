@@ -1,0 +1,811 @@
+extends ../layouts/primary.pug
+
+block variables
+
+	-var page = 'front_3'
+
+	-var type = 'front'
+
+block header
+
+	include ../blocks/_aside-dropdown/_aside-dropdown
+
+	// top bar start
+
+	.top-bar.d-none.d-lg-block
+		.container-fluid
+			.row.align-items-end
+
+				.col-lg-9
+
+					a.top-bar__link(href="tel:+180012345678") + 1800 - 123 456 78
+					a.top-bar__link(href="tel:+18009756511") + 1800 - 975 65 11
+					a.top-bar__link(href="mailto:support@helpo.org") support@helpo.org
+
+
+				.col-lg-3.text-right
+
+					ul.socials
+						li.socials__item
+							a.socials__link(href="#")
+								+fa('facebook')
+						li.socials__item
+							a.socials__link(href="#")
+								+fa('twitter')
+						li.socials__item
+							a.socials__link(href="#")
+								+fa('google-plus')
+						li.socials__item
+							a.socials__link(href="#")
+								+fa('instagram')
+
+	// top bar end
+
+	// header start
+
+	header.header.header--front_3
+		.container-fluid
+			.row.no-gutters.justify-content-between
+
+				.col-auto.d-flex.align-items-center
+
+					.dropdown-trigger.d-none.d-sm-block
+						.dropdown-trigger__item
+
+					.header-logo
+						a.header-logo__link(href="index.html")
+							img.header-logo__img(src="img/logo_dark.png", alt="logo")
+
+				.col-auto
+
+					include ../blocks/_main-menu/_main-menu
+
+				.col-auto.d-flex.align-items-center
+
+					// lang select start
+					ul.lang-select
+						li.lang-select__item.lang-select__item--active
+							span En
+							ul.lang-select__sub-list
+								li
+									a(href="#") French
+								li
+									a(href="#") Spanish
+								li
+									a(href="#") Deutsch
+								li
+									a(href="#") Russian
+					// lang select end
+
+					a.button.button--squared(href="#")
+						span Donate
+
+					.dropdown-trigger.d-block.d-sm-none
+						.dropdown-trigger__item
+
+	// header end
+
+block main
+
+	// promo start
+
+	section.promo.promo--front_3
+
+		.promo-slider
+
+			.promo-slider__item.promo-slider__item--style-3
+				picture
+					source(srcset='img/front-3_promo.jpg' media='(min-width: 835px)')
+					source(srcset='img/834front-3_promo.jpg' media='(min-width: 376px)')
+					img.img--bg(src='img/375front-3_promo.jpg' alt='img')
+				.container
+					.row
+						.col-xl-6.offset-xl-6.text-left
+							.align-container
+								.align-container__item
+									.promo-slider__wrapper-1
+										h2.promo-slider__title #[span We Help Animals]#[br]#[span Around the world]
+									.promo-slider__wrapper-2
+										p.promo-slider__subtitle Gray eel-catfish longnose whiptail catfish smalleye squaretail queen danio unicorn fish shortnose greeneye fusilier fish silver carp nibbler sharksucker tench lookdown catfish
+									.promo-slider__wrapper-3
+										a(href="#").button.promo-slider__button.button--primary Discover
+
+			.promo-slider__item.promo-slider__item--style-2
+				picture
+					source(srcset='img/front-3_promo-2.jpg' media='(min-width: 835px)')
+					source(srcset='img/834front-3_promo-2.jpg' media='(min-width: 376px)')
+					img.img--bg(src='img/375front-3_promo-2.jpg' alt='img')
+				.container
+					.row
+						.col-xl-7
+							.align-container
+								.align-container__item
+									.promo-slider__wrapper-1
+										h2.promo-slider__title #[span Helpo Volounteers]#[br]#[span Help to Animals]
+									.promo-slider__wrapper-2
+										p.promo-slider__subtitle Gray eel-catfish longnose whiptail catfish smalleye squaretail queen danio unicorn fish shortnose greeneye fusilier fish silver carp nibbler sharksucker tench lookdown catfish
+									.promo-slider__wrapper-3
+										a(href="#").button.promo-slider__button.button--primary Discover
+
+			.promo-slider__item.promo-slider__item--style-1
+				picture
+					source(srcset='img/front-3_promo-3.jpg' media='(min-width: 835px)')
+					source(srcset='img/834front-3_promo-3.jpg' media='(min-width: 376px)')
+					img.img--bg(src='img/375front-3_promo-3.jpg' alt='img')
+				.container
+					.row
+						.col-12
+							.align-container
+								.align-container__item
+									.promo-slider__wrapper-1
+										h2.promo-slider__title #[span Animals need helps]#[br]#[span around the world.]
+									.promo-slider__wrapper-2
+										p.promo-slider__subtitle Gray eel-catfish longnose whiptail catfish smalleye squaretail queen danio unicorn fish shortnose greeneye fusilier fish silver carp nibbler sharksucker tench lookdown catfish
+									.promo-slider__wrapper-3
+										a(href="#").button.promo-slider__button.button--primary Discover
+
+		// promo pannel start
+		.promo-pannel
+			.promo-pannel__video
+				img.img--bg(src="img/video_block-3.jpg" alt="image")
+				a.video-trigger(href="https://www.youtube.com/watch?v=_sI_Ps7JSEk")
+					span Watch our video
+					+fa('play')
+		// promo pannel end
+
+		// slider nav start
+		.slider__nav.slider__nav--promo
+			.promo-slider__count
+			.slider__arrows
+				.slider__prev
+					+fa('chevron-left')
+				.slider__next
+					+fa('chevron-right')
+		// slider nav end
+
+	// promo end
+
+	// about us start
+
+	section.section.about-us.background--brown
+		.container
+			.row.align-items-center
+
+				.col-lg-6
+
+					.heading.heading--primary
+						span.heading__pre-title About Us
+						h2.heading__title #[span About Helpo] #[span Charity Company]
+
+					p #[strong Thresher shark rudd African lungfish silverside, Red salmon rockfish grunion, garpike zebra danio king-of-the-salmon banjo catfish."]
+					p Sea chub demoiselle whalefish zebra lionfish mud cat pelican eel. Minnow snoek icefish velvet-belly shark, California halibut round stingray northern sea robin. Southern grayling trout-perch
+					p Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail, Canthigaster rostrata. Midshipman dartfish Modoc sucker, yellowtail kingfish basslet. Buri chimaera triplespine northern sea robin zingel lancetfish galjoen fish, catla wolffish, mosshead warbonnet
+
+					a.button.button--primary(href="about.html") More About
+
+				.col-lg-6.col-xl-5.offset-xl-1
+
+					.info-box
+						img.img--bg(src="img/about-us-2.jpg", alt="img")
+						h4.info-box__title We are Awesome Volounteer Team
+						p Gray eel-catfish longnose whiptail catfish smalleye squaretail queen danio unicorn fish shortnose greeneye fusilier fish silver carp nibbler sharksucker tench lookdown catfish
+						a.info-box__link(href="volunteer.html") Become a volounteer
+
+	// about us end
+
+	// section start
+
+	section.section.background--brown.no-padding-top
+		.container
+			.row.offset-margin
+
+				.col-md-4.text-center
+
+					.counter-item.counter-item--style-3
+						.counter-item__top
+							h6.counter-item__title We Helped on 2018
+						.counter-item__lower
+							span.js-counter 200
+							span k
+
+				.col-md-4.text-center
+
+					.counter-item.counter-item--style-3
+						.counter-item__top
+							h6.counter-item__title Dollars We Collected
+						.counter-item__lower
+							span.js-counter 65
+							span bil
+
+				.col-md-4.text-center
+
+					.counter-item.counter-item--style-3
+						.counter-item__top
+							h6.counter-item__title Closed Projects
+						.counter-item__lower
+							span.js-counter 100
+							span k +
+
+	// section end
+
+	// section start
+
+	section.section
+		.container
+
+			.row.margin-bottom
+
+				.col-12
+					.heading.heading--primary.heading--center
+						span.heading__pre-title What We do
+						h2.heading__title #[span We do it] #[span for all people]
+
+			.row.offset-margin
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_3/2_animal_shelter.svg", alt="icon")
+						.icon-item__text
+							p Medicine Help
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_3/2_beggar.svg", alt="icon")
+						.icon-item__text
+							p We Build and Create
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_3/2_charity.svg", alt="icon")
+						.icon-item__text
+							p Water Delivery
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_3/2_child.svg", alt="icon")
+						.icon-item__text
+							p We Care About
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_3/2_love.svg", alt="icon")
+						.icon-item__text
+							p New Clothes
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_3/2_money_hand.svg", alt="icon")
+						.icon-item__text
+							p Fresh Food
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_3/2_phone_donate.svg", alt="icon")
+						.icon-item__text
+							p Best Volounteers
+
+				.col-6.col-md-4.col-lg-3
+
+					.icon-item
+						.icon-item__img
+							img(src="img/svg/icons_3/2_piggy_bank.svg", alt="icon")
+						.icon-item__text
+							p Donation Around the World
+
+	// section end
+
+	// causes start
+
+	section.section.causes.background--brown
+
+		img.causes__bg(src="img/causes_img.png", alt="img")
+
+		.container
+			.row.align-items-start.margin-bottom
+
+				.col-xl-4
+
+					.heading.heading--primary
+						span.heading__pre-title What we Do
+						h2.heading__title #[span Helpo] #[span Causes]
+
+				.col-xl-8
+
+					p.margin-30 Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail, Canthigaster rostrata. Midshipman dartfish Modoc sucker, yellowtail kingfish. Canthigaster rostrata. Midshipman dartfish Modoc sucker, yellowtail kingfish basslet.
+					a.button.button--primary(href="#") More Causes
+
+			.row.offset-margin
+				
+				.col-12
+
+					.items-slider-wrapper
+
+						.items-slider
+
+							.items-slider__item
+
+								.causes-item.causes-item--style-3.causes-item--slider.no-padding
+									.causes-item__body
+										.row.align-items-center
+											.col-xl-8
+												.causes-item__img
+													// slider nav start
+													.slider__nav.items-slider__nav
+														.slider__arrows
+															.slider__prev
+																+fa('chevron-left')
+															.slider__next
+																+fa('chevron-right')
+													// slider nav end
+													img.img--bg(src="img/lion.jpg", alt="img")
+											.col-xl-4
+												.causes-item__wrapper
+													.causes-item__action
+														.causes-item__badge(style="background-color: #49C2DF") Water Delivery
+													.causes-item__top
+														h6.causes-item__title 
+															a(href="cause-details.html") Clean Water in Africa
+														p Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail canthigaster rostrata. 
+													.causes-item__lower
+														.progress-bar
+															.progress-bar__inner(style="width: 78%;")
+																.progress-bar__value 78%
+														.causes-item__details-holder
+															.causes-item__details-item
+																span Goal: 
+																span 25 000$
+															.causes-item__details-item.text-right
+																span Pledged: 
+																span 20 350$
+														a.causes-item__button.button.button--primary(href="#") + Donate
+
+							.items-slider__item
+
+								.causes-item.causes-item--style-3.causes-item--slider.no-padding
+									.causes-item__body
+										.row.align-items-center
+											.col-xl-8
+												.causes-item__img
+													// slider nav start
+													.slider__nav.items-slider__nav
+														.slider__arrows
+															.slider__prev
+																+fa('chevron-left')
+															.slider__next
+																+fa('chevron-right')
+													// slider nav end
+													img.img--bg(src="img/action-block_2.jpg", alt="img")
+											.col-xl-4
+												.causes-item__wrapper
+													.causes-item__action
+														.causes-item__badge(style="background-color: #F36F8F") Medicine
+													.causes-item__top
+														h6.causes-item__title 
+															a(href="cause-details.html") Health in other Countries
+														p Sea chub demoiselle whalefish zebra lionfish mud cat pelican eel. Minnow snoek icefish velvet-belly shark, California halibut round stingray northern sea robin.
+													.causes-item__lower
+														.progress-bar
+															.progress-bar__inner(style="width: 23%;")
+																.progress-bar__value 23%
+														.causes-item__details-holder
+															.causes-item__details-item
+																span Goal: 
+																span 14 000$
+															.causes-item__details-item.text-right
+																span Pledged: 
+																span 6 098$
+													a.causes-item__button.button.button--primary(href="#") + Donate
+
+	// causes end
+
+	// section start
+
+	section.section
+		.container
+			.row.align-items-end.margin-bottom
+
+				.col-sm-6
+
+					.heading.heading--primary
+						span.heading__pre-title What we Did
+						h2.heading__title.no-margin-bottom #[span Helpo] #[span Projects]
+
+				.col-sm-6.text-sm-right
+
+					// slider nav start
+					.slider__nav.projects-slider__nav
+						.slider__arrows
+							.slider__prev
+								+fa('chevron-left')
+							.slider__next
+								+fa('chevron-right')
+					// slider nav end
+
+		.projects-slider
+
+			.projects-slider__item
+
+				.projects-masonry__item.projects-masonry__item--primary.projects-masonry__item--height-2
+					.projects-masonry__img
+						img.img--bg(src="img/projects-slider_1.jpg", alt="img")
+
+						.projects-masonry__inner
+							span.projects-masonry__badge(style="background: #F36F8F;") Medicine
+							h3.projects-masonry__title 
+								a(href="cause-details.html") More than One Life Changed
+							p Rockweed gunnel; candlefish mail-cheeked fish, yellowtail snapper cuskfish elasmobranch seamoth triggerfish gar 
+							.projects-masonry__details-holder
+								.projects-masonry__details-item
+									span Goal: 
+									span 25 000$
+								.projects-masonry__details-item
+									span Date: 
+									span 23 Jan'19
+
+			.projects-slider__item
+
+				.projects-masonry__item.projects-masonry__item--primary.projects-masonry__item--height-2
+					.projects-masonry__img
+						img.img--bg(src="img/projects-slider_2.jpg", alt="img")
+
+						.projects-masonry__inner
+							span.projects-masonry__badge(style="background: #49C2DF;") Water Delivery
+							h3.projects-masonry__title 
+								a(href="cause-details.html") Helpo for Help
+							p Gray eel-catfish longnose whiptail catfish smalleye squaretail queen danio unicorn fish shortnose greeneye fusilier fish silver carp
+							.projects-masonry__details-holder
+								.projects-masonry__details-item
+									span Goal: 
+									span 25 000$
+								.projects-masonry__details-item
+									span Date: 
+									span 23 Jan'19
+
+			.projects-slider__item
+
+				.projects-masonry__item.projects-masonry__item--primary.projects-masonry__item--height-2
+					.projects-masonry__img
+						img.img--bg(src="img/projects-slider_3.jpg", alt="img")
+
+						.projects-masonry__inner
+							span.projects-masonry__badge(style="background: #F36F8F;") Medicine
+							h3.projects-masonry__title 
+								a(href="cause-details.html") He Needs Your Protection
+							p Sea snail bigeye zebra turkeyfish mola mola sunfish roach. Southern Dolly Varden, lightfish ray long-whiskered catfish; burbot dealfish
+							.projects-masonry__details-holder
+								.projects-masonry__details-item
+									span Goal: 
+									span 35 000$
+								.projects-masonry__details-item
+									span Date: 
+									span 23 Jan'19
+
+			.projects-slider__item
+
+				.projects-masonry__item.projects-masonry__item--primary.projects-masonry__item--height-2
+					.projects-masonry__img
+						img.img--bg(src="img/projects-slider_2.jpg", alt="img")
+
+						.projects-masonry__inner
+							span.projects-masonry__badge(style="background: #F36F8F;") Medicine
+							h3.projects-masonry__title 
+								a(href="cause-details.html") More than One Life Changed
+							p Rockweed gunnel; candlefish mail-cheeked fish, yellowtail snapper cuskfish elasmobranch seamoth triggerfish gar 
+							.projects-masonry__details-holder
+								.projects-masonry__details-item
+									span Goal: 
+									span 25 000$
+								.projects-masonry__details-item
+									span Date: 
+									span 23 Jan'19
+
+	// section end
+
+	// text section start
+
+	section.section.text-section.text-section--front_2.no-padding-bottom
+
+		img.text-section__bg(src="img/text-section_2.png" alt="img")
+
+		.container
+			.row
+
+				.col-12.text-center
+
+					h2.text-section__heading Sponsor
+
+			.row
+
+				.col-lg-8.offset-lg-4.col-xl-7.offset-xl-4
+
+					h3.text-section__title Delivering help and hope #[br]to children through sponsorship.
+					p Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail, Canthigaster rostrata. Midshipman dartfish Modoc sucker, yellowtail kingfish
+					a.button.button--primary(href="#") More information
+
+	// text section end
+
+	// events start
+
+	section.section.events.events--front_2
+
+		img.events__bg(src="img/events_bg.png" alt="img")
+
+		.container
+			.row.margin-bottom
+
+				.col-12
+
+					.heading.heading--primary.heading--center
+						span.heading__pre-title Events
+						h2.heading__title #[span Helpo Holds] #[span for You]
+						p.no-margin-bottom Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail, Canthigaster rostrata. Midshipman dartfish
+
+			.row
+
+				.col-md-6.col-lg-4
+
+					.event-item
+						.event-item__img
+							img.img--bg(src="img/event_1.jpg" alt="img")
+						.event-item__content
+							h6.event-item__title
+								a(href="#") Help for Language. Voluanteer
+							p #[b Dark Spurt,] San Francisco, CA 94528, USA
+							p #[b September 30 - October 31,] 2019
+							p #[b 10:00 AM - 18:00 PM,] Everyday
+
+				.col-md-6.col-lg-4
+
+					.event-item
+						.event-item__img
+							img.img--bg(src="img/event_2.jpg" alt="img")
+						.event-item__content
+							h6.event-item__title
+								a(href="#") The Culture of Africa. Rebirth
+							p #[b Dark Spurt,] San Francisco, CA 94528, USA
+							p #[b September 30 - October 31,] 2019
+							p #[b 10:00 AM - 18:00 PM,] Everyday
+
+				.col-md-6.col-lg-4
+
+					.event-item
+						.event-item__img
+							img.img--bg(src="img/event_3.jpg" alt="img")
+						.event-item__content
+							h6.event-item__title
+								a(href="#") Help for Language. Voluanteer
+							p #[b Dark Spurt,] San Francisco, CA 94528, USA
+							p #[b April 15 - April 20,] 2019
+							p #[b 10:00 AM - 15:00 PM,] Everyday
+
+			.row
+
+				.col-12.text-center
+
+					a.button.button--primary(href="#") View all events
+
+	// events end
+
+	// section start
+
+	section.section.no-padding-top.no-padding-bottom
+		.row.no-gutters
+
+			.col-xl-6
+
+				.action-block
+					.action-block__inner
+						img.img--bg(src="img/action-block_1.jpg", alt="img")
+						h3.action-block__title We are Awesome Volounteer Team
+						p.action-block__text Gray eel-catfish longnose whiptail catfish smalleye squaretail queen danio unicorn fish shortnose greeneye fusilier fish silver carp nibbler sharksucker tench lookdown catfish
+						a.action-block__link.button.button--primary(href="#") Become
+
+			.col-xl-6
+
+				.action-block
+					.action-block__inner
+						img.img--bg(src="img/action-block_2.jpg", alt="img")
+						h3.action-block__title All donations can help change a life
+						p.action-block__text Gray eel-catfish longnose whiptail catfish smalleye squaretail queen danio unicorn fish shortnose greeneye fusilier fish silver carp nibbler sharksucker tench lookdown catfish
+						a.action-block__link.button.button--primary(href="#") Donate
+
+	// section end
+
+	include ../blocks/_testimonials--style-1/_testimonials--style-1
+
+	// blog start
+	
+	section.section.blog.blog--front_3
+	
+		img.blog__bg(src="img/blog_bg-2.png" alt="img")
+	
+		.container
+			.row.margin-bottom
+	
+				.col-12
+	
+					.heading.heading--primary.heading--center
+						span.heading__pre-title News
+						h2.heading__title.no-margin-bottom #[span Helpo] #[span Blog]
+	
+			.row.offset-margin
+	
+				.col-md-6.col-xl-4
+	
+					.blog-item.blog-item--style-1
+						.blog-item__img
+							img.img--bg(src="img/blog_1.jpg" alt="img")
+							span.blog-item__badge(style="background-color: #49C2DF;") Water Delivery
+						.blog-item__content
+							h6.blog-item__title
+								a(href="#") Save the Children's Role in Fight Against Malnutrition Hailed
+							p Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail canthigaster
+							.blog-item__details
+								span.blog-item__date 23 Jan' 19
+								span #[+svg('comment')] 501
+	
+				.col-md-6.col-xl-4
+	
+					.blog-item.blog-item--style-1
+						.blog-item__img
+							img.img--bg(src="img/blog_4.png" alt="img")
+							span.blog-item__badge(style="background-color: #F36F8F;") Medicine
+						.blog-item__content
+							h6.blog-item__title
+								a(href="#") Save the Children's Role in Fight Against Malnutrition Hailed
+							p Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail canthigaster
+							.blog-item__details
+								span.blog-item__date 23 Jan' 19
+								span #[+svg('comment')] 501
+
+				.col-md-6.col-xl-4
+
+					.blog-item.blog-item--style-1
+						.blog-item__img
+							img.img--bg(src="img/blog_7.jpg", alt="img")
+							span.blog-item__badge(style="background-color: #F8AC3A;") Food
+						.blog-item__content
+							h6.blog-item__title
+								a(href="blog-post.html") Back to the future: Quality education through respect, 
+							p Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail canthigaster
+							.blog-item__details
+								span.blog-item__date 23 Jan' 19
+								span #[+svg('comment')] 5
+	
+	// blog end
+
+	// donors start
+
+	section.section.donors.donors--style-2.no-padding-top.no-padding-bottom
+		.container
+			.row.margin-bottom
+
+				.col-12
+
+					.heading.heading--primary.heading--center
+						span.heading__pre-title Donors
+						h2.heading__title.no-margin-bottom #[span Who Help] #[span Us]
+
+			.row
+
+				.col-12
+
+					include ../blocks/_donors-slider/_donors-slider
+
+	// donors end
+
+	// bottom bg start
+
+	section.bottom-background
+		.container
+			.row
+				.col-12
+					.bottom-background__img
+						img(src="img/bottom-bg.png", alt="img")
+
+	// bottom bg end
+
+block footer
+
+	// footer front_3 start
+
+	footer.footer.footer--front_3
+		.container
+			.row
+
+				.col-lg-4
+
+					.footer-logo
+						a.footer-logo__link(href="index.html")
+							img.footer-logo__img(src="img/logo_white.png", alt="logo")
+
+					.footer-contacts
+						p.footer-contacts__address Elliott Ave, Parkville VIC 3052, Melbourne Canada
+						p.footer-contacts__phone Phone: #[a(href="tel:+31859644725") +31 85 964 47 25]
+						p.footer-contacts__mail Email: #[a(href="mailto:support@helpo.org") support@helpo.org]
+
+					// footer socials start
+					ul.footer-socials
+						li.footer-socials__item
+							a.footer-socials__link(href="#")
+								+fa('facebook')
+						li.footer-socials__item
+							a.footer-socials__link(href="#")
+								+fa('twitter')
+						li.footer-socials__item
+							a.footer-socials__link(href="#")
+								+fa('google-plus')
+						li.footer-socials__item
+							a.footer-socials__link(href="#")
+								+fa('instagram')
+					// footer socials end
+
+				.col-lg-8
+
+					// footer nav start
+					nav
+						ul.footer-menu
+							li.footer-menu__item(class=(type === "front" ? "footer-menu__item--active" : undefined))
+								a.footer-menu__link(href="#") Home Page
+							li.footer-menu__item
+								a.footer-menu__link(href="#") Blog & News
+							li.footer-menu__item
+								a.footer-menu__link(href="#") Donations
+							li.footer-menu__item
+								a.footer-menu__link(href="#") Clean Water
+							li.footer-menu__item
+								a.footer-menu__link(href="#") About Us
+							li.footer-menu__item
+								a.footer-menu__link(href="#") Contact Us
+							li.footer-menu__item
+								a.footer-menu__link(href="#") Animals
+							li.footer-menu__item
+								a.footer-menu__link(href="#") Madicine
+							li.footer-menu__item
+								a.footer-menu__link(href="#") Pages
+							li.footer-menu__item
+								a.footer-menu__link(href="#") Elements
+							li.footer-menu__item
+								a.footer-menu__link(href="#") Children
+							li.footer-menu__item
+								a.footer-menu__link(href="#") Food
+							li.footer-menu__item
+								a.footer-menu__link(href="#") Causes
+							li.footer-menu__item
+								a.footer-menu__link(href="#") Documentation
+							li.footer-menu__item
+								a.footer-menu__link(href="#") Old People
+							li.footer-menu__item
+								a.footer-menu__link(href="#") Documentation
+					// footer nav end
+		
+		.footer__lower
+			.container
+				.row.align-items-baseline
+
+					.col-md-6.col-xl-7
+
+						p.footer-copyright © 2020 Helpo Charity Template by Artureanec
+
+					.col-md-6.col-xl-5
+
+						.footer__form
+
+							input.footer__form-input(type="email" placeholder="Enter your E-mail")
+							button(type="submit").footer__form-submit.button.button--primary Subscribe
+
+	// footer front_3 end

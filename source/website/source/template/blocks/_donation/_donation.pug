@@ -1,0 +1,118 @@
+// donation start
+
+section.section.donation
+	
+	img.donation__bg(src="img/donation_img.png", alt="img")
+
+	.container
+		.row
+
+			.col-12
+			
+				.donation-item
+					.donation-item__img
+						img.img--bg(src="img/donation-item_img.jpg", alt="img")
+					.donation-item__body
+
+						.row
+
+							.col-12
+
+								h5.donation-item__title Healthy Food
+
+						.row.align-items-end
+
+							.col-lg-7
+
+								.progress-bar
+									.progress-bar__inner(style="width: 42%;")
+										.progress-bar__value 42%
+
+							.col-lg-5
+
+								.donation-item__details-holder
+									.donation-item__details-item
+										span Goal: 
+										span 220 000$
+									.donation-item__details-item
+										span Pledged: 
+										span 95 200$
+
+						form.form.donation-form(action="javascript:void(0);")
+
+							.row.align-items-baseline.margin-bottom
+								
+								.col-lg-5.col-xl-6
+
+									label.form__label
+										span.form__icon $
+										input.form__field.form__input-number(type="number")
+
+								.col-lg-7.col-xl-6.text-lg-right
+
+									label.form__radio-label
+										span.form__label-text $100.00
+										input.form__input-radio(type="radio" name="value-select" value="100" checked)
+										span.form__radio-mask.form__radio-mask
+
+									label.form__radio-label
+										span.form__label-text $200.00
+										input.form__input-radio(type="radio" name="value-select" value="200")
+										span.form__radio-mask.form__radio-mask
+
+									label.form__radio-label
+										span.form__label-text $500.00
+										input.form__input-radio(type="radio" name="value-select" value="500")
+										span.form__radio-mask.form__radio-mask
+
+									label.form__radio-label
+										span.form__label-text $1000.00
+										input.form__input-radio(type="radio" name="value-select" value="1000")
+										span.form__radio-mask.form__radio-mask
+
+							.row.margin-bottom
+
+								.col-12
+
+									h6.form__title Payment Method
+
+								.col-12
+
+									label.form__radio-label
+										img.form__label-img(src="img/paypal.png", alt="paypal")
+										input.form__input-radio(type="radio" name="method-select" value="paypal" checked)
+										span.form__radio-mask.form__radio-mask
+
+									label.form__radio-label
+										img.form__label-img(src="img/klarna.png", alt="klarna")
+										input.form__input-radio(type="radio" name="method-select" value="klarna")
+										span.form__radio-mask.form__radio-mask
+
+									label.form__radio-label
+										img.form__label-img(src="img/visa.png", alt="visa")
+										input.form__input-radio(type="radio" name="method-select" value="visa")
+										span.form__radio-mask.form__radio-mask
+
+							.row
+
+								.col-12
+
+									h6.form__title Personal Info
+
+								.col-lg-4.margin-30
+
+									input.form__field(type="text" name="first-name" placeholder="First Name")
+
+								.col-lg-4.margin-30
+
+									input.form__field(type="text" name="last-name" placeholder="Last Name")
+
+								.col-lg-4.margin-30
+
+									input.form__field(type="email" name="email" placeholder="Email")
+
+								.col-lg-4
+
+									button.form__submit(type="submit") + Donate
+
+// donation end

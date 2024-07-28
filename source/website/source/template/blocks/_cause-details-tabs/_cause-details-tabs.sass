@@ -1,0 +1,64 @@
+/* cause details tabs start */
+
+/* donor item */
+
+.donor-item
+	padding: 30px
+	box-shadow: 0px 3px 15px 2px rgba(0, 0, 0, 0.04)
+	margin-bottom: 30px
+	transition: all .3s
+
+.donor-item:hover
+	background-color: $orange
+	box-shadow: none
+
+.donor-item
+	&__info
+		display: flex
+		align-items: center
+	&__img
+		position: relative
+		overflow: hidden
+		height: 60px
+		width: 60px
+		border-radius: 50%
+		margin-right: 15px
+		z-index: 1
+	&__description
+		width: calc(100% - 75px)
+	&__name
+		color: $blue
+		font-size: 18px
+		font-weight: 700
+		letter-spacing: -0.050em
+		margin-bottom: 3px
+	&__date
+		color: #777777
+		font-size: 14px
+	&__value
+		margin: 15px 0 0 0
+
+	+r992
+
+		&__value
+			margin: 0
+			text-align: right
+
+/* gallery simple */
+
+.gallery-simple
+	&__item
+		position: relative
+		display: block
+		margin-bottom: 30px
+		transition: background .3s
+	&__item::before
+		content: ""
+		display: block
+		padding-top: percentage(267/267)
+	&__item:hover
+		background: rgba(53, 57, 118, 0.7)
+	.img--bg
+		z-index: -1
+
+/* cause details tabs end */

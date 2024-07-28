@@ -1,0 +1,273 @@
+extends ../layouts/primary.pug
+
+block variables
+
+	-var page = 'member'
+
+	-var type = 'inner'
+
+	-var dest = 'pages'
+
+block header
+
+	include ../blocks/_aside-dropdown/_aside-dropdown
+
+	// header start
+	
+	header.header.header--inner
+		.container-fluid
+			.row.no-gutters.justify-content-between
+
+				.col-auto.d-flex.align-items-center
+					.dropdown-trigger.dropdown-trigger--inner.d-none.d-sm-block
+						.dropdown-trigger__item
+
+					.header-logo
+						a.header-logo__link(href="index.html")
+							img.header-logo__img(src="img/logo_dark.png", alt="logo")
+
+				.col-auto
+					include ../blocks/_main-menu/_main-menu
+
+				.col-auto.d-flex.align-items-center
+
+					// lang select start
+					ul.lang-select.lang-select--inner
+						li.lang-select__item.lang-select__item--active
+							span En
+							ul.lang-select__sub-list
+								li
+									a(href="#") French
+								li
+									a(href="#") Spanish
+								li
+									a(href="#") Deutsch
+								li
+									a(href="#") Russian
+					// lang select end
+
+					a.button.button--squared(href="#") 
+						span Donate
+
+					.dropdown-trigger.dropdown-trigger--inner.d-block.d-sm-none
+						.dropdown-trigger__item
+
+	// header end
+
+block main
+
+	section.promo-primary(class=(dest === "elements" ? "promo-primary--elements" : undefined))
+
+		picture
+			source(srcset='img/volunteer.jpg', media='(min-width: 992px)')
+			img.img--bg(src='img/volunteer.jpg', alt='img')
+
+		.promo-primary__description 
+			span Compassion
+
+		.container
+			.row
+				.col-auto
+					.align-container
+						.align-container__item
+							span.promo-primary__pre-title Helpo
+							h1.promo-primary__title #[span Team] #[span Member]
+
+	// section start
+
+	section.section.team-member.no-padding-bottom
+		.container
+			.row.align-items-center
+
+				.col-lg-6.col-xl-5
+
+					.img-box
+						img.img--layout(src="img/about_layout-reverse.png", alt="img")
+						.img-box__img
+							img.img--bg(src="img/img_box-1.jpg", alt="img")
+
+				.col-lg-6.col-xl-6.offset-xl-1
+
+					.heading.heading--primary
+						span.heading__pre-title Community a Officer – Mr Charity
+						h2.heading__title #[span Eey Chie]
+						p Alienum phaedrum torquatos nec eu, vis detraxit periculis ex, nihil expetendis in mei. Mei an pericula euripidis, hinc partem ei est. Eos ei nisl graecis, vix aperiri consequat an. Eius lorem tincidunt vix at, vel pertinax sensibus id, error epicurei mea et. Mea facilisis urbanitas moderatius id. Vis ei rationibus definiebas, eu qui purto zril laoreet. Ex error omnium interpretaris pro, alia illum ea vim. Lorem ipsum dolor sit amet, eu per legimus referrentur. Ius ne viris repudiare, nominavi sententiae eos in.
+						p Alienum phaedrum torquatos nec eu, vis detraxit periculis ex, nihil expetendis in mei. Mei an pericula euripidis, hinc partem ei est. Eos ei nisl graecis, vix aperiri consequat an. Eius lorem tincidunt vix at, vel pertinax sensibus id, error epicurei mea et. Mea facilisis urbanitas moderatius id. Vis ei rationibus definiebas.
+
+	section.section.team-member
+		.container
+			.row
+
+				.col-lg-6.col-xl-5
+
+					.team-member__skills
+
+						h4.team-member__title My Skills
+						p.margin-bottom Alienum phaedrum torquatos nec eu, vis detraxit periculis ex, nihil expetendis in mei. Mei an pericula euripidis, hinc partem ei est. Eos ei nisl graecis, vix aperiri consequat an. Eius lorem tincidunt vix at, vel pertinax. Mei an pericula euripidis, hinc partem ei est. , hinc partem ei est.
+						
+						h6.team-member__subtitle Leadership
+						.progress-bar
+							.progress-bar__inner(style="width: 78%;")
+								.progress-bar__value 78%
+						
+						h6.team-member__subtitle Volunteering
+						.progress-bar
+							.progress-bar__inner(style="width: 72%;")
+								.progress-bar__value 72%
+
+				.col-lg-6.col-xl-6.offset-xl-1
+
+					.team-member__details
+
+						h4.team-member__title Contact details
+
+						.team-member__details-item
+							span Phone:
+							span #[a(href="tel:+100026655787") + 1000 266 55787]
+						.team-member__details-item
+							span Email:
+							span #[a(href="mailto:donate.d@charity.com") donate.d@charity.com]
+						.team-member__details-item
+							span Birthday:
+							span September 21, 1992
+						.team-member__details-item
+							span Location:
+							span Nursultan
+
+						.team-member__details-item
+
+							ul.aside-socials.no-margin-top
+								li.aside-socials__item
+									a.aside-socials__link(href="#")
+										+fa('instagram')
+								li.aside-socials__item
+									a.aside-socials__link(href="#")
+										+fa('google-plus')
+								li.aside-socials__item
+									a.aside-socials__link(href="#")
+										+fa('twitter')
+								li.aside-socials__item
+									a.aside-socials__link(href="#")
+										+fa('facebook')
+
+						a.button.button--primary(href="#") Send Message
+
+	// section end
+
+	// section start
+
+	section.section.background--brown
+		.container
+			.row.align-items-end.margin-bottom
+
+				.col-sm-6
+
+					.heading.heading--primary
+						span.heading__pre-title What we Did
+						h2.heading__title.no-margin-bottom #[span Helpo] #[span Projects]
+
+				.col-sm-6.text-sm-right
+
+					// slider nav start
+					.slider__nav.projects-slider__nav
+						.slider__arrows
+							.slider__prev
+								+fa('chevron-left')
+							.slider__next
+								+fa('chevron-right')
+					// slider nav end
+
+		.projects-slider
+
+			.projects-slider__item
+
+				.projects-masonry__item.projects-masonry__item--primary.projects-masonry__item--height-2
+					.projects-masonry__img
+						img.img--bg(src="img/projects-slider_1.jpg", alt="img")
+
+						.projects-masonry__inner
+							span.projects-masonry__badge(style="background: #F36F8F;") Medicine
+							h3.projects-masonry__title 
+								a(href="cause-details.html") More than One Life Changed
+							p Rockweed gunnel; candlefish mail-cheeked fish, yellowtail snapper cuskfish elasmobranch seamoth triggerfish gar 
+							.projects-masonry__details-holder
+								.projects-masonry__details-item
+									span Goal: 
+									span 25 000$
+								.projects-masonry__details-item
+									span Date: 
+									span 23 Jan'19
+
+			.projects-slider__item
+
+				.projects-masonry__item.projects-masonry__item--primary.projects-masonry__item--height-2
+					.projects-masonry__img
+						img.img--bg(src="img/projects-slider_2.jpg", alt="img")
+
+						.projects-masonry__inner
+							span.projects-masonry__badge(style="background: #49C2DF;") Water Delivery
+							h3.projects-masonry__title 
+								a(href="cause-details.html") Helpo for Help
+							p Gray eel-catfish longnose whiptail catfish smalleye squaretail queen danio unicorn fish shortnose greeneye fusilier fish silver carp
+							.projects-masonry__details-holder
+								.projects-masonry__details-item
+									span Goal: 
+									span 25 000$
+								.projects-masonry__details-item
+									span Date: 
+									span 23 Jan'19
+
+			.projects-slider__item
+
+				.projects-masonry__item.projects-masonry__item--primary.projects-masonry__item--height-2
+					.projects-masonry__img
+						img.img--bg(src="img/projects-slider_3.jpg", alt="img")
+
+						.projects-masonry__inner
+							span.projects-masonry__badge(style="background: #F36F8F;") Medicine
+							h3.projects-masonry__title 
+								a(href="cause-details.html") He Needs Your Protection
+							p Sea snail bigeye zebra turkeyfish mola mola sunfish roach. Southern Dolly Varden, lightfish ray long-whiskered catfish; burbot dealfish
+							.projects-masonry__details-holder
+								.projects-masonry__details-item
+									span Goal: 
+									span 35 000$
+								.projects-masonry__details-item
+									span Date: 
+									span 23 Jan'19
+
+			.projects-slider__item
+
+				.projects-masonry__item.projects-masonry__item--primary.projects-masonry__item--height-2
+					.projects-masonry__img
+						img.img--bg(src="img/projects-slider_2.jpg", alt="img")
+
+						.projects-masonry__inner
+							span.projects-masonry__badge(style="background: #F36F8F;") Medicine
+							h3.projects-masonry__title 
+								a(href="cause-details.html") More than One Life Changed
+							p Rockweed gunnel; candlefish mail-cheeked fish, yellowtail snapper cuskfish elasmobranch seamoth triggerfish gar 
+							.projects-masonry__details-holder
+								.projects-masonry__details-item
+									span Goal: 
+									span 25 000$
+								.projects-masonry__details-item
+									span Date: 
+									span 23 Jan'19
+
+	// section end
+
+	// bottom bg start
+
+	section.bottom-background.background--brown
+		.container
+			.row
+				.col-12
+					.bottom-background__img
+						img(src="img/bottom-bg.png", alt="img")
+
+	// bottom bg end
+
+block footer
+
+	include ../blocks/_footer/_footer

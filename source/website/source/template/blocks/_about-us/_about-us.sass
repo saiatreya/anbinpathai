@@ -1,0 +1,132 @@
+/* about us start */
+
+.about-us
+	position: relative
+
+.about-us::before
+	content: ""
+	display: none
+	height: 100%
+	width: 80px
+	background-color: #F9F7F6
+	position: absolute
+	top: 0
+	left: 0
+	z-index: -1
+
++r1600
+
+	.about-us::before
+		display: block
+
+.about-us
+	.button
+		margin-top: 45px
+	&__title span
+		font-weight: 400
+	&__subtitle
+		margin-bottom: 20px
+	&__text-aside
+		color: $orange
+		font-size: 72px
+		line-height: 1.4
+		text-align: center
+		font-family: $font-storytella
+		letter-spacing: -0.020em
+
+	+r576
+
+		&__text-aside
+			font-size: 100px	
+
+	+r992
+
+		&__text-aside
+			font-size: 180px
+			line-height: 150px
+
+	p:last-of-type
+		margin-bottom: 0
+	.info-box
+		margin-top: 70px
+
+	+r992
+
+		.info-box
+			margin: 0
+
+/* about-us front-2 */
+
+.about--front-2
+	.heading
+		margin-bottom: 30px
+
+	+r1200
+
+		.heading
+			margin-bottom: 50px
+
+/* info box */
+
+.info-box
+	position: relative
+	color: #FFF
+	text-align: center
+	padding: 67px 30px 62px 30px
+	
+
++r768
+
+	.info-box
+		padding: 117px 40px 112px 40px
+
++r992
+
+	.info-box
+		padding: 147px 70px 112px 70px
+		min-height: 520px
+
+.info-box
+	.img--layout
+		display: none
+
+	+r1200
+
+		.img--layout
+			display: initial
+
+	&__title
+		color: #FFF
+		font-size: 28px
+		margin-bottom: 26px
+
+	+r576
+
+		&__title
+			font-size: 35px
+			line-height: 40px
+
+	&__link
+		position: relative
+		display: inline-block
+		color: #FFF
+		font-size: 14px
+		font-weight: 700
+		text-transform: uppercase
+		margin-top: 20px
+		text-decoration: none
+		transition: color .3s
+	&__link::after
+		content: ""
+		display: block
+		width: 100%
+		height: 1px
+		position: absolute
+		bottom: 2px
+		left: 0
+		background-color: #FFF
+		transition: opacity .3s
+	&__link:hover::after
+		opacity: 0
+
+/* about us end */

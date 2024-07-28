@@ -1,0 +1,102 @@
+// promo start
+
+section.promo
+
+	.promo-slider
+
+		.promo-slider__item.promo-slider__item--style-1
+			picture
+				source(srcset='img/promo_1.jpg' media='(min-width: 835px)')
+				source(srcset='img/834promo_1.jpg' media='(min-width: 376px)')
+				img.img--bg(src='img/375promo_1.jpg' alt='img')
+			.container
+				.row
+					.col-12
+						.align-container
+							.align-container__item
+								.promo-slider__wrapper-1
+									h2.promo-slider__title #[span We help all people in need] #[span around the world.]
+								.promo-slider__wrapper-2
+									p.promo-slider__subtitle Gray eel-catfish longnose whiptail catfish smalleye squaretail queen danio unicorn fish shortnose greeneye fusilier fish silver carp nibbler sharksucker tench lookdown catfish
+								.promo-slider__wrapper-3
+									a(href="#").button.promo-slider__button.button--primary Discover
+
+		.promo-slider__item.promo-slider__item--style-2
+			picture
+				source(srcset='img/promo_2.jpg' media='(min-width: 835px)')
+				source(srcset='img/834promo_2.jpg' media='(min-width: 376px)')
+				img.img--bg(src='img/375promo_2.jpg' alt='img')
+			.container
+				.row
+					.col-xl-7
+						.align-container
+							.align-container__item
+								.promo-slider__wrapper-1
+									h2.promo-slider__title #[span Our Helping]#[br]#[span around the world.]
+								.promo-slider__wrapper-2
+									p.promo-slider__subtitle Gray eel-catfish longnose whiptail catfish smalleye squaretail queen danio unicorn fish shortnose greeneye fusilier fish silver carp nibbler sharksucker tench lookdown catfish
+								.promo-slider__wrapper-3
+									a(href="#").button.promo-slider__button.button--primary Discover
+
+		.promo-slider__item.promo-slider__item--style-3
+			picture
+				source(srcset='img/promo_3.jpg' media='(min-width: 835px)')
+				source(srcset='img/834promo_3.jpg' media='(min-width: 376px)')
+				img.img--bg(src='img/375promo_3.jpg', alt='img')
+			.container
+				.row
+					.col-xl-8.offset-xl-2
+						.align-container
+							.align-container__item
+								.promo-slider__wrapper-1
+									h2.promo-slider__title #[span Helpo Volounteers]#[br]#[span Around the world.]
+								.promo-slider__wrapper-2
+									p.promo-slider__subtitle Gray eel-catfish longnose whiptail catfish smalleye squaretail queen danio unicorn fish shortnose greeneye fusilier fish silver carp nibbler sharksucker tench lookdown catfish
+								.promo-slider__wrapper-3
+									a(href="#").button.promo-slider__button.button--primary Discover
+
+	// promo socials start
+	ul.promo-socials
+		li.promo-socials__item
+			a.promo-socials__link(href="#")
+				+fa('instagram')
+		li.promo-socials__item
+			a.promo-socials__link(href="#")
+				+fa('google-plus')
+		li.promo-socials__item
+			a.promo-socials__link(href="#")
+				+fa('twitter')
+		li.promo-socials__item
+			a.promo-socials__link(href="#")
+				+fa('facebook')
+	// promo socials end
+
+	// promo pannel start
+	.promo-pannel
+		a.anchor.promo-pannel__anchor(href="#about") 
+			span Scroll Down
+		.promo-pannel__video
+			img.img--bg(src="img/video_block.jpg" alt="image")
+			a.video-trigger(href="https://www.youtube.com/watch?v=_sI_Ps7JSEk")
+				span Watch our video
+				+fa('play')
+		.promo-pannel__phones
+			p.promo-pannel__title Phone numbers
+			a.promo-pannel__link(href="tel:+180012345678") + 1800 - 123 456 78
+			a.promo-pannel__link(href="tel:+18009756511") + 1800 - 975 65 11
+		.promo-pannel__email
+			p.promo-pannel__title Email
+			a.promo-pannel__link(href="mailto:support@helpo.org") support@helpo.org
+	// promo pannel end
+
+	// slider nav start
+	.slider__nav.slider__nav--promo
+		.promo-slider__count
+		.slider__arrows
+			.slider__prev
+				+fa('chevron-left')
+			.slider__next
+				+fa('chevron-right')
+	// slider nav end
+
+// promo end

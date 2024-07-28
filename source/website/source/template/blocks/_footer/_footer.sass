@@ -1,0 +1,240 @@
+/* footer start */
+
+footer.footer
+	color: #A9A9AB
+	background-color: #20212B
+	padding: 60px 0
+
+.footer
+	&__title
+		color: #FFF
+		font-size: 20px
+		margin-bottom: 20px
+	&__button
+		width: 100%
+		margin-top: 4px
+	&__form-input
+		color: #9C9C9E
+		border: none
+		background: none
+		width: 100%
+		border-bottom: 2px solid #373841
+		padding: 4px 0 10px 0
+	&__form-input::placeholder
+		opacity: 1
+	&__form-submit
+		background: $orange
+		margin-top: 30px
+		width: 100%
+
+/* footer logo */
+
+.footer-logo
+	&__link
+		text-decoration: none
+	&__img
+		max-height: 50px
+		width: auto
+
+	+r992
+
+		&__img
+			max-height: 60px
+
+/* footer socials */
+
+.footer-socials
+	padding: 0
+	margin: 27px 0 30px 0
+	display: flex
+	color: #FFF
+
++r576
+	.footer-socials
+		margin-bottom: 0
+
+.footer-socials
+	&__item
+		list-style: none
+	&__item:not(:last-of-type)
+		margin-right: 40px
+	&__link
+		color: inherit
+		transition: opacity .3s
+	&__link:hover
+		color: #FFF
+		opacity: 0.75
+
+/* footer contacts */
+
+.footer-contacts
+	margin-bottom: 30px
+
++r992
+	.footer-contacts
+		margin-bottom: 0px
+
+.footer-contacts
+	p
+		margin-bottom: 0
+		line-height: 32px
+	p a
+		color: inherit
+		text-decoration: none
+		transition: opacity .3s
+	p a:hover
+		color: inherit
+		opacity: 0.75
+
+/* footer menu */
+
+.footer-menu
+	padding: 0
+	margin: 0
+	margin-bottom: 30px
+	display: flex
+	flex-wrap: wrap
+
++r576
+	.footer-menu
+		margin-bottom: 0
+
+.footer-menu
+	&__item
+		list-style: none
+		width: 50%
+	&__item--active &__link
+		opacity: 0.75
+	&__link
+		display: inline-block
+		position: relative
+		color: #A9A9AB
+		line-height: 32px
+		text-decoration: none
+		transition: opacity .3s
+	&__link:hover
+		color: #A9A9AB
+		opacity: 0.75
+	&__link::after
+		content: ""
+		display: block
+		width: 0%
+		height: 2px
+		background: $orange
+		transition: width .3s
+	&__link:hover::after,
+	&__item--active &__link::after
+		width: 100%
+
+/* footer copyright */
+
+.footer-copyright
+	margin-bottom: 0
+	margin-top: 50px
+	text-align: center
+	margin-bottom: 15px
+
++r768
+	.footer-copyright
+		margin-top: 70px
+		margin-bottom: 0
+		text-align: left
+
+.footer-copyright,
+.footer-privacy
+	color: #65656b
+	font-size: 14px
+
+/* footer privacy */
+
+.footer-privacy
+	text-align: center
+
++r768
+	.footer-privacy
+		text-align: right
+
+.footer-privacy
+	&__link
+		color: inherit
+		text-decoration: none
+	&__link:hover
+		color: inherit
+		text-decoration: underline
+	&__divider
+		padding: 0 8px
+
+/* footer front_2 */
+
+footer.footer--front_2
+	.footer-contacts
+		margin-top: 20px
+	.footer__title
+		padding-top: 24px
+		margin-bottom: 29px
+
+/* footer front_3 */
+
+footer.footer--front_3
+	padding-bottom: 0
+
+footer.footer--front_3
+	.footer-socials
+		margin-bottom: 0
+	.footer-contacts
+		margin-top: 20px
+	.footer-menu
+		padding-top: 30px
+
+	+r992
+
+		.footer-menu
+			padding-top: 77px
+
+	.footer-menu__item
+		width: 50%
+
+	+r576
+
+		.footer-menu__item
+			width: 33.333%
+
+	+r768
+
+		.footer-menu__item
+			width: 25%
+
+	.footer__form
+		display: flex
+		align-items: center
+		flex-direction: column
+		margin-top: 30px
+
+	+r768
+
+		.footer__form
+			margin-top: 0
+			flex-direction: row
+			align-items: flex-end
+
+	.footer__form-submit
+		width: 200px
+		margin-top: 15px
+
+	+r768
+
+		.footer__form-submit
+			margin-top: 0
+
+	.footer-copyright
+		margin: 0
+	.footer__lower
+		border: 1px solid #2C2D37
+		padding: 35px 0
+		margin-top: 30px
+
+	+r576
+
+		.footer__lower
+			margin-top: 50px
+/* footer end */    

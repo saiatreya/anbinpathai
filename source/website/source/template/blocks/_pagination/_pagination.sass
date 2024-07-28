@@ -1,0 +1,101 @@
+/* pagination start */
+
+.pagination
+	padding: 0
+	margin: 0
+	display: flex
+	justify-content: center
+	align-items: flex-end
+
+.pagination
+	&__item
+		margin: 0 4px
+		border: 2px solid #c3c3c3
+		border-radius: 50px
+		height: 40px
+		min-width: 40px
+		text-align: center
+		cursor: pointer
+		transition: all .3s
+
+	+r768
+		&__item
+			height: 50px
+			min-width: 50px
+
+	&__item:nth-of-type(4),
+	&__item:nth-of-type(5),
+	&__item:nth-of-type(6)
+		display: none
+
+	+r768
+		&__item:nth-of-type(4),
+		&__item:nth-of-type(5),
+		&__item:nth-of-type(6)
+			display: initial
+
+	&__item:hover,
+	&__item--active
+		background: $orange
+		border: 2px solid $orange
+	&__item--active
+		pointer-events: none	
+	&__item--disabled
+		height: auto
+		min-width: auto
+		border: none
+		pointer-events: none
+		padding-bottom: 5px
+		margin: 0 11px
+
+	+r768
+		&__item--prev,
+		&__item--next
+			padding: 0 20px
+
+	&__item--prev
+		margin-right: 15px
+		margin-left: 0
+	&__item--next
+		margin-left: 15px
+		margin-right: 0
+
+	+r768
+		&__item--prev
+			margin-right: 26px
+			margin-left: 0
+
+		&__item--next
+			margin-left: 26px
+			margin-right: 0
+
+	+r768	
+		&__item--prev i
+			margin-right: 10px
+
+		&__item--next i
+			margin-left: 10px
+
+	&__item span,
+	&__item i
+		display: inline-block
+		color: #333
+		font-size: 14px
+		line-height: 36px
+		font-weight: 700
+
+	+r768
+		&__item span,
+		&__item i
+			line-height: 46px
+
+	&__item--prev span,
+	&__item--next span
+		display: none
+
+	+r768
+		&__item--prev span,
+		&__item--next span
+			display: initial
+	
+/* pagination end */

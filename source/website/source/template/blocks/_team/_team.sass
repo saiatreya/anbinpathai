@@ -1,0 +1,172 @@
+/* team start */
+
+.team
+	.heading
+		margin-bottom: 30px
+
+.team-item
+	&__socials
+		position: relative
+		padding: 0
+		margin: 0
+		display: flex
+		z-index: 2
+	&__socials li
+		list-style: none
+	&__socials li:not(:last-of-type)
+		margin-right: 20px
+	&__socials li a
+		transition: color .3s
+	&__img
+		position: relative
+		overflow: hidden
+	.team-item__name,
+	.team-item__position
+		position: relative
+		z-index: 2
+		transition: color .3s
+	.team-item__name
+		position: relative
+		color: $blue
+		font-size: 18px
+		font-weight: 700
+	.team-item__position
+		font-size: 14px
+	&__img-holder
+		position: relative
+	&__img .img--bg
+		object-position: center center
+		font-family: "object-fit: cover; object-position: center center"
+		z-index: 2
+
+/* team item rounded */
+
+.team-item--rounded
+	padding: 25px 0
+	transition: all .3s
+
+.team-item--rounded
+	.team-item__socials
+		margin: 0 0 25px 0
+		position: relative
+		justify-content: center
+		opacity: 0
+		visibility: hidden
+		z-index: 2
+		transition: opacity .3s
+	.team-item__socials li a
+		color: #FFF
+	.team-item__socials li.item--active a,
+	.team-item__socials li a:hover
+		color: $orange	
+	.team-item__img-holder .img--layout
+		transition: opacity .3s
+	.team-item__img
+		height: 170px
+		width: 170px
+		border-radius: 50%
+		margin: 0 auto 23px auto
+	.team-item__name,
+	.team-item__position
+		text-align: center
+
+.team-item--rounded:hover,
+.team-item--rounded.team-item--active
+	background-color: $blue
+	box-shadow: 0px 3px 15px 2px rgba(0, 0, 0, 0.1)
+
+.team-item--rounded:hover,
+.team-item--rounded.team-item--active
+	.team-item__socials
+		opacity: 1
+		visibility: visible
+	.team-item__img-holder .img--layout
+		opacity: 0
+	.team-item__name,
+	.team-item__position
+		color: #FFF
+
+/* team item horizontal */
+
+.team-item--horizontal
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin-bottom: 50px
+
+.team-item--horizontal
+	.team-item__img
+		height: 140px
+		width: 140px
+		border-radius: 50%
+
+	+r576
+		.team-item__img
+			height: 170px
+			width: 170px
+
+	.team-item__description
+		width: 100%
+		max-width: calc(100% - 155px)
+
+	+r576
+		.team-item__description
+			width: 100%
+			max-width: calc(100% - 205px)
+
+	.team-item__socials li a
+		color: $blue
+		font-size: 18px
+	.team-item__socials li a:hover
+		color: $orange
+	.img--layout
+		display: none
+
+	+r576
+		.img--layout
+			display: inline-block
+
+/* team item primary */
+
+.team-item--primary
+	padding: 5px
+	box-shadow: 0px 3px 15px 2px rgba(0, 0, 0, 0.1)
+	transition: background .3s
+	margin-bottom: 50px
+
+.team-item--primary:hover
+	background: $blue
+
+.team-item--primary:hover
+	.team-item__name,
+	.team-item__position
+		color: #FFF
+	.team-item__socials
+		opacity: 1
+		transform: translateX(0)
+
+.team-item--primary
+	.team-item__socials
+		display: inline-flex
+		padding: 8px 25px
+		background-color: $blue
+		position: absolute
+		top: 10px
+		left: 0
+		z-index: 3
+		opacity: 0
+		transform: translateX(-100%)
+		transition: all .3s
+	.team-item__socials li a
+		color: #FFF
+	.team-item__socials li.item--active a,
+	.team-item__socials li a:hover
+		color: $orange	
+	.team-item__img::before
+		content: ""
+		display: block
+		padding-top: percentage(290/260)
+	.team-item__description
+		padding: 24px 20px 21px 20px
+
+/* team end */

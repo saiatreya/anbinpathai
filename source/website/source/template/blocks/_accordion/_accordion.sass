@@ -1,0 +1,60 @@
+/* accordion start */
+
+.accordion
+	background-color: #FFF
+	border-radius: 35px
+
+.accordion:not(:last-of-type)
+	margin-bottom: 30px
+
+.accordion
+	&__title-block
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 10px 15px 10px 30px
+	&__title
+		margin-bottom: 0
+		width: calc(100% - 70px)
+	&__close
+		position: relative
+		cursor: pointer
+		height: 40px
+		width: 40px
+		border: 2px solid $orange
+		border-radius: 50%
+
+	+r768
+		&__close
+			height: 52px
+			width: 52px
+
+	&__close::before,
+	&__close::after
+		content: ""
+		display: inline-block
+		background-color: #000
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+	&__close::before
+		height: 14px
+		width: 2px
+		transition: all .3s
+	&__close::after
+		width: 14px
+		height: 2px
+	&__close--active::before
+		opacity: 0
+	&__text-block
+		padding: 0 30px 10px 30px
+		width: calc(100% - 70px)
+		display: none
+
+/* accordion bordered */
+
+.accordion--bordered
+	border: 2px solid #F4F0ED
+
+/* accordion end */

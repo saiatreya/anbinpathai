@@ -1,0 +1,112 @@
+/* testimonials style-3 start */
+
+.testimonials--style-3
+	position: relative
+	background: #F9F7F6
+
++r768
+	section.testimonials--style-3
+		background: transparent
+
++r1200
+	section.testimonials--style-3
+		padding: 125px 0
+
+.testimonials--style-3::before
+	content: ""
+	display: none
+	height: 100%
+	width: 52%
+	background-color: #F9F7F6
+	position: absolute
+	top: 0
+	right: 0
+
++r768
+	.testimonials--style-3::before
+		display: block
+
+.testimonials--style-3
+
+	+r768
+		.testimonials__slider-holder
+			margin-right: -85%
+			margin-left: -15px
+
+	.heading
+		&__title
+			margin-bottom: 0
+
+.testimonials-slider--style-3
+	margin-top: 50px
+
++r1200
+	.testimonials-slider--style-3
+		margin-top: 0
+
+.testimonials-slider--style-3
+	.slick-slide
+		padding: 15px 0 0 0
+
+	+r768
+		.slick-slide
+			padding: 15px
+
+	.testimonials-slider__icon
+		color: $orange
+		font-size: 150px
+		line-height: 30px
+		font-weight: 700
+		position: absolute
+		top: 20px
+		left: 30px
+	.testimonials-slider__item
+		position: relative
+		background-color: #FFF
+		padding: 55px 30px 43px 30px
+
+	+r768
+		.testimonials-slider__item
+			box-shadow: 0px 3px 15px 2px rgba(0, 0, 0, 0.06)
+
+	.testimonials-slider__author
+		color: #333
+		font-size: 16px
+		font-weight: 700
+		width: 100%
+		margin-top: 30px
+	.testimonials-slider__author::before
+		content: ""
+		display: inline-block
+		height: 2px
+		width: 40px
+		background-color: $orange
+		vertical-align: middle
+		margin-right: 20px
+
+/* testimonials style-3 nav */
+
+.testimonials-style-3__nav
+	justify-content: flex-start
+	margin-top: 50px
+
+.testimonials-style-3__nav
+	.slider__prev,
+	.slider__next
+		color: $blue
+
++r576
+	.testimonials-style-3__nav
+		display: flex
+		justify-content: flex-end
+		padding-bottom: 10px
+		margin-top: 0
+
++r1200
+	.testimonials-style-3__nav
+		margin-top: 50px
+		margin-bottom: 0
+		padding-bottom: 0
+		justify-content: flex-start
+	
+/* testimonials style-3 end */

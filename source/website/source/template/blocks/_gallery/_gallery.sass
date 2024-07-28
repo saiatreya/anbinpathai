@@ -1,0 +1,53 @@
+/* gallery start */
+
+.gallery
+	.filter-panel
+		justify-content: flex-start
+	&__button
+		margin-top: 70px
+
+/* projects start */
+
+.gallery-masonry
+	&__img
+		position: relative
+		display: block
+		overflow: hidden
+		text-decoration: none
+	&__item &__img img
+		transform: scale(1.001)
+		transition: transform 1s
+	&__item:hover &__img img
+		transform: scale(1.2)
+	&__description
+		position: absolute
+		color: #FFF
+		width: calc(100% - 60px)
+		bottom: 22px
+		left: 30px
+		opacity: 0
+		transition: opacity .3s
+	&__item:hover &__description
+		opacity: 1
+
+.gallery-masonry__item--height-1::before
+	content: ""
+	display: block
+	padding-top: percentage(900/1270)
+
+.gallery-masonry__item--height-2
+	content: ""
+	display: block
+	padding-top: percentage(450/635)
+
+.gallery-masonry__item--height-3
+	content: ""
+	display: block
+	padding-top: percentage(450/635)
+
++r768
+
+	.gallery-masonry__item--height-3
+		padding-top: percentage(450/1270)
+
+/* gallery end */

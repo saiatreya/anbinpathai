@@ -1,0 +1,99 @@
+/* donation start */
+
+.donation
+	overflow: hidden
+	background-color: #F9F7F6
+
+.donation
+	&__bg
+		position: absolute
+		top: 120px
+		right: 0
+		pointer-events: none
+		z-index: -1
+	.donation-form
+		margin-top: 40px
+
+	+r992
+		.donation-form
+			margin-top: 60px
+
+/* donation item */
+
+.donation-item
+	box-shadow: 0px 3px 15px 2px rgba(15, 13, 13, 0.06)
+
+.donation-item
+	.progress-bar
+		margin-top: 30px
+
+	+r992
+		
+		.progress-bar
+			margin-top: 0
+
+	&__img
+		position: relative
+	&__img::before
+		content: ""
+		display: block
+		padding-top: percentage(600/1170)
+	&__body
+		background: #FFF
+		padding: 45px 15px 60px 15px
+
+	+r576
+
+		&__body
+			padding: 45px 30px 60px 30px
+
+	+r992
+		&__body
+			padding: 45px 50px 60px 50px
+
+	&__details-holder
+		display: flex
+		margin-top: 30px
+
+	+r992
+		&__details-holder
+			justify-content: flex-end
+
+	&__details-item:first-of-type
+		margin-right: 30px
+	&__details-item span:nth-of-type(2)
+		color: #333
+		font-weight: 700
+
+/* donation form */
+
+.donation-form
+	.form__input-number
+		margin-bottom: 30px
+
+	+r992
+		.form__input-number
+			margin-bottom: 0
+
+	.form__title
+		margin-bottom: 26px
+	.form__submit
+		margin-top: 30px
+	.form__icon
+		color: #333
+		font-size: 20px
+		line-height: 50px
+		font-weight: 700
+		height: 50px
+		width: 50px
+		border-radius: 50%
+		text-align: center
+		background-color: $orange
+		position: absolute
+		top: 0
+		left: 0
+	.form__radio-label:not(:last-of-type)
+		margin-right: 40px
+		margin-bottom: 15px
+
+/* donation end */
