@@ -1,0 +1,82 @@
+extends ../layouts/primary.pug
+
+block variables
+
+	-var page = 'cause_details'
+
+	-var type = 'inner'
+
+	-var dest = 'causes-pages'
+
+block header
+
+	include ../blocks/_aside-dropdown/_aside-dropdown
+
+	include ../blocks/_header/_header
+
+block main
+
+	section.promo-primary
+		picture
+			source(srcset="./img/AP_Pic (80).jpeg" media="(min-width: 992px)")
+			img.img--bg(src="./img/AP_Pic (97).jpeg" alt="img")
+		.promo-primary__description
+			span Anbin Pathai (Path of Love Trust)
+		.container
+			.row
+				.col-auto
+					.align-container
+						.align-container__item
+							span.promo-primary__pre-title Anbin Pathai (Path of Love Trust)
+							h1.promo-primary__title
+								span Empowering Women: 
+								span Building Skills, Confidence, and Economic Independence
+
+	section.section
+		.container
+			.row
+				.col-12
+					//- cause details tabs start
+					.tabs.horizontal-tabs.cause-details-tabs
+						.horizontal-tabs__content
+							.horizontal-tabs__item#horizontal-tabs__item-1
+								p
+									strong As part of our mission to uplift and empower women, our NGO recently conducted a free tailoring training program for women in Royapettah. This initiative is designed to equip participants with valuable skills that can lead to self-improvement and economic independence. Here's an overview of the program:
+								h6.tabs__title Skill Development in Tailoring:
+								p The training provided comprehensive instruction in tailoring, helping women acquire the necessary skills to make clothing and other fabric-based products. This skill set not only enhances their personal development but also opens up opportunities for employment and entrepreneurship.
+								p Building on the success of our initial training, we are planning to start another round of sessions. This ongoing effort underscores our commitment to reaching more women and broadening the impact of the program.
+								h6.tabs__title Empowerment and Self-Improvement:
+								p The core aim of these training programs is to empower women, providing them with the tools and confidence needed to improve their lives. By gaining skills in tailoring, participants can achieve greater financial stability, contribute to their households, and gain a sense of independence.
+								p Through these initiatives, we strive to create a supportive environment where women can learn, grow, and transform their lives. Our training programs are a crucial step toward fostering self-reliance and economic empowerment among women in our community.
+							.horizontal-tabs__item#horizontal-tabs__item-4
+								.gallery-simple
+									.row.offset-30
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (80).jpeg", data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (80).jpeg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (81).jpg", data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (81).jpg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (82).jpg", data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (82).jpg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (83).jpg", data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (83).jpg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (84).jpg", data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (84).jpg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (85).jpg", data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (85).jpg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (86).jpg", data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (86).jpg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (87).jpg", data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (87).jpg" alt="img")
+
+
+block footer
+
+	include ../blocks/_footer/_footer
