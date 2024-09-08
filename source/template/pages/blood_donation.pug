@@ -1,0 +1,83 @@
+extends ../layouts/primary.pug
+
+block variables
+
+	-var page = 'cause_details'
+
+	-var type = 'inner'
+
+	-var dest = 'causes-pages'
+
+block header
+
+	include ../blocks/_aside-dropdown/_aside-dropdown
+
+	include ../blocks/_header/_header
+
+block main
+
+	section.promo-primary
+		picture
+			source(srcset="./img/AP_Pic (80).jpeg" media="(min-width: 992px)")
+			img.img--bg(src="./img/AP_Pic (97).jpeg" alt="img")
+		.promo-primary__description
+			span Anbin Pathai (Path of Love Trust)
+		.container
+			.row
+				.col-auto
+					.align-container
+						.align-container__item
+							span.promo-primary__pre-title Anbin Pathai (Path of Love Trust)
+							h1.promo-primary__title
+								span Blood Donation Coordination: 
+								span Saving Lives through Blood Donation
+
+	section.section
+		.container
+			.row
+				.col-12
+					//- cause details tabs start
+					.tabs.horizontal-tabs.cause-details-tabs
+						.horizontal-tabs__content
+							.horizontal-tabs__item(id="horizontal-tabs__item-1")
+								p
+									strong One of our key initiatives is focused on coordinating blood donations to meet urgent medical needs. The aim of this program is to respond to calls for blood and connect with volunteers willing to donate, ensuring that hospitals and patients have access to the necessary blood supplies. Here's an overview of how we operate:
+								h6.tabs__title Call Response and Coordination:
+								p Our team actively accepts calls from hospitals, clinics, and individuals in need of blood donations. Upon receiving a request, we quickly mobilize to find suitable donors within our network of volunteers.
+								h6.tabs__title Volunteer Mobilization:
+								p We maintain a database of registered blood donors who are ready to respond to emergency needs. When a request is received, we reach out to these volunteers, coordinating the donation process to ensure that the required blood type is available promptly.
+								h6.tabs__title Community Engagement:
+								p We also engage with the community to raise awareness about the importance of blood donation. By encouraging more people to volunteer as donors, we aim to build a robust and responsive blood donation network.
+								p Through this initiative, our goal is to facilitate life-saving blood donations, providing critical support to healthcare facilities and ensuring that patients in need receive timely transfusions.
+							.horizontal-tabs__item(id="horizontal-tabs__item-4")
+								.gallery-simple
+									.row.offset-30
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (80).jpeg" data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (80).jpeg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (81).jpg" data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (81).jpg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (82).jpg" data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (82).jpg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (83).jpg" data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (83).jpg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (84).jpg" data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (84).jpg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (85).jpg" data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (85).jpg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (86).jpg" data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (86).jpg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (87).jpg" data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (87).jpg" alt="img")
+
+
+block footer
+
+	include ../blocks/_footer/_footer

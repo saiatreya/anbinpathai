@@ -1,0 +1,83 @@
+extends ../layouts/primary.pug
+
+block variables
+
+	-var page = 'cause_details'
+
+	-var type = 'inner'
+
+	-var dest = 'causes-pages'
+
+block header
+
+	include ../blocks/_aside-dropdown/_aside-dropdown
+
+	include ../blocks/_header/_header
+
+block main
+
+	section.promo-primary
+		picture
+			source(srcset="./img/AP_Pic (80).jpeg", media="(min-width: 992px)")
+			img.img--bg(src="./img/AP_Pic (97).jpeg", alt="img")
+		.promo-primary__description 
+			span Anbin Pathai (Path of Love Trust)
+		.container
+			.row
+				.col-auto
+					.align-container
+						.align-container__item
+							span.promo-primary__pre-title Anbin Pathai (Path of Love Trust)
+							h1.promo-primary__title 
+								span Relief Work During Calamities:
+								span Providing Essential Aid
+
+	section.section
+		.container
+			.row
+				.col-12
+					//- cause details tabs start
+					.tabs.horizontal-tabs.cause-details-tabs
+						.horizontal-tabs__content
+							.horizontal-tabs__item#horizontal-tabs__item-1
+								p 
+									strong In response to natural calamities, our NGO has been actively involved in relief work to support affected individuals and families. Our efforts focus on providing immediate and essential aid to those in need, ensuring they have access to basic necessities during challenging times. Here's a summary of our relief activities: 
+								h6.tabs__title Distribution of Essential Supplies:
+								p During calamities, we directly distribute food, milk, blankets, bread, and groceries to the affected people. These essential supplies are critical for sustaining individuals and families who have lost access to basic resources due to the disaster.
+								h6.tabs__title Feeding Program:
+								p Throughout the period of crisis, we provided daily meals to approximately 400 people. This program ensured that those impacted by the calamity had consistent access to nutritious food, helping to alleviate hunger and support their well-being during a difficult time.
+								p Our relief work is driven by a commitment to providing timely and compassionate assistance to those affected by natural disasters. By delivering essential supplies and meals, we aim to offer immediate relief and support recovery efforts, helping communities to rebuild and recover.
+
+							.horizontal-tabs__item#horizontal-tabs__item-4
+								.gallery-simple
+									.row.offset-30
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (80).jpeg", data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (80).jpeg", alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (81).jpg", data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (81).jpg", alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (82).jpg", data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (82).jpg", alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (83).jpg", data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (83).jpg", alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (84).jpg", data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (84).jpg", alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (85).jpg", data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (85).jpg", alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (86).jpg", data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (86).jpg", alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (87).jpg", data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (87).jpg", alt="img")
+
+
+
+block footer
+
+	include ../blocks/_footer/_footer
