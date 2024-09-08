@@ -2,105 +2,110 @@ extends ../layouts/primary.pug
 
 block variables
 
-	-var page = 'donors'
-
-	-var type = 'inner'
+	-var page = 'events'
 
 	-var dest = 'pages'
 
 block header
 
-	include ../blocks/_aside-dropdown/_aside-dropdown
+	// include ../blocks/_aside-dropdown/_aside-dropdown
 
 	// header start
+
+	include ../blocks/_header/_header
 	
-	header.header.header--inner
-		.container-fluid
-			.row.no-gutters.justify-content-between
-
-				.col-auto.d-flex.align-items-center
-					.dropdown-trigger.dropdown-trigger--inner.d-none.d-sm-block
-						.dropdown-trigger__item
-
-					.header-logo
-						a.header-logo__link(href="index.html")
-							img.header-logo__img(src="img/logo_dark.png", alt="logo")
-
-				.col-auto
-					include ../blocks/_main-menu/_main-menu
-
-				.col-auto.d-flex.align-items-center
-
-					// lang select start
-					ul.lang-select.lang-select--inner
-						li.lang-select__item.lang-select__item--active
-							span En
-							ul.lang-select__sub-list
-								li
-									a(href="#") French
-								li
-									a(href="#") Spanish
-								li
-									a(href="#") Deutsch
-								li
-									a(href="#") Russian
-					// lang select end				
-
-					a.button.button--squared(href="#") 
-						span Donate
-
-					.dropdown-trigger.dropdown-trigger--inner.d-block.d-sm-none
-						.dropdown-trigger__item
-
 	// header end
 
 block main
 
-	section.promo-primary(class=(dest === "elements" ? "promo-primary--elements" : undefined))
-
+	section.promo-primary
 		picture
-			source(srcset='img/donors.jpg' media='(min-width: 992px)')
-			img.img--bg(src='img/donors.jpg' alt='img')
-
-		.promo-primary__description 
-			span Mercy
-
+			source(srcset='img/donors.jpg', media='(min-width: 992px)')
+			img.img--bg(src='img/donors.jpg', alt='img')
+		.promo-primary__description
+			span Donate
 		.container
 			.row
 				.col-auto
 					.align-container
 						.align-container__item
-							span.promo-primary__pre-title Helpo
-							h1.promo-primary__title #[span Partners] #[span & Donors]
-
-	include ../blocks/_donors-inner/_donors-inner
-
-	include ../blocks/_info/_info
-
-	include ../blocks/_info-banner/_info-banner
-
+							span.promo-primary__pre-title Support Anbin Pathai
+							h1.promo-primary__title
+								span Your Contribution Can Make a Difference
+								span
+	// info start
+	section.section.info.no-padding-top
+		.container
+			.row.align-items-start.margin-bottom
+			div
+				.heading.heading--primary
+				span.heading__pre-title
+				h2.heading__title
+					span Dear
+					span Partners &amp; Donors
+				p
+					| At Anbin Pathai, we are committed to transforming lives through our diverse range of initiatives, from providing essential meals to those in need to offering educational opportunities and coordinating life-saving blood donations. Our programs include:
+					| Daily Meals: Ensuring that homeless individuals, underprivileged families, and school children in Chennai receive nutritious meals every day.
+					| Emergency Relief: Distributing food, milk, blankets, bread, and groceries to those affected by natural calamities, providing crucial support during times of crisis.
+					| Empowering Women: Offering free tailoring training to women, helping them gain valuable skills for self-improvement and economic independence.
+					| Education: Running learning centers in Royapettah and Santhome, where underprivileged students receive quality education and holistic development.
+					| Blood Donation Coordination: Responding to urgent calls for blood and mobilizing volunteers to meet critical needs.
+					| To sustain and expand these vital programs, we depend on the generosity of our community. Your donation can help us:
+					| Continue Providing Meals: Feed hundreds of individuals and families in need.
+					| Enhance Emergency Relief Efforts: Offer timely support during disasters.
+					| Support Skill Training for Women: Empower more women through our training programs.
+					| Expand Educational Opportunities: Provide resources and support to more students.
+					| Facilitate Life-Saving Blood Donations: Ensure that hospitals have the blood needed to save lives.
+				p
+					| You can help our causes by donating using the following options:
+				p
+					strong Bank Transfer: 
+				p
+					| Account Name :
+					strong  Path of Love Trust
+				p
+					| A/C No : 
+					strong 800210110008468
+				p
+					| Account Type : 
+					strong Savings
+				p
+					| IFSC : 
+					strong BKID0008002
+				p
+					| Bank Name : 
+					strong Bank of India
+				p
+					strong GPay/PhonePay/Paytm : 9941642120
+				p
+					strong UPI ID : sanclementg@okhdfcbank
+				p
+					| In India, donations to Anbin Pathai are eligible for a tax deduction under Section 80G of the Income Tax Act. For all donations, we will provide a receipt that allows you to claim this deduction.
+					| Your support is crucial in helping us achieve our mission and make a lasting impact. Together, we can create a brighter future for those in need.
+					| Thank you for your generosity and commitment.
+				p
+					strong  TN GOV REG. 157/2020 NGODARPAN.TN/2020/0260818
+			.row
+				.col-12
+					.info__img
+						img.img--layout(src='img/info_img-layout.png', alt='img')
+						img(src='img/donate.jpg', alt='img')
+	// info end
 	// text section start
-
 	section.section.text-section.text-section--style-2
-
-		img.text-section__bg-left(src="img/text-section_left.png", alt="img")
-		img.text-section__bg-right(src="img/text-section_right.png", alt="img")
-
+		img.text-section__bg-left(src='img/text-section_left.png', alt='img')
+		img.text-section__bg-right(src='img/text-section_right.png', alt='img')
 		.container
 			.row
-
 				.col-12.text-center
-
 					h2.text-section__heading Thank You
-
 			.row
-
 				.col-lg-8.offset-lg-4.col-xl-7.offset-xl-4
-
-					h3.text-section__title To all our donors, #[br]partners and volunteers
-					p Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail, Canthigaster rostrata. Midshipman dartfish Modoc sucker, yellowtail kingfish
-
-	// text section end
+					h3.text-section__title
+						| To all our donors, 
+						br
+						| partners and volunteers
+						p
 
 block footer
 

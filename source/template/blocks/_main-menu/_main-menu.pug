@@ -7,59 +7,6 @@ nav
 			a.main-menu__link(href="index.html")
 				span Home
 
-		li.main-menu__item.main-menu__item--has-child(class=(dest === "pages" ? "main-menu__item--active" : undefined))
-			a.main-menu__link(href="javascript:void(0);")
-				span Pages
-
-			// sub menu start
-			ul.main-menu__sub-list.sub-list--style-2
-				li(class=(page === "about" ? "item--active" : undefined))
-					a(href="about.html")
-						span About
-				li(class=(page === "typography" ? "item--active" : undefined))
-					a(href="typography.html") 
-						span Typography
-				li(class=(page === "donors" ? "item--active" : undefined))
-					a(href="donors.html")
-						span Donors & Partners
-				li(class=(page === "volunteer" ? "item--active" : undefined))
-					a(href="volunteer.html")
-						span Become a Volunteer
-				li(class=(page === "member" ? "item--active" : undefined))
-					a(href="team-member.html")
-						span Team Member
-				li(class=(page === "events" ? "item--active" : undefined))
-					a(href="events.html")
-						span Events
-				li(class=(page === "event-details" ? "item--active" : undefined))
-					a(href="event-details.html")
-						span Event Details
-				li(class=(page === "stories" ? "item--active" : undefined))
-					a(href="stories.html")
-						span Stories
-				li(class=(page === "storie-details" ? "item--active" : undefined))
-					a(href="story-details.html")
-						span Story Details
-				li(class=(page === "blog" ? "item--active" : undefined))
-					a(href="blog.html")
-						span Blog
-				li(class=(page === "blog-post" ? "item--active" : undefined))
-					a(href="blog-post.html")
-						span Blog Post
-				li(class=(page === "gallery" ? "item--active" : undefined))
-					a(href="gallery.html")
-						span Gallery
-				li(class=(page === "pricing" ? "item--active" : undefined))
-					a(href="pricing.html")
-						span Pricing Plans
-				li(class=(page === "faq" ? "item--active" : undefined))
-					a(href="faq.html")
-						span FAQ
-				li(class=(page === "404" ? "item--active" : undefined))
-					a(href="404.html")
-						span 404 Page
-			// sub menu end
-
 		li.main-menu__item(class=(page === "events" ? "main-menu__item--active" : undefined))
 			a.main-menu__link(href="events.html")
 				span Events

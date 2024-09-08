@@ -1,79 +1,55 @@
 // footer start
-
 footer.footer
-	.container
-		.row
-
-			.col-sm-6.col-lg-3
-
-				.footer-logo
-					a.footer-logo__link(href="index.html")
-						img.footer-logo__img(src="img/logo_white.png", alt="logo")
-
-				// footer socials start
-				ul.footer-socials
-					li.footer-socials__item
-						a.footer-socials__link(href="#")
-							+fa('facebook')
-					li.footer-socials__item
-						a.footer-socials__link(href="#")
-							+fa('twitter')
-					li.footer-socials__item
-						a.footer-socials__link(href="#")
-							+fa('google-plus')
-					li.footer-socials__item
-						a.footer-socials__link(href="#")
-							+fa('instagram')
-				// footer socials end
-
-			.col-sm-6.col-lg-3
-
-				h4.footer__title Contacts
-				.footer-contacts
-					p.footer-contacts__address Elliott Ave, Parkville VIC 3052, Melbourne Canada
-					p.footer-contacts__phone Phone: #[a(href="tel:+31859644725") +31 85 964 47 25]
-					p.footer-contacts__mail Email: #[a(href="mailto:support@helpo.org") support@helpo.org]
-
-			.col-sm-6.col-lg-3
-
-				h4.footer__title Menu & Links
-
-				// footer nav start
-				nav
-					ul.footer-menu
-						li.footer-menu__item(class=(type === "front" ? "footer-menu__item--active" : undefined))
-							a.footer-menu__link(href="index.html") Home
-						li.footer-menu__item
-							a.footer-menu__link(href="#") Blog
-						li.footer-menu__item(class=(page === "about" ? "footer-menu__item--active" : undefined))
-							a.footer-menu__link(href="about.html") About
-						li.footer-menu__item(class=(page === "contacts" ? "footer-menu__item--active" : undefined))
-							a.footer-menu__link(href="#") Contacts
-						li.footer-menu__item
-							a.footer-menu__link(href="#") Pages
-						li.footer-menu__item
-							a.footer-menu__link(href="#") Elements
-						li.footer-menu__item(class=(page === "causes" ? "footer-menu__item--active" : undefined))
-							a.footer-menu__link(href="causes.html") Causes
-				// footer nav end
-
-			.col-sm-6.col-lg-3
-
-				h4.footer__title Donate
-				p Help Us Change the Lives of Children in World
-				a.button.footer__button.button--filled(href="#") Donate
-
-		.row.align-items-baseline
-
-			.col-md-6
-
-				p.footer-copyright © 2020 Helpo Charity Template by Artureanec
-
-			.col-md-6
-
-				.footer-privacy
-					a.footer-privacy__link(href="#") Privacy Policy
-					span.footer-privacy__divider |
-					a.footer-privacy__link(href="#") Term and Condision
-
+  .container
+    .row
+      .col-sm-6.col-lg-3
+        .footer-logo
+          a.footer-logo__link(href='index.html')
+            img.footer-logo__img(src='img/logo.png', alt='logo')
+        // footer socials start
+        ul.footer-socials
+          li.footer-socials__item
+            a.footer-socials__link(href='#')
+              i.fa.fa-facebook(aria-hidden='true')
+          li.footer-socials__item
+            a.footer-socials__link(href='#')
+              i.fa.fa-twitter(aria-hidden='true')
+          li.footer-socials__item
+            a.footer-socials__link(href='#')
+              i.fa.fa-google-plus(aria-hidden='true')
+          li.footer-socials__item
+            a.footer-socials__link(href='#')
+              i.fa.fa-instagram(aria-hidden='true')
+        // footer socials end
+      .col-sm-6.col-lg-3
+        h4.footer__title Contacts
+        .footer-contacts
+          p.footer-contacts__address 2/36 Dooming Street, Santhome, Mylapore , Chennai 660004
+          p.footer-contacts__phone
+            | Phone: 
+            a(href='tel:+919941642120') +91 99416 42120
+          p.footer-contacts__mail
+            | Email: 
+            a(href='mailto:support@helpo.org') anbinpathai@gmail.com
+      .col-sm-6.col-lg-3
+        h4.footer__title Menu &amp; Links
+        // footer nav start
+        nav
+          ul.footer-menu
+            li.footer-menu__item.footer-menu__item--active
+              a.footer-menu__link(href='index.html') Home
+            li.footer-menu__item
+              a.footer-menu__link(href='about.html') About
+            li.footer-menu__item
+              a.footer-menu__link(href='contacts.html') Contacts
+            li.footer-menu__item
+              a.footer-menu__link(href='events.html') Events
+        // footer nav end
+      .col-sm-6.col-lg-3
+        h4.footer__title Donate
+        p Help Us Change the Lives of the needy in Chennai
+        a.button.footer__button.button--filled(href='donors.html') Donate
+    .row.align-items-baseline
+      .col-md-6
+        p.footer-copyright &copy; 2024 Anbin Pathi
 // footer end
