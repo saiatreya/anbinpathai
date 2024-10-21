@@ -1,0 +1,87 @@
+extends ../layouts/primary.pug
+
+block variables
+
+	-var page = 'cause_details'
+
+	-var type = 'inner'
+
+	-var dest = 'causes-pages'
+
+block header
+
+	include ../blocks/_aside-dropdown/_aside-dropdown
+
+	include ../blocks/_header/_header
+
+block main
+
+	section.promo-primary
+		picture
+			source(srcset="./img/AP_Pic (80).jpeg" media="(min-width: 992px)")
+			img.img--bg(src="./img/AP_Pic (97).jpeg" alt="img")
+		.promo-primary__description
+			span Anbin Pathai (Path of Love Trust)
+		.container
+			.row
+				.col-auto
+					.align-container
+						.align-container__item
+							span.promo-primary__pre-title Anbin Pathai (Path of Love Trust)
+							h1.promo-primary__title
+								span Empowering Through Education:
+								span Anbin Pathai (Path of Love Trust) Katral Maiyam
+
+	section.section
+		.container
+			.row
+				.col-12
+					//- cause details tabs start
+					.tabs.horizontal-tabs.cause-details-tabs
+						.horizontal-tabs__content
+							.horizontal-tabs__item(id="horizontal-tabs__item-1")
+								h6.tabs__title Empowering Through Education: Our Learning Centers' Impact:
+								p
+									| Our NGO operates two learning centers in Rayapettah and Santhome, dedicated to providing quality education and holistic development for underprivileged students. Here’s an overview of our impact:
+								h6.tabs__title Educational Outreach:
+								p We currently serve a total of 100 students across both centers. These students come from diverse backgrounds, many of whom face significant socio-economic challenges.
+								h6.tabs__title Academic Excellence and Personal Development:
+								p Our curriculum is designed to foster academic excellence, ensuring that every student achieves a high standard of education. Beyond academics, we focus on developing good character, leadership skills, and a positive social outlook. Our goal is to nurture well-rounded individuals who can contribute positively to society.
+								h6.tabs__title Leadership and Societal Contribution:
+								p We believe in empowering our students to become leaders in their communities. By instilling values of responsibility and service, we prepare them to take on roles that can drive social change and build a better society.
+								h6.tabs__title Supporting Women and Families:
+								p Our centers also play a crucial role in supporting women, helping them gain the skills and confidence needed to lead their families successfully. By educating women, we contribute to the broader goal of family and community upliftment, enabling them to overcome difficulties and improve their quality of life.
+								p Through these efforts, our learning centers not only provide education but also empower students to become agents of change, capable of making a positive impact on their families and communities.
+							.horizontal-tabs__item(id="horizontal-tabs__item-4")
+								.gallery-simple
+									.row.offset-30
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (80).jpeg" data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (80).jpeg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (81).jpg" data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (81).jpg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (82).jpg" data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (82).jpg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (83).jpg" data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (83).jpg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (84).jpg" data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (84).jpg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (85).jpg" data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (85).jpg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (86).jpg" data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (86).jpg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (87).jpg" data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (87).jpg" alt="img")
+					//- cause details tabs end
+
+
+block footer
+
+	include ../blocks/_footer/_footer

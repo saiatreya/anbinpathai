@@ -1,0 +1,87 @@
+extends ../layouts/primary.pug
+
+block variables
+
+	-var page = 'cause_details'
+
+	-var type = 'inner'
+
+	-var dest = 'causes-pages'
+
+block header
+
+	include ../blocks/_aside-dropdown/_aside-dropdown
+
+	include ../blocks/_header/_header
+
+block main
+
+	section.promo-primary
+		picture
+			source(srcset="./img/AP_Pic (80).jpeg" media="(min-width: 992px)")
+			img.img--bg(src="./img/AP_Pic (80).jpeg" alt="img")
+		.promo-primary__description
+			span Anbin Pathai (Path of Love Trust)
+		.container
+			.row
+				.col-auto
+					.align-container
+						.align-container__item
+							span.promo-primary__pre-title Anbin Pathai (Path of Love Trust)
+							h1.promo-primary__title 
+								span Homeless
+								span & Elderly Care
+
+	section.section
+		.container
+			.row
+				.col-12
+					.tabs.horizontal-tabs.cause-details-tabs
+						.horizontal-tabs__content
+							#horizontal-tabs__item-1.horizontal-tabs__item
+								h6.tabs__title Rescue Operations and Care:
+								p Our team responds to rescue calls received from the community, including known persons and police forces. Upon arrival, we provide immediate care by bathing and cleaning the individuals and then transporting them to the nearest old age home or nursing facility. These operations are crucial in safeguarding vulnerable individuals from the dangers of street life.
+								h6.tabs__title Health Monitoring and Medical Support:
+								p Once the individuals are in a safe environment, our commitment continues. We monitor their health conditions on a monthly basis, providing regular check-ups to track their well-being. In addition to health monitoring, we supply necessary food and cover medical expenses, ensuring that they receive comprehensive and holistic care.
+								h6.tabs__title Long-Term Support and Integration:
+								p Our services are designed not just to provide immediate relief but also to support long-term integration into a safe and supportive environment. By ensuring regular health check-ups, providing food, and covering medical expenses, we aim to offer a stable foundation for these individuals to rebuild their lives.
+								h6.tabs__title Monthly Provisions for Basic Needs:
+								p Every month, we distribute essential items to homeless individuals, including food, clothing, and household essentials like mats. These provisions are crucial in helping them meet their basic needs and maintain a semblance of stability in their lives.
+								h6.tabs__title Access to Clean Water:
+								p Recognizing the importance of clean water for health and hygiene, we have established water ponds in select areas. These ponds provide homeless individuals with reliable access to clean water, which is vital for drinking, cooking, and personal hygiene.
+								p Through these initiatives, our NGO strives to create a compassionate and supportive network for the homeless and elderly, addressing their immediate needs while also working towards their long-term well-being and integration into a caring community.
+							
+							#horizontal-tabs__item-4.horizontal-tabs__item
+								.gallery-simple
+									.row.offset-30
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (80).jpeg" data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (80).jpeg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (81).jpg" data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (81).jpg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (82).jpg" data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (82).jpg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (83).jpg" data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (83).jpg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (84).jpg" data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (84).jpg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (85).jpg" data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (85).jpg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (86).jpg" data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (86).jpg" alt="img")
+										.col-12.col-sm-6.col-lg-4.col-xl-3
+											a.gallery-simple__item(href="./img/AP_Pic (87).jpg" data-fancybox="simple-gallery")
+												img.img--bg(src="./img/AP_Pic (87).jpg" alt="img")
+
+
+
+
+block footer
+
+	include ../blocks/_footer/_footer

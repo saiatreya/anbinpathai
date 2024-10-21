@@ -1,0 +1,62 @@
+extends ../layouts/primary.pug
+
+block variables
+
+	-var page = 'cause_details'
+
+	-var type = 'inner'
+
+	-var dest = 'causes-pages'
+
+block header
+
+	include ../blocks/_aside-dropdown/_aside-dropdown
+
+	include ../blocks/_header/_header
+
+block main
+
+	section.promo-primary
+		picture
+			source(srcset="./img/AP_Pic (80).jpeg" media="(min-width: 992px)")
+			img.img--bg(src="./img/AP_Pic (97).jpeg" alt="img")
+		.promo-primary__description 
+			span Anbin Pathai (Path of Love Trust)
+		.container
+			.row
+				.col-auto
+					.align-container
+						.align-container__item
+							span.promo-primary__pre-title Anbin Pathai (Path of Love Trust)
+							h1.promo-primary__title 
+								span Anbin Pathai (Path of Love Trust) Annachathiram:
+								span Nourishing the Needy in Chennai
+
+	section.section
+		.container
+			.row
+				.col-12
+					.tabs.horizontal-tabs.cause-details-tabs
+						.horizontal-tabs__content
+							#horizontal-tabs__item-1.horizontal-tabs__item
+								h6.tabs__title Impact:
+								p Our initiative operates in Chennai, where we work tirelessly to identify and reach out to those in need. Our commitment is to alleviate hunger and improve the quality of life for the city's most vulnerable residents. Through "Anbin Pathai (Path of Love Trust) Annachathiram," we provide nutritious meals to underprivileged and homeless populations in Chennai. Here’s an overview of our efforts:
+								h6.tabs__title Food Collection from Events:
+								p In partnership with wedding halls and restaurants, we collect leftover food from auspicious events. This surplus food is collected and distributed to those in need, helping reduce food waste and addressing hunger.
+								h6.tabs__title Daily Food Distribution:
+								p A significant focus is providing meals to school children from underprivileged backgrounds, ensuring they have the necessary nutrition for growth, learning, and development.
+								p Anbin Pathai (Path of Love Trust) Annachathiram aims to provide essential nourishment to those in need, building a healthier and more compassionate community.
+
+							#horizontal-tabs__item-4.horizontal-tabs__item
+								.gallery-simple
+									.row.offset-30
+										each img, index in ['./img/AP_Pic (80).jpeg', './img/AP_Pic (81).jpg', './img/AP_Pic (82).jpg', './img/AP_Pic (83).jpg', './img/AP_Pic (84).jpg', './img/AP_Pic (85).jpg', './img/AP_Pic (86).jpg', './img/AP_Pic (87).jpg']
+											.col-12.col-sm-6.col-lg-4.col-xl-3
+												a.gallery-simple__item(href=img data-fancybox="simple-gallery")
+													img.img--bg(src=img alt="img")
+
+
+
+block footer
+
+	include ../blocks/_footer/_footer
