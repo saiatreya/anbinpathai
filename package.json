@@ -1,7 +1,8 @@
 {
 	"main": "gulpfile.js",
 	"scripts": {
-		"dev": "gulp server",
+		"serve": "gulp server",
+		"dev": "gulp dev",
 		"build": "gulp build"
 	},
 	"devDependencies": {

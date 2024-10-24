@@ -2,13 +2,13 @@ extends ../layouts/primary.pug
 
 block variables
 
-	-var page = 'events'
+	-var page = 'donors'
 
 	-var dest = 'pages'
 
 block header
 
-	// include ../blocks/_aside-dropdown/_aside-dropdown
+	include ../blocks/_aside-dropdown/_aside-dropdown
 
 	// header start
 
@@ -42,7 +42,7 @@ block main
 				span.heading__pre-title
 				h2.heading__title
 					span Dear
-					span Partners &amp; Donors
+					span &nbsp;Partners &amp; Donors
 				p
 					| At Anbin Pathai, we are committed to transforming lives through our diverse range of initiatives, from providing essential meals to those in need to offering educational opportunities and coordinating life-saving blood donations. Our programs include:
 					| Daily Meals: Ensuring that homeless individuals, underprivileged families, and school children in Chennai receive nutritious meals every day.
@@ -58,33 +58,35 @@ block main
 					| Facilitate Life-Saving Blood Donations: Ensure that hospitals have the blood needed to save lives.
 				p
 					| You can help our causes by donating using the following options:
-				p
-					strong Bank Transfer: 
-				p
-					| Account Name :
-					strong  Path of Love Trust
-				p
-					| A/C No : 
-					strong 800210110008468
-				p
-					| Account Type : 
-					strong Savings
-				p
-					| IFSC : 
-					strong BKID0008002
-				p
-					| Bank Name : 
-					strong Bank of India
-				p
-					strong GPay/PhonePay/Paytm : 9941642120
-				p
-					strong UPI ID : sanclementg@okhdfcbank
-				p
-					| In India, donations to Anbin Pathai are eligible for a tax deduction under Section 80G of the Income Tax Act. For all donations, we will provide a receipt that allows you to claim this deduction.
-					| Your support is crucial in helping us achieve our mission and make a lasting impact. Together, we can create a brighter future for those in need.
-					| Thank you for your generosity and commitment.
-				p
-					strong  TN GOV REG. 157/2020 NGODARPAN.TN/2020/0260818
+
+				div.bank-details
+					p
+						strong Bank Transfer: 
+					p
+						| Account Name :
+						strong  Path of Love Trust
+					p
+						| A/C No : 
+						strong 800210110008468
+					p
+						| Account Type : 
+						strong Savings
+					p
+						| IFSC : 
+						strong BKID0008002
+					p
+						| Bank Name : 
+						strong Bank of India
+					p
+						strong GPay/PhonePay/Paytm : 9941642120
+					p
+						strong UPI ID : sanclementg@okhdfcbank
+					i
+						| In India, donations to Anbin Pathai are eligible for a tax deduction under Section 80G of the Income Tax Act. For all donations, we will provide a receipt that allows you to claim this deduction.
+						| Your support is crucial in helping us achieve our mission and make a lasting impact. Together, we can create a brighter future for those in need.
+						| Thank you for your generosity and commitment.
+					p
+						strong  TN GOV REG. 157/2020 NGODARPAN.TN/2020/0260818
 			.row
 				.col-12
 					.info__img

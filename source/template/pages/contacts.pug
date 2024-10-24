@@ -6,7 +6,7 @@ block variables
 
 block header
 
-	// include ../blocks/_aside-dropdown/_aside-dropdown
+	include ../blocks/_aside-dropdown/_aside-dropdown
 
 	// header start
 
@@ -39,17 +39,17 @@ block main
 		.container
 			.row.offset-margin
 
-				.col-sm-6.col-lg-3
+				.col-sm-6.col-lg-4
 
 					.icon-item
 						.icon-item__img
 							img.img--layout(src="img/icon_1-1.png" alt="img")
 							svg.icon.icon-item__icon.icon--red
-								use(xlink:href="#location-pin")
+								use(xlink:href="#1_earth")
 						.icon-item__text
-							p Adress: Elliott Ave, Parkville VIC 3052, Melbourne Canada
+							p Address: 2/36 Dooming Street, Santhome, Mylapore , Chennai 660004
 
-				.col-sm-6.col-lg-3
+				.col-sm-6.col-lg-4
 
 					.icon-item
 						.icon-item__img
@@ -57,9 +57,9 @@ block main
 							svg.icon.icon-item__icon.icon--orange
 								use(xlink:href="#phone-call")
 						.icon-item__text
-							p Phone: #[a.icon-item__link(href="tel:+31859644725") + 31 85 964 47 25] #[a.icon-item__link(href="tel:+31859644725") + 31 85 964 47 25]
+							p Phone: #[a.icon-item__link(href="tel:+91-9941642120") +91-9941642120]
 
-				.col-sm-6.col-lg-3
+				.col-sm-6.col-lg-4
 
 					.icon-item
 						.icon-item__img
@@ -67,33 +67,9 @@ block main
 							svg.icon.icon-item__icon.icon--green
 								use(xlink:href="#envelope")
 						.icon-item__text
-							p Email: #[a.icon-item__link(href="mailto:support@helpo.org") support@helpo.org]
+							p Email: #[a.icon-item__link(href="mailto:anbinpathai@gmail.com") anbinpathai@gmail.com]
 
-				.col-sm-6.col-lg-3
-
-					.icon-item
-						.icon-item__img
-							img.img--layout(src="img/icon_4-4.png" alt="img")
-							svg.icon.icon-item__icon.icon--blue
-								use(xlink:href="#share")
-						.icon-item__text
-
-							// socials start
-							ul.socials
-								li.socials__item
-									a.socials__link(href="#")
-										+fa('instagram')
-								li.socials__item
-									a.socials__link(href="#")
-										+fa('google-plus')
-								li.socials__item
-									a.socials__link.socials__link--active(href="#")
-										+fa('twitter')
-								li.socials__item
-									a.socials__link(href="#")
-										+fa('facebook')
-							// socials end
-
+				
 	// section end
 
 	// include ../blocks/_contacts/_contacts

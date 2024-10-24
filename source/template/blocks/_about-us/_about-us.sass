@@ -14,6 +14,19 @@
 	left: 0
 	z-index: -1
 
+.img-bgg
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	transform: translate(0)
+
+.img-brand
+	object-fit: contain
+	width: 100%
+	height: 100%
+
 +r1600
 
 	.about-us::before
@@ -73,13 +86,10 @@
 	color: #FFF
 	text-align: center
 	padding: 67px 30px 62px 30px
-	
-
 +r768
 
 	.info-box
 		padding: 117px 40px 112px 40px
-
 +r992
 
 	.info-box
@@ -87,14 +97,6 @@
 		min-height: 520px
 
 .info-box
-	.img--layout
-		display: none
-
-	+r1200
-
-		.img--layout
-			display: initial
-
 	&__title
 		color: #FFF
 		font-size: 28px

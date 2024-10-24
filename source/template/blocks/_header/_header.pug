@@ -2,29 +2,26 @@
 
 header.header.header--front
 	.container-fluid
-		.row.no-gutters.justify-content-between
+		.row.no-gutters.justify-content-between.header-row
 
-			.col-auto.d-flex.align-items-center
+			.col-md-3.d-flex
 
-				.dropdown-trigger.d-lg-none.d-sm-block
-					.dropdown-trigger__item
-
-				.header-logo.ml-lg-5
+				.col-md-12.header-logo.py-2
 					a.header-logo__link(href="index.html")
 						img.header-logo__img.logo--light(src="img/logo.png", alt="logo")
 						img.header-logo__img.logo--dark(src="img/logo.png", alt="logo")
 
-			.col-auto
+			.col-md-6.margin-auto.text-center
 
 				include ../_main-menu/_main-menu
 
-			.col-auto.d-flex.align-items-center
+			.col-md-3.d-flex.align-items-center.justify-content-end
 
 				// lang select start
 				// div#google_translate_element
 				// lang select end
 
-				.dropdown-trigger.d-block.d-sm-none
+				.dropdown-trigger.d-md-block.d-lg-none
 					.dropdown-trigger__item
 
 				a.button.button--squared(href="donors.html")
