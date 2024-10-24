@@ -41,35 +41,53 @@
 	</head>
 	<body>
 		<div class="page-wrapper">
-			<!-- include ../blocks/_aside-dropdown/_aside-dropdown-->
+			<!-- aside dropdown start-->
+			<div class="aside-dropdown">
+				<div class="aside-dropdown__inner"><span class="aside-dropdown__close">
+					<svg class="icon">
+						<use xlink:href="#close"></use>
+					</svg></span>
+				<div class="aside-dropdown__item">
+					<!-- aside menu start-->
+					<ul class="aside-menu">
+						<li class="aside-menu__item"><a class="aside-menu__link" href="index.html">Home</a></li>
+						<li class="aside-menu__item"><a class="aside-menu__link" href="events.html">Events</a></li>
+						<li class="aside-menu__item"><a class="aside-menu__link" href="about.html">About Us</a></li>
+						<li class="aside-menu__item"><a class="aside-menu__link" href="contacts.html">Contact Us</a></li>
+					</ul>
+					<!-- aside menu end-->
+					<div class="aside-inner"><span class="aside-inner__title">Email</span><a class="aside-inner__link" href="mailto:anbinpathai@gmail.com">anbinpathai@gmail.com</a></div>
+					<div class="aside-inner"><span class="aside-inner__title">Phone numbers</span><a class="aside-inner__link" href="tel:+919941642120">+91 99416 42120</a></div>
+				</div>
+				<div class="aside-dropdown__item px-0 justify-content-center d-flex"><a class="button button--squared" href="donors.html"><span>Donate</span></a></div>
+				</div>
+			</div>
+			<!-- aside dropdown end-->
 			<!-- header start-->
 			<!-- header start-->
 			<header class="header header--front">
 				<div class="container-fluid">
-					<div class="row no-gutters justify-content-between">
-						<div class="col-auto d-flex align-items-center">
-							<div class="dropdown-trigger d-lg-none d-sm-block">
-								<div class="dropdown-trigger__item"></div>
-							</div>
-							<div class="header-logo ml-lg-5"><a class="header-logo__link" href="index.html"><img class="header-logo__img logo--light" src="img/logo.png" alt="logo"/><img class="header-logo__img logo--dark" src="img/logo.png" alt="logo"/></a></div>
+					<div class="row no-gutters justify-content-between header-row">
+						<div class="col-md-3 d-flex">
+							<div class="col-md-12 header-logo py-2"><a class="header-logo__link" href="index.html"><img class="header-logo__img logo--light" src="img/logo.png" alt="logo"/><img class="header-logo__img logo--dark" src="img/logo.png" alt="logo"/></a></div>
 						</div>
-						<div class="col-auto">
+						<div class="col-md-6 margin-auto text-center">
 							<!-- main menu start-->
 							<nav>
 								<ul class="main-menu">
 									<li class="main-menu__item"><a class="main-menu__link" href="index.html"><span>Home</span></a></li>
 									<li class="main-menu__item main-menu__item--active"><a class="main-menu__link" href="events.html"><span>Events</span></a></li>
-									<li class="main-menu__item"><a class="main-menu__link" href="index.html#about"><span>About Us</span></a></li>
-									<li class="main-menu__item"><a class="main-menu__link" href="#contactus"><span>Contact Us</span></a></li>
+									<li class="main-menu__item"><a class="main-menu__link" href="about.html"><span>About Us</span></a></li>
+									<li class="main-menu__item"><a class="main-menu__link" href="contacts.html"><span>Contact Us</span></a></li>
 								</ul>
 							</nav>
 							<!-- main menu end-->
 						</div>
-						<div class="col-auto d-flex align-items-center">
+						<div class="col-md-3 d-flex align-items-center justify-content-end">
 							<!-- lang select start-->
 							<!-- div#google_translate_element-->
 							<!-- lang select end-->
-							<div class="dropdown-trigger d-block d-sm-none">
+							<div class="dropdown-trigger d-md-block d-lg-none">
 								<div class="dropdown-trigger__item"></div>
 							</div><a class="button button--squared" href="donors.html"><span>Donate</span></a>
 						</div>
@@ -124,7 +142,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-12">
-								<div class="bottom-background__img"><img src="img/bottom-bg.png" alt="img"/></div>
+								<div class="events-bottom-img bottom-background__img"><img src="img/bottom-bg.png" alt="img"/></div>
 							</div>
 						</div>
 					</div>
@@ -135,7 +153,7 @@
 				<div class="container" id="contactus">
 					<div class="row">
 						<div class="col-sm-6 col-lg-3">
-							<div class="footer-logo"><a class="footer-logo__link" href="index.html"><img class="footer-logo__img" src="img/logo.png" alt="logo"/></a></div>
+							<div class="footer-logo"><a class="footer-logo__link" href="index.html"><img class="footer-logo__img rounded-circle" src="img/logo.png" alt="logo"/></a></div>
 							<!-- footer socials start-->
 							<ul class="footer-socials">
 								<li class="footer-socials__item"><a class="footer-socials__link" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -159,8 +177,8 @@
 							<nav>
 								<ul class="footer-menu">
 									<li class="footer-menu__item footer-menu__item--active"><a class="footer-menu__link" href="index.html">Home</a></li>
-									<li class="footer-menu__item"><a class="footer-menu__link" href="index.html#about">About</a></li>
-									<li class="footer-menu__item"><a class="footer-menu__link" href="#contactus">Contact us</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="about.html">About</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="contacts.html">Contact us</a></li>
 									<li class="footer-menu__item"><a class="footer-menu__link" href="events.html">Events</a></li>
 								</ul>
 							</nav>
