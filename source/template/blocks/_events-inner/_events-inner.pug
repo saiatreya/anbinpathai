@@ -7,7 +7,7 @@ section.event-section
 script.
 	function handleHeightMessage({ data = '{}' } = {}) {
 		if (data) {
-			const t = JSON.parse(data);
+			const t = typeof data === 'string' ? JSON.parse(data) : data;
 			if (t.type === 'resize') {
 				document.getElementById('anbanpathaiIframe').setAttribute('style', 'height:' + t.height + 'px;')
 			}
