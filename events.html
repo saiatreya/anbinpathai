@@ -57,7 +57,7 @@
 					</ul>
 					<!-- aside menu end-->
 					<div class="aside-inner"><span class="aside-inner__title">Email</span><a class="aside-inner__link" href="mailto:anbinpathai@gmail.com">anbinpathai@gmail.com</a></div>
-					<div class="aside-inner"><span class="aside-inner__title">Phone numbers</span><a class="aside-inner__link" href="tel:+919941642120">+91 99416 42120</a></div>
+					<div class="aside-inner"><span class="aside-inner__title">Phone numbers</span><a class="aside-inner__link" href="tel:919941642120">+91 99416 42120</a><span class="aside-inner__title">Land Line number</span><a class="aside-inner__link" href="tel:04448671714">+044 48671714</a><span class="aside-inner__title">Whats app</span><a class="aside-inner__link" href="tel:919025390089">+91 9025390089</a></div>
 				</div>
 				<div class="aside-dropdown__item px-0 justify-content-center d-flex"><a class="button button--squared" href="donors.html"><span>Donate</span></a></div>
 				</div>
@@ -123,7 +123,7 @@
 				<script>
 					function handleHeightMessage({ data = '{}' } = {}) {
 						if (data) {
-							const t = JSON.parse(data);
+							const t = typeof data === 'string' ? JSON.parse(data) : data;
 							if (t.type === 'resize') {
 								document.getElementById('anbanpathaiIframe').setAttribute('style', 'height:' + t.height + 'px;')
 							}
@@ -137,17 +137,6 @@
 
 				</script>
 				<!-- events inner end-->
-				<!-- bottom bg start-->
-				<section class="bottom-background background--brown">
-					<div class="container">
-						<div class="row">
-							<div class="col-12">
-								<div class="events-bottom-img bottom-background__img"><img src="img/bottom-bg.png" alt="img"/></div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- bottom bg end-->
 			</main>
 			<footer class="footer">
 				<div class="container" id="contactus">
@@ -165,8 +154,10 @@
 						<div class="col-sm-6 col-lg-3">
 							<h4 class="footer__title">Contact us</h4>
 							<div class="footer-contacts">
-								<p class="footer-contacts__address">2/36 Dooming Street, Santhome, Mylapore , Chennai 660004</p>
-								<p class="footer-contacts__phone">Phone: <a href="tel:+919941642120">+91 99416 42120</a></p>
+								<p class="footer-contacts__address">2/36 Dooming Street, Santhome, Mylapore , Chennai 600004</p>
+								<p class="footer-contacts__phone">Phone: <a href="tel:919941642120">+91 99416 42120</a></p>
+								<p>Land Line number: <a class="icon-item__link" href="tel:04448671714">+044-48671714</a></p>
+								<p>Whats app: <a class="icon-item__link" href="tel:919025390089">+91-9025390089</a></p>
 								<p class="footer-contacts__mail">Email: <a href="mailto:support@helpo.org">anbinpathai@gmail.com</a></p>
 							</div>
 						</div>
